@@ -1,0 +1,65 @@
+body, div, ul, li, p, form, h1, h2, h1, h4, h5, a{	margin: 0px;	padding: 0px;}
+
+body{
+	font-family:Arial, Helvetica, sans-serif, Calibri;
+		font-size:11px;	line-height:20px;
+	
+	}
+img, a{
+	border-width:0px;
+	}
+td{	vertical-align:top;	}
+a{
+	color:#163c51;
+	text-decoration:underline;
+	}
+a:hover{ text-decoration:underline;}
+.box{ display:block;}	
+
+/* common section
+/********************************************************************************/
+.notext{	color:rgba(0,0,0,0);	font-size:0px;	letter-spacing:-99999em;	}
+.nobg{ background-image:none;}	
+.clearfix{ clear:both;}
+.alignleft{	float:left;	margin-right:10px;	position:relative;	top:6px;}	
+.alignright{float:right;margin-left:10px;	position:relative;	top:6px;}	
+.more{ font-weight:bold; text-decoration:none; background:url(../images/more_bg.png); width:103px; height:24px; line-height:23px; text-align:center; display:block; float:left; margin-right:8px; color:#fff; text-transform:uppercase;}
+.more span{ font-weight:bold;}
+a:hover.more{ text-decoration:none;}
+
+h1{ height:21px; line-height:25px; color:#119fd7; margin-bottom:5px; padding-left:0px; font-size:24px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:normal;}
+h1.hwelcome{ background:url(../images/h1_welcome.png) no-repeat; height:25px;}
+
+h2{ height:33px; line-height:33px; color:#fff; font-size:16px; padding-left:15px;}
+h2.hstats{ background:url(../images/h2_stats.png);}
+h2.hmembers{ background:url(../images/h2_members.png);}
+
+
+/* layout section
+/********************************************************************************/
+
+
+
+.inpts { 
+	background:url(../images/text-field.gif) repeat-x #fff;
+	font-size: 12px;
+	border:1px solid #aeaeae;
+	padding:5px 5px 5px 5px;
+	resize: none;
+}
+
+
+nput, select, textarea { 
+	background:url(../images/text-field.gif) repeat-x #fff;
+	font-size: 12px;
+	border:1px solid #aeaeae;
+	padding:5px 5px 5px 5px;
+	resize: none;
+}
+input[type="text"], textarea {
+	background:url(../images/text-field.gif) repeat-x #fff;
+	font-size: 12px;
+	border:1px solid #aeaeae;
+	padding:5px 5px 5px 5px;
+	resize: none;
+	}

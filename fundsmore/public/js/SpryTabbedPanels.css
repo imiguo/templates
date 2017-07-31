@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Horizontal Tabbed Panels */
+.TabbedPanels {
+	margin: 0 auto;
+	padding: 0px;
+	clear: both;
+	width: 98%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+	 
+}
+
+ul.TabbedPanelsTabGroup {
+  margin: 0px;
+  padding: 0px;
+  background: url(../images/h4.png) repeat-x;
+ height: 36px;
+  width:600px;
+  
+}
+.TabbedPanelsTabGroup li{ list-style:none; font-size:12px;  }
+.TabbedPanelsTabGroup li:hover{background:url(../images/li_h.png) repeat-x; color: #000; }
+
+li.TabbedPanelsTab {
+	position: relative;
+	float: left;
+	padding: 10px 12px 0 12px;
+	margin: 0px;
+	height: 29px;
+    
+	
+	color: #fff;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	background: url(../images/li_line2.png) no-repeat right 0px;
+}
+
+li.last {
+	position: relative;
+	float: left;
+	padding: 10px 14px 0 14px;
+	margin: 0px;
+	height: 29px;
+color: #fff;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	background: url(../images/li_line2.png) no-repeat right 0px;
+}
+
+li.last:hover {
+	
+	background: url(../images/li_r.png) no-repeat left  0px;
+}
+
+li.last2 {
+	position: relative;
+	float: left;
+	padding: 10px 14px 0 14px;
+	margin: 0px;
+	height: 29px;
+color: #fff;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	background: url(../images/li_line2.png) no-repeat right 0px;
+}
+
+li.last2:hover {
+	
+	background:url(../images/li_h.png) repeat-x;
+}
+
+
+.TabbedPanelsTabHover {
+	color: #000;
+}
+
+.TabbedPanelsTabSelected {
+	color: #000;
+
+}
+.TabbedPanelsTab a {
+	
+	color: black;
+	text-decoration: none;
+	text-shadow: #fff 1px 1px;
+}
+.TabbedPanelsContentGroup {
+	clear: both;
+    overflow:hidden;
+}
+.TabbedPanelsContent {
+	padding: 10px 5px 0 5px;
+	
+}
+.TabbedPanelsContentVisible {
+}

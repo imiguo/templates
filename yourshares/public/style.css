@@ -1,0 +1,374 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url(images/topbg.gif);
+	background-position:top;
+	background-repeat:repeat-x;
+	background-color:#E5E5E5;
+}
+
+a:link {
+	color:#DF4721;
+	text-decoration: underline;
+}
+a:visited {
+	color:#DF4721;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+	color:#DF4721;
+}
+a:active {
+	text-decoration: none;
+	color:#DF4721;
+}
+
+h2 { 
+   font-family: Verdana;
+   font-size:18px;
+   color:#010100;
+   margin-bottom:15px;
+   font-weight:normal;
+   }
+   
+h3 { 
+   font-family: Arial;
+   font-size:12px;
+   color:#DF4721;
+   margin-bottom:5px;
+   font-weight:BOLD;
+   }
+   
+h4 { 
+   font-family: Verdana;
+   font-size:18px;
+   color:#010100;
+   margin-bottom:10px;
+   padding-bottom:10px;
+   padding-left:5px;
+   font-weight:normal;
+   border-bottom: 1px dotted #B5B4B4;
+   }
+   
+h5 { 
+   font-family: Verdana;
+   font-size:11px;
+   color:#174D78;
+   font-weight:normal;
+   margin-bottom: 0;
+   margin-top: 10px;
+   height:25px;
+   padding-left:5px;
+   border-bottom: 1px dotted #B0B0B0;
+   }
+   
+.box {
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  background-color:#F9F8F6;
+  padding-top:20px;
+  padding-bottom:7px;
+  text-align:justify;
+  line-height:1.4em;
+} 
+
+.box2 {
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  padding-top:20px;
+  padding-bottom:7px;
+  text-align:justify;
+  line-height:1.4em;
+}  
+
+.inputbg {
+  background: url(images/inputbg.gif);
+  padding-left:10px;
+}
+
+.input {
+  font-family: Tahoma;
+  font-size:14px;
+  color:#A4A4A4;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.input2 {
+  font-family: Verdana;
+  font-size:11px;
+  color:#3C3C3C;
+  background: #ffffff;
+  border: 1px solid #C5C5C5;
+}
+
+.reg { 
+   font-family: Verdana;
+   font-size:11px;
+   color:#174D78;
+   font-weight:normal;
+   padding-left:5px;
+   border-bottom: 1px dotted #B0B0B0;
+   }
+   
+.dots {
+  border-bottom: 1px dotted #B0B0B0;
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  }
+  
+.dots2 {
+  border-bottom: 1px dotted #B0B0B0;
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  padding-left: 7px;
+  padding-right: 7px;
+  }
+  
+.sbmt {
+  font-family: Verdana;
+  font-size:11px;
+  color:#ffffff;
+  background: #154E7B;
+  border: 1px solid #154E7B;
+}    
+
+.content {
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  padding-top:25px;
+  padding-bottom:10px;
+  text-align:justify;
+  line-height:1.4em;
+}
+
+.tab {
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  text-align:justify;
+  line-height:1.4em;
+}
+
+.newsdate {
+  font-family: Verdana;
+  font-size:11px;
+  color:#A0A0A0;
+  line-height:1.4em;
+}
+   
+.foot {
+    font-size: 11px;
+	font-family: Arial;
+	color: #6C6C6C;
+	padding-left:20px;
+}
+
+.foot a:link {
+	color: #6C6C6C;
+	text-decoration: none;
+}
+
+.foot a:visited {
+	color: #6C6C6C;
+	text-decoration: none;
+}
+
+.foot a:hover {
+	color: #6C6C6C;
+	text-decoration: underline;
+}
+
+.foot a:active {
+	color: #6C6C6C;
+	text-decoration: underline;
+}
+
+.ftext {
+  font-family: Arial;
+  font-size: 11px;
+  font-color: #6C6C6C;
+  padding-right: 20px;
+}
+
+.floatr {
+  float:right;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.floatl {
+  float:left;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}	
+
+.news {
+  padding: 0 10px 15px 10px;
+  background: #FFFFFF;
+  border-top: 1px dotted #B0B0B0;
+  border-bottom: 1px dotted #B0B0B0;
+  margin-top:20px;
+}
+
+
+.rmen {
+    font-size: 12px;
+	font-family: Arial;
+	color: #DF4721;
+	padding-left:10px;
+	font-weight:bold;
+	background-image:url(images/rmen.gif);
+}
+
+.rmen a:link {
+	color: #DF4721;
+	text-decoration: none;
+}
+
+.rmen a:visited {
+	color: #DF4721;
+	text-decoration: none;
+}
+
+.rmen a:hover {
+	color: #174D78;
+	text-decoration: none;
+}
+
+.rmen a:active {
+	color: #174D78;
+	text-decoration: none;
+}
+
+
+
+form {	margin-top: 0px;margin-bottom: 0px;margin-left: 0px;margin-right: 0px;}
+.toptable {
+	background-color: FF8D00;
+}
+
+a.toplink, a.toplink:hover, a.toplink:visited, a.toplink:active {
+	color: white;
+	text-decoration: none;
+}
+.forCopyright {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #EDD1D7;
+	text-align: center;
+	background-color: ff8d00;
+}
+
+body, td, .forTexts {
+	font-family: Verdana;
+    font-size:11px;
+    color:#2E2E2E;
+}
+a.menutxt, a.menutxt:hover, a.menutxt:visited, a.menutxt:active {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666699;
+}
+.menutxt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+    background-color: #FF8D00;
+}
+
+.inpts {
+  font-family: Verdana;
+  font-size:11px;
+  color:#3C3C3C;
+  background: #ffffff;
+  border: 1px solid #C5C5C5;
+}
+
+.sbmt {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #154E7B;
+	border: 2px solid #154E7B;
+	padding: 1px 7px 1px 7px;
+}
+
+a.hlp, a.hlp:active, a.hlp:visited, a.hlp:hover { font-family: verdana; font-size: 12px; color: black; text-decoration: none; cursor: help;}
+
+.line {
+	background-color: ff8d00;
+}
+.bgcolorleft {
+	background-color: white;
+}
+.bgcolormain {
+	background-color: white;
+}
+.bgcolorright {
+	background-color: white;
+}
+div.framebody {
+	text-align: left;
+}
+
+.inheader {
+   font-family: Verdana;
+   font-size:11px;
+   color:#174D78;
+   font-weight:bold;
+   padding-left:10px;
+   border-bottom: 1px dotted #B0B0B0;
+   padding: 5px 0 5px 5px;
+   background: #FAFAFA;
+}
+
+.item {
+  border-bottom: 1px dotted #B0B0B0;
+  font-family: Verdana;
+  font-size:11px;
+  color:#2E2E2E;
+  padding: 5px 0 5px 5px;
+}
+
+.calendartable {
+	background-color: ff8d00;
+	text-align: center;
+}
+.calendartablebg {
+	background-color: white;
+}
+.calendarweek {
+	background-color: ff8d00;
+	text-align: center;
+	
+}
+td.gray {
+        color: gray;
+}
+
+.tmeniu {
+ margin: 35px 20px 25px 0;
+}

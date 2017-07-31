@@ -1,0 +1,11 @@
+DD_belatedPNG.fix(".css selector");
+DD_belatedPNG.fix(".twitterBox");
+DD_belatedPNG.fix("img");
+DD_belatedPNG.fix("h2");
+DD_belatedPNG.fix(".serviceBox ul li a");
+DD_belatedPNG.fix(".progressBox a");
+DD_belatedPNG.fix(".welcomeBox a");
+DD_belatedPNG.fix(".businessBox a");
+DD_belatedPNG.fix(".welcomeBox a");
+DD_belatedPNG.fix(".welcomeBox h2");
+DD_belatedPNG.fix("ol#controls li a");
