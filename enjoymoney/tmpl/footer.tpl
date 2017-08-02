@@ -7,7 +7,7 @@
 	<table width="200" border="0" cellpadding="0" cellspacing="0">
 	  <!--DWLayoutTable-->
   <tr>
-    <td width="200" height="40" valign="top"><img src="images/box_01.png" width="200" height="40"></td>
+    <td width="200" height="40" valign="top"><img src="images/box_01.png?tag={$tag}" width="200" height="40"></td>
   </tr>
   <tr>
     <td valign="top" class="boxc" align="center">
@@ -28,7 +28,7 @@
 			</tr>
 
 			<tr>
-			<td height="32" colspan="2" align="center" valign="bottom"><input type=image src="images/login.gif" value="Login"></td>
+			<td height="32" colspan="2" align="center" valign="bottom"><input type=image src="images/login.gif?tag={$tag}" value="Login"></td>
 		  </tr>
 
 		  <tr>
@@ -40,7 +40,7 @@
 	</td>
   </tr>
   <tr>
-    <td height="11" valign="top"><img src="images/box_04.gif" width="200" height="11"></td>
+    <td height="11" valign="top"><img src="images/box_04.gif?tag={$tag}" width="200" height="11"></td>
   </tr>
 </table>
 	</div>
@@ -49,7 +49,7 @@
 <table width="200" border="0" cellpadding="0" cellspacing="0">
 	  <!--DWLayoutTable-->
   <tr>
-    <td width="200" height="35" valign="top"><img src="images/box1_01.gif" width="200" height="35"></td>
+    <td width="200" height="35" valign="top"><img src="images/box1_01.gif?tag={$tag}" width="200" height="35"></td>
   </tr>
 
   <tr>
@@ -98,7 +98,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="200">
     <!--DWLayoutTable-->
   <tbody><tr>
-    <td height="40" valign="top" width="200"><img src="images/menu_01.gif" height="40" width="200"></td>
+    <td height="40" valign="top" width="200"><img src="images/menu_01.gif?tag={$tag}" height="40" width="200"></td>
   </tr>
   <tr>
     <td class="boxc" align="center" valign="top">
@@ -146,7 +146,7 @@
   </td>
   </tr>
   <tr>
-    <td height="11" valign="top"><img src="images/box_04.gif" height="11" width="200"></td>
+    <td height="11" valign="top"><img src="images/box_04.gif?tag={$tag}" height="11" width="200"></td>
   </tr>
 </tbody></table>
 </div>

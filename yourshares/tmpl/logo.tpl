@@ -126,9 +126,9 @@ $(document).ready(function() {
 
       <tr>
 
-        <td width="387" height="128" valign="top"><img src="images/index_01.gif" width="387" height="128"></td>
+        <td width="387" height="128" valign="top"><img src="images/index_01.gif?tag={$tag}" width="387" height="128"></td>
 
-    <td width="267" valign="middle"><a href="?a=support"><img src="images/support.png" width="188" height="58" border="0"></a></td>
+    <td width="267" valign="middle"><a href="?a=support"><img src="images/support.png?tag={$tag}" width="188" height="58" border="0"></a></td>
 
     <td width="296" align="right" valign="top">
 
@@ -152,11 +152,11 @@ $(document).ready(function() {
 
             <tr>
 
-              <td height="28"><a href="?a=signup" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/iover_04.gif',1)"><img src="images/index_04.gif" name="Image2" width="132" height="28" border="0"></a></td>
+              <td height="28"><a href="?a=signup" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/iover_04.gif',1)"><img src="images/index_04.gif?tag={$tag}" name="Image2" width="132" height="28" border="0"></a></td>
 
-	          <td height="28"><a href="?a=login" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/iover_05.gif',1)"><img src="images/index_05.gif" name="Image3" width="66" height="28" border="0"></a></td>
+	          <td height="28"><a href="?a=login" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/iover_05.gif',1)"><img src="images/index_05.gif?tag={$tag}" name="Image3" width="66" height="28" border="0"></a></td>
 
-	          <td height="28"><a href="?a=support" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/iover_06.gif',1)"><img src="images/index_06.gif" name="Image4" width="78" height="28" border="0"></a></td>
+	          <td height="28"><a href="?a=support" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/iover_06.gif',1)"><img src="images/index_06.gif?tag={$tag}" name="Image4" width="78" height="28" border="0"></a></td>
 
             </tr>
 
@@ -188,11 +188,11 @@ $(document).ready(function() {
 
 	 <div class="slideshow">
 
-	   <img src="images/h1.jpg" width="950" height="214">
+	   <img src="images/h1.jpg?tag={$tag}" width="950" height="214">
 
-	   <img src="images/h2.jpg" width="950" height="214">
+	   <img src="images/h2.jpg?tag={$tag}" width="950" height="214">
 
-	   <img src="images/h3.jpg" width="950" height="214">
+	   <img src="images/h3.jpg?tag={$tag}" width="950" height="214">
 
 	 </div>
 
@@ -210,25 +210,25 @@ $(document).ready(function() {
 
     <tr>
 
-  <td width="6" height="34" valign="top"><img src="images/index_11.gif" width="6" height="34"></td>
+  <td width="6" height="34" valign="top"><img src="images/index_11.gif?tag={$tag}" width="6" height="34"></td>
 
-  <td width="82" valign="top"><a href="?a=home" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/iover_12.gif',1)"><img src="images/index_12.gif" name="Image8" width="82" height="34" border="0"></a></td>
+  <td width="82" valign="top"><a href="?a=home" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/iover_12.gif',1)"><img src="images/index_12.gif?tag={$tag}" name="Image8" width="82" height="34" border="0"></a></td>
 
-  <td width="138" valign="top"><a href="?a=cust&page=howtoinvest" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/iover_13.gif',1)"><img src="images/index_13.gif" name="Image9" width="138" height="34" border="0"></a></td>
+  <td width="138" valign="top"><a href="?a=cust&page=howtoinvest" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/iover_13.gif',1)"><img src="images/index_13.gif?tag={$tag}" name="Image9" width="138" height="34" border="0"></a></td>
 
-  <td width="171" valign="top"><a href="?a=signup" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/iover_14.gif',1)"><img src="images/index_14.gif" name="Image10" width="171" height="34" border="0"></a></td>
+  <td width="171" valign="top"><a href="?a=signup" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/iover_14.gif',1)"><img src="images/index_14.gif?tag={$tag}" name="Image10" width="171" height="34" border="0"></a></td>
 
-  <td width="79" valign="top"><a href="?a=faq" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/iover_15.gif',1)"><img src="images/index_15.gif" name="Image11" width="79" height="34" border="0"></a></td>
+  <td width="79" valign="top"><a href="?a=faq" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/iover_15.gif',1)"><img src="images/index_15.gif?tag={$tag}" name="Image11" width="79" height="34" border="0"></a></td>
 
-  <td width="71" valign="top"><a href="?a=news" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/iover_16.gif',1)"><img src="images/index_16.gif" name="Image12" width="71" height="34" border="0"></a></td>
+  <td width="71" valign="top"><a href="?a=news" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/iover_16.gif',1)"><img src="images/index_16.gif?tag={$tag}" name="Image12" width="71" height="34" border="0"></a></td>
 
-  <td width="196" valign="top"><a href="?a=rules" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/iover_17.gif',1)"><img src="images/index_17.gif" name="Image13" width="196" height="34" border="0"></a></td>
+  <td width="196" valign="top"><a href="?a=rules" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/iover_17.gif',1)"><img src="images/index_17.gif?tag={$tag}" name="Image13" width="196" height="34" border="0"></a></td>
 
-  <td width="95" valign="top"><a href="?a=paidout" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/iover_18.gif',1)"><img src="images/index_18.gif" name="Image14" width="95" height="34" border="0"></a></td>
+  <td width="95" valign="top"><a href="?a=paidout" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/iover_18.gif',1)"><img src="images/index_18.gif?tag={$tag}" name="Image14" width="95" height="34" border="0"></a></td>
 
-  <td width="107" valign="top"><a href="?a=support" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','images/iover_19.gif',1)"><img src="images/index_19.gif" name="Image15" width="107" height="34" border="0"></a></td>
+  <td width="107" valign="top"><a href="?a=support" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','images/iover_19.gif',1)"><img src="images/index_19.gif?tag={$tag}" name="Image15" width="107" height="34" border="0"></a></td>
 
-  <td width="5"><img src="images/index_20.gif" width="5" height="34"></td>
+  <td width="5"><img src="images/index_20.gif?tag={$tag}" width="5" height="34"></td>
 
     </tr>
 

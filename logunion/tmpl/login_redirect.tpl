@@ -6,7 +6,7 @@
 <table width="100%" height="100%">
 <tr>
 <td width="100%" height="100%" align="center" valign="middle">
-  <img src="images/loading.gif"></td>
+  <img src="images/loading.gif?tag={$tag}"></td>
 </tr>
 </table>
 <body>

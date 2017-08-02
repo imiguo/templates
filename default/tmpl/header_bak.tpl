@@ -10,7 +10,7 @@
 	     <td>
            <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
              <tr class=bgcolorleft valign="top"> 
-              <td width=300 align=center><img src="images/q.gif" width=180 height=1>
+              <td width=300 align=center><img src="images/q.gif?tag={$tag}" width=180 height=1>
 {include file="left.tpl"}
               </td>
               <td class=line valign="top" width=1><img src=images/q.gif width=1 height=1></td>          

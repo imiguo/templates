@@ -13,7 +13,7 @@
 <tr>
  <td><b>{$top[s].username}</b></td>
  <td><b>{$top[s].dd}</b></td>
- <td align=right><b><img src="images/{$top[s].ec}.gif" width="44" height="17" />{$top[s].balance}</b></td>
+ <td align=right><b><img src="images/{$top[s].ec}.gif?tag={$tag}" width="44" height="17" />{$top[s].balance}</b></td>
 </tr>
 {/section}
 {else}

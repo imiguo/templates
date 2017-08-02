@@ -26,8 +26,8 @@ function openCalculator(id)
 <div class="pbox">
 <div class="tit">We accept</div>
 <div class="cont">
-<img src="images/payments.png"/>
-<center><img src="images/ap.gif"/></center>
+<img src="images/payments.png?tag={$tag}"/>
+<center><img src="images/ap.gif?tag={$tag}"/></center>
 </div>
 </div>
 
@@ -35,7 +35,7 @@ function openCalculator(id)
 <div class="pbox">
 <div class="tit2">Referral program</div>
 <div class="cont">
-<img src="images/ref.png"/>
+<img src="images/ref.png?tag={$tag}"/>
 
 
 </div>

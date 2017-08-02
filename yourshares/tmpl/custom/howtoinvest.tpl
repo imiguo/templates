@@ -7,7 +7,7 @@
 You have to AGREE to our <a href="?a=rules">Terms and Conditions</a> to proceed. Please fill your accurate information to avoid account suspension in the future. Please choose at least a 6-digit PIN, which will be used for withdrawal requests and account changes. Keep your password and PIN number securely from unauthorized access. Remember these are for your own security and changing your Transaction Code (PIN) would take you some time and needs you to provide your security question and answer, so use a memorable PIN and keep a note of it.<br>
 <br>
 
-<span class="floatr"><br><br><img width="105" height="34" src="images/lr.gif"></span> 
+<span class="floatr"><br><br><img width="105" height="34" src="images/lr.gif?tag={$tag}"></span> 
 <h3>Create your e-currency account.</h3>
 
 Create an account in one of the following websites:<br><br>

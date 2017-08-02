@@ -34,7 +34,7 @@
   </tr>
   
   <tr>
-    <td width="247" height="35" valign="bottom" align="center"><input type=image src="images/log.gif" value="Login" name="submit"></td>
+    <td width="247" height="35" valign="bottom" align="center"><input type=image src="images/log.gif?tag={$tag}" value="Login" name="submit"></td>
   </tr>
   </form>
  </table>
@@ -129,14 +129,14 @@
   {/if}
   
   <tr>
-    <td height="10" valign="top"><img src="images/boxbottom.gif" width="299" height="10"></td>
+    <td height="10" valign="top"><img src="images/boxbottom.gif?tag={$tag}" width="299" height="10"></td>
   </tr>
 </table>
   </div>
   
   
   
-<div style="padding-top:15px;" align="center"><img src="images/reff.jpg" width="257" height="282" /></div>  
+<div style="padding-top:15px;" align="center"><img src="images/reff.jpg?tag={$tag}" width="257" height="282" /></div>  
   </td>
   </tr>
 </table>
@@ -144,12 +144,12 @@
 <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr>
-    <td height="16" colspan="2" valign="top"><img src="images/index_23.gif" width="950" height="16"></td>
+    <td height="16" colspan="2" valign="top"><img src="images/index_23.gif?tag={$tag}" width="950" height="16"></td>
   </tr>
   <tr>
     <td width="309" height="70" valign="middle" class="foot"><a href="?a=home">HOME</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="?a=rules">TERMS OF SERVICE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="?a=support">SUPPORT</a> </td>
 
-  <td width="641" align="right" valign="middle" class="ftext"><img src="images/security.png" width="227" height="32"></td>
+  <td width="641" align="right" valign="middle" class="ftext"><img src="images/security.png?tag={$tag}" width="227" height="32"></td>
   </tr>
 </table>
 

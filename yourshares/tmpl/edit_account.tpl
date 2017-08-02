@@ -147,7 +147,7 @@ function checkform() {
 </ul>
 {/if}
 {*======================================================================*}
-<img width="580" height="45" src="images/pic9.jpg"><br><br>
+<img width="580" height="45" src="images/pic9.jpg?tag={$tag}"><br><br>
 
 <table width="580" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
@@ -172,7 +172,7 @@ function checkform() {
 
 
 <h4>Login Details</h4>
-<img width="580" height="45" src="images/pic5.jpg"><br><br>
+<img width="580" height="45" src="images/pic5.jpg?tag={$tag}"><br><br>
 
 <table width="580" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
@@ -194,7 +194,7 @@ function checkform() {
 
 
 <h4>Payment Accounts </h4>
-<img width="580" height="45" src="images/pic6.jpg"><br><br>
+<img width="580" height="45" src="images/pic6.jpg?tag={$tag}"><br><br>
 
 
 <table width="580" cellspacing="1" cellpadding="0" border="0" align="center">

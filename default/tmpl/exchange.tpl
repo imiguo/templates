@@ -182,7 +182,7 @@ function chng_bg(id, color)
 {section name=ec loop=$ec}
 <tr>
  <td><input type="radio" name="from" value="{$ec[ec].ec}" {if $smarty.section.ec.index == 0}checked{/if} onclick="chng_selection('{$ec[ec].ec}')"></td>
- <td><img src="images/{$ec[ec].ec}.gif" align=absmiddle height=17> {$ec[ec].ec_name} :</td>
+ <td><img src="images/{$ec[ec].ec}.gif?tag={$tag}" align=absmiddle height=17> {$ec[ec].ec_name} :</td>
  <td><input type=text name="amount_{$ec[ec].ec}" value="{$ec[ec].balance}" class=inpts size=7
       onchange="in_out('{$ec[ec].ec}')" onkeyup="in_out('{$ec[ec].ec}')"
       onfocusout="in_out('{$ec[ec].ec}', true)" onactivate="in_out('{$ec[ec].ec}', true)"
@@ -216,15 +216,16 @@ Currently you have no funds to exchange.<br><br>
 <h3>Our Exchange Rates:</h3><br>
 <table cellspacing=0 cellpadding=0 border=0><tr><td class=calendartable>
 <table cellspacing=1 cellpadding=2 border=0>
-<tr>
+<tr>
+
  <td align=center class=calendartablebg>From / To</td>
 {section name=from loop=$exchange}
- <td align=center class=calendartablebg><img src="images/{$exchange[from].from}.gif" height=17></td>
+ <td align=center class=calendartablebg><img src="images/{$exchange[from].from}.gif?tag={$tag}" height=17></td>
 {/section}
 </tr>
 {section name=from loop=$exchange}
 <tr>
- <td align=center class=calendartablebg id="e{$exchange[from].from}_t"><img src="images/{$exchange[from].from}.gif" height=17></td>
+ <td align=center class=calendartablebg id="e{$exchange[from].from}_t"><img src="images/{$exchange[from].from}.gif?tag={$tag}" height=17></td>
  {section name=to loop=$exchange[from].tos}
   <td align=center class=calendartablebg id="e{$exchange[from].from}_{$exchange[from].tos[to].to}">
    {if $exchange[from].from == $exchange[from].tos[to].to}

@@ -70,7 +70,7 @@
 
       <div class="logo">
 
-        <a href="?a=home"><img src="images/logo.gif" width="321" height="75" border="0"></a>
+        <a href="?a=home"><img src="images/logo.gif?tag={$tag}" width="321" height="75" border="0"></a>
 
       </div>
 
@@ -124,9 +124,9 @@
 
         <div id="coin-slider">
 
-          <img src="images/slide1.jpg" width="940" height="369" alt="slide1">
+          <img src="images/slide1.jpg?tag={$tag}" width="940" height="369" alt="slide1">
 
-          <img src="images/slide2.jpg" width="940" height="369" alt="slide2">
+          <img src="images/slide2.jpg?tag={$tag}" width="940" height="369" alt="slide2">
 
         </div>
 

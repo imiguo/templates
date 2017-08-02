@@ -27,7 +27,7 @@ Your login or password or turing image code is wrong. Please check this informat
 <br><br>
 {/if}
 
-<img width="580" height="45" src="images/pic8.jpg"><br><br>
+<img width="580" height="45" src="images/pic8.jpg?tag={$tag}"><br><br>
 
 <form onsubmit="return checkform()" name="mainform" method="post">
 <input type="hidden" value="do_login" name="a">

@@ -45,7 +45,7 @@
 {section name=deposit loop=$plans[plans].deposits}
 <tr>
  <td align=center class=item><b>{$plans[plans].deposits[deposit].date}</b></td>
- <td align=center class=item><b>${$plans[plans].deposits[deposit].deposit} <img src="images/{$plans[plans].deposits[deposit].ec}.gif" align=absmiddle hspace=1 height=17></b></td>
+ <td align=center class=item><b>${$plans[plans].deposits[deposit].deposit} <img src="images/{$plans[plans].deposits[deposit].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></b></td>
 {if $plans[plans].use_compound}
  <td align=center class=item align=center>{$plans[plans].deposits[deposit].compound}% <a href="?a=change_compound&deposit={$plans[plans].deposits[deposit].id}">[change]</a></td>
 {/if}

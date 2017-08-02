@@ -70,14 +70,14 @@ function checklogin() {
 					<DIV id="info">
 						<table>
 							<tr><td colspan=2>We accept &nbsp</td></tr>
-							<tr><td>&nbsp</td><td><img src="images/payments.png"></td></tr>
+							<tr><td>&nbsp</td><td><img src="images/payments.png?tag={$tag}"></td></tr>
 						</table>
 					</DIV>
 					<br><br><br><br>
 					<DIV id="info">
 						<table>
 							<tr><td colspan=2>Referral program &nbsp</td></tr>
-							<tr><td>&nbsp</td><td><img src="images/ref.png"></td></tr>
+							<tr><td>&nbsp</td><td><img src="images/ref.png?tag={$tag}"></td></tr>
 						</table>
 					</DIV>
 					<br><br><br><br>

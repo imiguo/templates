@@ -197,7 +197,7 @@ You must register at least one e-currency account. You may NOT change/add your e
 
 <h4>General Details</h4>
 
-<img width="580" height="45" src="images/pic9.jpg"><br>
+<img width="580" height="45" src="images/pic9.jpg?tag={$tag}"><br>
 <br>
 
 <table width="580" height="29" cellspacing="0" cellpadding="0" border="0" bgcolor="#FAFAFA" align="center">
@@ -236,7 +236,7 @@ You must register at least one e-currency account. You may NOT change/add your e
 
 <h4>Login Details</h4>
 
-<img width="580" height="45" src="images/pic5.jpg"><br><br>
+<img width="580" height="45" src="images/pic5.jpg?tag={$tag}"><br><br>
 
 <table width="580" height="29" cellspacing="0" cellpadding="0" border="0" bgcolor="#FAFAFA" align="center">
     <!--DWLayoutTable-->
@@ -262,7 +262,7 @@ You must register at least one e-currency account. You may NOT change/add your e
 
 <h4>Payment Accounts </h4>
 
-<img width="580" height="45" src="images/pic6.jpg"><br><br>
+<img width="580" height="45" src="images/pic6.jpg?tag={$tag}"><br><br>
 
 <table width="580" height="29" cellspacing="0" cellpadding="0" border="0" bgcolor="#FAFAFA" align="center">
     <tbody>
@@ -285,7 +285,7 @@ You must register at least one e-currency account. You may NOT change/add your e
 
 
 <h4>User Agreement</h4>
-<img width="580" height="45" src="images/pic7.jpg"><br><br>
+<img width="580" height="45" src="images/pic7.jpg?tag={$tag}"><br><br>
 
 <table width="580" cellspacing="0" cellpadding="0" border="0" align="center" class="tab">
 <tbody><tr>

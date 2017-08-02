@@ -28,7 +28,7 @@
   </td>
     </tr>
     <tr>
-     <td height="205" valign="top"><img src="images/index_02.jpg" width="972" height="227" /></td>
+     <td height="205" valign="top"><img src="images/index_02.jpg?tag={$tag}" width="972" height="227" /></td>
     </tr>
    </tbody>
   </table>

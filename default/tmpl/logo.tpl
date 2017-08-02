@@ -12,8 +12,8 @@
     <td valign=top height=142>
       <table cellspacing=0 cellpadding=0 border=0 width=100% height=142>
 	    <tr>
-		  <td background="images/ver.gif" class=toptable><img src="images/top.gif" width=304 height=142 border="0" align=left></td>
-		  <td background="images/ver.gif" class=toptable valign=bottom align=right>
+		  <td background="images/ver.gif?tag={$tag}" class=toptable><img src="images/top.gif?tag={$tag}" width=304 height=142 border="0" align=left></td>
+		  <td background="images/ver.gif?tag={$tag}" class=toptable valign=bottom align=right>
 
 <b>
 <a href=?a=home class=toplink>Home</a> &middot; 

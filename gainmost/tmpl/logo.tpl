@@ -120,7 +120,7 @@
 
 
 
-<a href="?a=signup"><img src="images/signup.gif" border="0"></a>
+<a href="?a=signup"><img src="images/signup.gif?tag={$tag}" border="0"></a>
 
 </div>
 

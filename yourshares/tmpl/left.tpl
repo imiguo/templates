@@ -19,7 +19,7 @@
                      <tr>
 	                  <th class=title>Dollar price per ounce</th>
                      </tr><tr>
-	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_usoz_2.gif" width=172 height=124></td>
+	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_usoz_2.gif?tag={$tag}" width=172 height=124></td>
 					 </tr>
 					</table>
 					<br>
@@ -30,7 +30,7 @@
                      <tr>
 	                  <th class=title>Euro price per ounce</th>
                      </tr><tr>
-	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_euoz_2.gif" width=172 height=124></td>
+	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_euoz_2.gif?tag={$tag}" width=172 height=124></td>
 					 </tr>
 					</table>
 					<br>

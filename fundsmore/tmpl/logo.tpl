@@ -188,7 +188,7 @@ margin: 0
 
 <div id="access" style="display: none;">
 
-  <div class="close2"><a href="#" onClick="showLogin(); return false;"><img src="images/close.png" alt="" /></a></div>
+  <div class="close2"><a href="#" onClick="showLogin(); return false;"><img src="images/close.png?tag={$tag}" alt="" /></a></div>
 
 
 
@@ -304,7 +304,7 @@ document.getElementById('overlay').style.display = 'none';
 
           <h1 id="logo">
 
-           <a href=?a=home><img src="images/logo.png"  alt="" /></a>
+           <a href=?a=home><img src="images/logo.png?tag={$tag}"  alt="" /></a>
 
            <span class="header1"></span>
 
@@ -318,7 +318,7 @@ document.getElementById('overlay').style.display = 'none';
 
           <ul class="menu">
 
-                      <li id="item-510" ><a href="#" onClick="showLogin(); return false;" ><img src="images/log.png" /></a></li>
+                      <li id="item-510" ><a href="#" onClick="showLogin(); return false;" ><img src="images/log.png?tag={$tag}" /></a></li>
 
                      </ul>
 
@@ -379,35 +379,35 @@ document.getElementById('overlay').style.display = 'none';
 
                 <ul id="carousel1">
 
-                 <li><a href=?a=signup><img src="images/carousel_icon1.png" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon1.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan1</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon2.png" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon2.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signu pclass="carousel_link">Plan2</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon3.png" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon3.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan3</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon4.png" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon4.png?tag={$tag}" alt="" /></a>
 
                  <a href=?a=signup class="carousel_link">Plan4</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon5.png" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon5.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan5</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon6.png" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon6.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan6</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon7.png" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon7.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan7</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon8.png" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon8.png?tag={$tag}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan8</a></li>
 

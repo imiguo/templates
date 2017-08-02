@@ -84,7 +84,7 @@ To: <select name=month_to class=inpts>
  <td align=right><b>
   ${$trans[trans].balance}
  </td>
- <td><img src="images/{$trans[trans].ec}.gif" align=absmiddle hspace=1 height=17></td>
+ <td><img src="images/{$trans[trans].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></td>
 </tr>
 {/section}
 {else}
@@ -120,7 +120,7 @@ To: <select name=month_to class=inpts>
 {section name=trans loop=$trans}
 <tr>
  <td><b>{$trans[trans].transtype}</b></td>
- <td width=200 align=right><b>$ {$trans[trans].actual_amount}</b> <img src="images/{$trans[trans].ec}.gif" align=absmiddle hspace=1 height=17></td>
+ <td width=200 align=right><b>$ {$trans[trans].actual_amount}</b> <img src="images/{$trans[trans].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></td>
  <td width=170 align=center valign=bottom><b><small>{$trans[trans].d}</small></b></td>
 </tr>
 <tr>
