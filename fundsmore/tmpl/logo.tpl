@@ -8,13 +8,13 @@
 
  <link rel="icon" href="images/fav.ico" type="image/x-icon" />
 
- <script src="js/core.js" type="text/javascript"></script>
+ <script src="js/core.js?tag={$tag}" type="text/javascript"></script>
 
- <script src="js/caption.js" type="text/javascript"></script>
+ <script src="js/caption.js?tag={$tag}" type="text/javascript"></script>
 
- <script src="js/mootools-more.js" type="text/javascript"></script>
+ <script src="js/mootools-more.js?tag={$tag}" type="text/javascript"></script>
 
-{literal} 
+{literal}
 
 <script type="text/javascript">
 
@@ -42,49 +42,49 @@ var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
 
 </script>
 
-{/literal} 
-
-                
-
- <link rel="stylesheet" href="css/main.css" type="text/css" media="screen,projection" />
-
- <link rel="stylesheet" href="css/position.css" type="text/css" media="screen,projection" />
-
- <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen,projection" />
-
- <link rel="stylesheet" href="css/personal.css" type="text/css" media="screen,projection" />
-
- <link rel="stylesheet" href="css/general.css" type="text/css" media="screen,projection" />
+{/literal}
 
 
 
- <script type="text/javascript" src="js/hide.js"></script>
+ <link rel="stylesheet" href="css/main.css?tag={$tag}" type="text/css" media="screen,projection" />
 
- <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+ <link rel="stylesheet" href="css/position.css?tag={$tag}" type="text/css" media="screen,projection" />
 
- <script type="text/javascript" src="js/tiny.js"></script>
+ <link rel="stylesheet" href="css/layout.css?tag={$tag}" type="text/css" media="screen,projection" />
 
- <script type="text/javascript" src="js/cufon-yui.js"></script>
+ <link rel="stylesheet" href="css/personal.css?tag={$tag}" type="text/css" media="screen,projection" />
 
-
-
- <script type="text/javascript" src="js/cufon-replace.js"></script>
-
- <script type="text/javascript" src="js/HeliosCond_400.font.js"></script>
-
- <script type="text/javascript" src="js/Heliosthin.font.js"></script>
-
- <script type="text/javascript" src="js/tabs.js"></script>
-
-				
-
- <script src="js/tab.js" type="text/javascript"></script>
-
- <link href="js/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+ <link rel="stylesheet" href="css/general.css?tag={$tag}" type="text/css" media="screen,projection" />
 
 
 
-{literal} 
+ <script type="text/javascript" src="js/hide.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/jquery-1.4.2.min.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/tiny.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/cufon-yui.js?tag={$tag}"></script>
+
+
+
+ <script type="text/javascript" src="js/cufon-replace.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/HeliosCond_400.font.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/Heliosthin.font.js?tag={$tag}"></script>
+
+ <script type="text/javascript" src="js/tabs.js?tag={$tag}"></script>
+
+
+
+ <script src="js/tab.js?tag={$tag}" type="text/javascript"></script>
+
+ <link href="js/SpryTabbedPanels.css?tag={$tag}" rel="stylesheet" type="text/css" />
+
+
+
+{literal}
 
 <script type="text/javascript">
 
@@ -112,7 +112,7 @@ Cufon.refresh();
 
 function() {
 
-$j(this).removeClass("actives");        
+$j(this).removeClass("actives");
 
 $j(this).find('ul').stop(false, true).fadeOut('fast');
 
@@ -134,9 +134,9 @@ Cufon.refresh();
 
 function() {
 
-$j('.parent').removeClass("active_tab"); 
+$j('.parent').removeClass("active_tab");
 
-Cufon.refresh();       
+Cufon.refresh();
 
 }
 
@@ -178,7 +178,7 @@ margin: 0
 
 <![endif]-->
 
-{/literal} 
+{/literal}
 
 </head>
 
@@ -216,7 +216,7 @@ margin: 0
 
     </div>
 
-   
+
 
     <div style="padding: 10px 0 0 170px;"><input type=submit  class="sbmt" value="Login" class="button"></div><br>
 
@@ -224,17 +224,17 @@ margin: 0
 
   </form>
 
-</div>						
+</div>
 
-							
 
-							
 
-{literal} 
+
+
+{literal}
 
 <script type="text/javascript">
 
-function checklogin() {   
+function checklogin() {
 
 if (document.loginform.username.value=='') {
 
@@ -288,7 +288,7 @@ document.getElementById('overlay').style.display = 'none';
 
 </script>
 
- {/literal}                               
+ {/literal}
 
 
 
@@ -334,7 +334,7 @@ document.getElementById('overlay').style.display = 'none';
 
 			     {if $userinfo.logged != 1}
 
-            <a href="?a=signup" class="a2"><span class="notext">Register</span></a>  
+            <a href="?a=signup" class="a2"><span class="notext">Register</span></a>
 
 					{else}
 
@@ -356,11 +356,11 @@ document.getElementById('overlay').style.display = 'none';
 
            </div>
 
-          </div>		
+          </div>
 
    </div>
 
-  </div><!-- end header -->           
+  </div><!-- end header -->
 
          <div class="main_banner">
 
@@ -381,19 +381,19 @@ document.getElementById('overlay').style.display = 'none';
 
                  <li><a href=?a=signup><img src="images/carousel_icon1.png" alt="" /></a>
 
-		 <a href=?a=signup class="carousel_link">Plan1</a></li> 
+		 <a href=?a=signup class="carousel_link">Plan1</a></li>
 
                  <li><a href=?a=signup><img src="images/carousel_icon2.png" alt="" /></a>
 
-		 <a href=?a=signu pclass="carousel_link">Plan2</a></li> 
+		 <a href=?a=signu pclass="carousel_link">Plan2</a></li>
 
                  <li><a href=?a=signup><img src="images/carousel_icon3.png" alt="" /></a>
 
-		 <a href=?a=signup class="carousel_link">Plan3</a></li> 
+		 <a href=?a=signup class="carousel_link">Plan3</a></li>
 
                  <li><a href=?a=signup><img src="images/carousel_icon4.png" alt="" /></a>
 
-                 <a href=?a=signup class="carousel_link">Plan4</a></li> 
+                 <a href=?a=signup class="carousel_link">Plan4</a></li>
 
                  <li ><a href=?a=signup><img src="images/carousel_icon5.png" alt="" /></a>
 
@@ -401,15 +401,15 @@ document.getElementById('overlay').style.display = 'none';
 
                  <li ><a href=?a=signup><img src="images/carousel_icon6.png" alt="" /></a>
 
-		 <a href=?a=signup class="carousel_link">Plan6</a></li> 
+		 <a href=?a=signup class="carousel_link">Plan6</a></li>
 
                  <li ><a href=?a=signup><img src="images/carousel_icon7.png" alt="" /></a>
 
-		 <a href=?a=signup class="carousel_link">Plan7</a></li> 
+		 <a href=?a=signup class="carousel_link">Plan7</a></li>
 
                  <li ><a href=?a=signup><img src="images/carousel_icon8.png" alt="" /></a>
 
-		 <a href=?a=signup class="carousel_link">Plan8</a></li> 				   
+		 <a href=?a=signup class="carousel_link">Plan8</a></li>
 
 		</ul>
 
@@ -417,9 +417,9 @@ document.getElementById('overlay').style.display = 'none';
 
           </div>
 
-         </div>	
+         </div>
 
-		 
+
 
 
 

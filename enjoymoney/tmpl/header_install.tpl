@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>HYIP Manager. Install Script.</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
 </head>
 
 <body bgcolor="#FFFFF2" link="#666699" vlink="#666699" alink="#666699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >

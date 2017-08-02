@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Calculator</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
 {if $error eq ''}
 {literal}
 <script>

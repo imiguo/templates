@@ -1,7 +1,7 @@
 {include file="header.tpl"}
-             <script src="js/jquery00.js" type="text/javascript"></script>
-<script src="js/jquery-u.js"></script>
-<script src="js/java0000.js"></script>
+             <script src="js/jquery00.js?tag={$tag}" type="text/javascript"></script>
+<script src="js/jquery-u.js?tag={$tag}"></script>
+<script src="js/java0000.js?tag={$tag}"></script>
 
 
 <h3>Our Global Representatives</h3>
