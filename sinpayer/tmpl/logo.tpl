@@ -3,7 +3,7 @@
 
 <head>
     <base #href="">
-    <title>COINEDGE LIMITED</title>
+    <title>{$app_full_name}</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="hustydesigns/hdcustomcss.css">

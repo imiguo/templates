@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 <h3>FAQ</h3>
-<div class="hd_faqtitle">How can I invest with Coinedge.biz ?</div>
-<div class="hd_faqbody"> To make a investment you must first become a member of Coinedge.biz. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup. </div>
+<div class="hd_faqtitle">How can I invest with {$app_site} ?</div>
+<div class="hd_faqbody"> To make a investment you must first become a member of {$app_site}. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup. </div>
 <div class="hd_faqtitle">What are the payment processors you accept?</div>
 <div class="hd_faqbody"> As shown in our website, we only accept the following payment processors:
     <br> 1.) <a href="https://www.perfectmoney.is/">PerfectMoney</a>
@@ -9,7 +9,7 @@
     <br> 3.) <a href="https://www.blockchain.info/">Bitcoin</a>
     <br>
 </div>
-<div class="hd_faqtitle">How do I open my Coinedge.biz Account?</div>
+<div class="hd_faqtitle">How do I open my {$app_site} Account?</div>
 <div class="hd_faqbody"> It's quite easy and convenient. Follow this <a href="indexcca3.html?a=signup">link</a>, fill in the registration form and then press "Register". </div>
 <div class="hd_faqtitle">What is your minimum deposit?</div>
 <div class="hd_faqbody"> The required minimum deposit amount is just $10.00 (US Dollars). </div>
@@ -18,16 +18,16 @@
 <div class="hd_faqtitle">How long does it take for my deposit to be added to my account?</div>
 <div class="hd_faqbody"> Your account will be updated as fast, as you deposit. </div>
 <div class="hd_faqtitle">How can I change my e-mail address or password?</div>
-<div class="hd_faqbody"> Log into your Coinedge.biz account and click on the "Edit Account". You can change your e-mail address and password there. </div>
+<div class="hd_faqbody"> Log into your {$app_site} account and click on the "Edit Account". You can change your e-mail address and password there. </div>
 <div class="hd_faqtitle">What if I can't log into my account because I forgot my password?</div>
 <div class="hd_faqbody"> Click <a href="index8083.html?a=forgot_password">forgot password </a> link, type your username or e-mail and you'll receive your account information. </div>
 <div class="hd_faqtitle">Does profit paid directly to my currency account?</div>
-<div class="hd_faqbody"> No, profits are gathered on your Coinedge.biz account and you can withdraw them anytime. </div>
+<div class="hd_faqbody"> No, profits are gathered on your {$app_site} account and you can withdraw them anytime. </div>
 <div class="hd_faqtitle">How do you calculate the interest on my account?</div>
-<div class="hd_faqbody"> Depending on each plan. Interest on your Coinedge.biz account is acquired according to maturity of your plan and credited to your available balance.</div>
+<div class="hd_faqbody"> Depending on each plan. Interest on your {$app_site} account is acquired according to maturity of your plan and credited to your available balance.</div>
 <div class="hd_faqtitle">Can I do a direct deposit from my account balance?</div>
-<div class="hd_faqbody"> Yes! To make a deposit from your Coinedge.biz account balance. Simply login into your members account and click on Make Deposit and select the Deposit from Account Balance Radio button. </div>
-<div class="hd_faqtitle">Can I make an additional deposit to Coinedge.biz account once it has been opened?</div>
+<div class="hd_faqbody"> Yes! To make a deposit from your {$app_site} account balance. Simply login into your members account and click on Make Deposit and select the Deposit from Account Balance Radio button. </div>
+<div class="hd_faqtitle">Can I make an additional deposit to {$app_site} account once it has been opened?</div>
 <div class="hd_faqbody"> Yes, you can make as many deposit as you wish but all transactions are handled separately. </div>
 <div class="hd_faqtitle">After I make a withdrawal request, when will the funds be available on my e-currency account?</div>
 <div class="hd_faqbody"> Processing withdrawals are done instantly. This, being a process which requires NO human intervention. </div>
@@ -47,10 +47,10 @@
 <div class="hd_faqbody"> No, you can only withdraw the balances in your account in the e-currency that the balance is.</div>
 <div class="hd_faqtitle">What is the minimum amount for withdrawal?</div>
 <div class="hd_faqbody">You can withdraw any amount that exceeds the $0.01</div>
-<div class="hd_faqtitle">Does Coinedge.biz offer any referral program?</div>
+<div class="hd_faqtitle">Does {$app_site} offer any referral program?</div>
 <div class="hd_faqbody">Yes we do, our referral program is a great way for everyone to earn, you may earn 4% commission from each deposit made by people you refer to us.</div>
 <div class="hd_faqtitle">Are there promotional material?</div>
-<div class="hd_faqbody">Yes, all registered member of Coinedge.biz has a referral link, also you can use your ref id on our banner url during promotion.</div>
+<div class="hd_faqbody">Yes, all registered member of {$app_site} has a referral link, also you can use your ref id on our banner url during promotion.</div>
 <div class="hd_faqtitle">Are earning 7 days a week?</div>
 <div class="hd_faqbody">Yes, interest is earned in your account 7 days a week and 365 days a year.</div>
 <div class="hd_faqtitle">Do you charge any withdrawal fee or penalty?</div>

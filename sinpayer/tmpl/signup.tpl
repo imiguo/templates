@@ -11,7 +11,7 @@
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">
-            <h3>Registration at coinedge.biz</h3>
+            <h3>Registration at {$app_site}</h3>
             <br>
             <script language=javascript>
             function checkform() {

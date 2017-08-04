@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>COINEDGE LIMITED</title>
+    <title>{$app_full_name}</title>
     <base #href="">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
@@ -245,10 +245,10 @@
         <div class="amk_wrap wow fadeInUp" data-wow-delay="0s">
             <div class="amk_box amk_left">
                 <h3>About <span>Us!</span></h3>
-                <p>Welcome to Coinedge Limited.
-                    <br> Coinedge Limited is the newest venture in the field of forex and crypto mining industry. Coinedge Limited is trusted dependable investment company that offers Great opportunities with zero risks. You found what you're looking for with Coinedge.biz , which offers High End asset management program based on Forex and global hardware mining pools!! With Coinedge Limited, anyone can participate from anywhere in the world. Since 2015, Coinedge has been listed as the Registered Company at the British Royal Register - Company House UK with company number #09865621. </p>
+                <p>Welcome to {$app_full_name}.
+                    <br> {$app_full_name} is the newest venture in the field of forex and crypto mining industry. {$app_full_name} is trusted dependable investment company that offers Great opportunities with zero risks. You found what you're looking for with {$app_site} , which offers High End asset management program based on Forex and global hardware mining pools!! With {$app_full_name}, anyone can participate from anywhere in the world. Since 2015, {$app_full_name} has been listed as the Registered Company at the British Royal Register - Company House UK with company number #09865621. </p>
                 <br />
-                <p>Our trading experts are hybrid of professionals from various fields with highly extensive experience as such we can offer our members various investment portfolio. We provide a variety of services developed by experienced traders in investing assets at strong interest rates. Coinedge support system is always available for any concern our client might have. Join Coinedge.biz today and Let your money work for you! </p>
+                <p>Our trading experts are hybrid of professionals from various fields with highly extensive experience as such we can offer our members various investment portfolio. We provide a variety of services developed by experienced traders in investing assets at strong interest rates. {$app_full_name} support system is always available for any concern our client might have. Join {$app_site} today and Let your money work for you! </p>
                 <br />
             </div>
             <div class="amk_box amk_right">
@@ -261,7 +261,7 @@
             </div>
             <div class="amk_box amk_right">
                 <h3>Our <span>Vision</span></h3>
-                <p>Coinedge has only motive to offer an investment platform that is user-friendly which will help our investors make smart profits. Coinedge offers investment portfolio using ON-TO-GO technology. Because of our consistency in the provision of investment opportunities for clients we are renowned in the crypto-currency market. Client satisfaction with our services is the only motive for Coinedge.biz </p>
+                <p>{$app_full_name} has only motive to offer an investment platform that is user-friendly which will help our investors make smart profits. {$app_full_name} offers investment portfolio using ON-TO-GO technology. Because of our consistency in the provision of investment opportunities for clients we are renowned in the crypto-currency market. Client satisfaction with our services is the only motive for {$app_site} </p>
             </div>
         </div>
     </div>
@@ -312,7 +312,7 @@
             <div class="amk_box2">
                 <a target="_blank" href="cert.pdf">"><img src="hustydesigns/graphics/co.png" />
                 <div class="amk_cobox">
-                    <h3>COINEDGE LIMITED</h3>
+                    <h3>{$app_full_name}</h3>
                     <ul>
 
                         <li><a target="_blank" href=https://beta.companieshouse.gov.uk/company/09865621>Company No.  09865621</a></li>
@@ -337,7 +337,7 @@
                     <li><a href=?a=news>News</a> | </li>
                     <li><a href=?a=rules>Terms</a></li>
                 </ul>
-                <p>Copyright 2017 <a href=?a=home>Coinedge.biz</a> - All rights reserved.</p>
+                <p>Copyright 2017 <a href=?a=home>{$app_site}</a> - All rights reserved.</p>
             </div>
             <a href=?a=home class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
         </div>

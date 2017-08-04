@@ -4,10 +4,10 @@
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
     <tr>
         <td align=justify>
-         Program participation is available to any individual, who is over 18 years of age and has a reliable Internet access. To start, one has to create the Midollar.com personal investment account. We assure you that you will get exceptional service and customer support.
+         Program participation is available to any individual, who is over 18 years of age and has a reliable Internet access. To start, one has to create the {$app_site} personal investment account. We assure you that you will get exceptional service and customer support.
         <br>
         <br>
-        <b>Register an Midollar.com Account</b> You have to AGREE to our <a href="?a=rules">Terms and Conditions</a> to proceed. Please fill your accurate information to avoid account suspension in the future. Please choose at least a 6-digit PIN, which will be used for withdrawal requests and account changes. Keep your password and PIN number securely from unauthorized access. Remember these are for your own security and changing your Transaction Code (PIN) would take you some time and needs you to provide your security question and answer, so use a memorable PIN and keep a note of it.
+        <b>Register an {$app_site} Account</b> You have to AGREE to our <a href="?a=rules">Terms and Conditions</a> to proceed. Please fill your accurate information to avoid account suspension in the future. Please choose at least a 6-digit PIN, which will be used for withdrawal requests and account changes. Keep your password and PIN number securely from unauthorized access. Remember these are for your own security and changing your Transaction Code (PIN) would take you some time and needs you to provide your security question and answer, so use a memorable PIN and keep a note of it.
         <br>
         <br>
         <b>Create your e-currency account.</b> Create an account in one of the following websites:
@@ -21,7 +21,7 @@
             <li>Perfectmoney has the same kind of features, even you can directly wire your money to them and fund your account. More info is available in their website.</li>
         </ul>
         <br>
-        <b>Deposit to Midollar.com Account.</b> Please login to your Midollar.com Account, in your right menu, you can see "Make Deposit" option.
+        <b>Deposit to {$app_site} Account.</b> Please login to your {$app_site} Account, in your right menu, you can see "Make Deposit" option.
         <br> Choose your plan, amount to spend and your desired e-currency, then click "Spend".
         <br>
         <br> On the next page you need to "confirm" your deposit, and after clicking on the button you will be redirected to your payment processor website. Follow the onscreen instructions and "Return" to our website from their website. Once you are back, the payment should be in your account as "Active Deposit". Sometimes, due to server issues, connection issues,... it may not happen instantly but don't worry, we are just a support ticket, email, live chat away! Send us your transaction details, and we will attend to you as soon as possible.

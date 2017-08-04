@@ -4,7 +4,7 @@
 <div id="ws-promote">
     <div id="ws-refurl">
         <p>Referral Link :</p>
-        <a href="http://www.coinedge.biz/?ref=world" target="blank">http://www.coinedge.biz/?ref=world</a>
+        <a href="/?ref=world" target="blank">{$app_url}/?ref=world</a>
     </div>
     <div id="ws-reftool">
     </div>

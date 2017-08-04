@@ -15,7 +15,7 @@
                 <li><a href=?a=news>News</a> | </li>
                 <li><a href=?a=rules>Terms</a></li>
             </ul>
-            <p>Copyright 2017 <a href="?a=home">Coinedge.biz</a> - All rights reserved.</p>
+            <p>Copyright 2017 <a href="?a=home">{$app_site}</a> - All rights reserved.</p>
         </div>
         <a href="?a=home" class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
     </div>
