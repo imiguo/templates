@@ -1,0 +1,60 @@
+{include file="header.tpl"}
+<h3>FAQ</h3>
+<div class="hd_faqtitle">How can I invest with Coinedge.biz ?</div>
+<div class="hd_faqbody"> To make a investment you must first become a member of Coinedge.biz. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup. </div>
+<div class="hd_faqtitle">What are the payment processors you accept?</div>
+<div class="hd_faqbody"> As shown in our website, we only accept the following payment processors:
+    <br> 1.) <a href="https://www.perfectmoney.is/">PerfectMoney</a>
+    <br> 2.) <a href="https://www.payeer.com/">Payeer</a>
+    <br> 3.) <a href="https://www.blockchain.info/">Bitcoin</a>
+    <br>
+</div>
+<div class="hd_faqtitle">How do I open my Coinedge.biz Account?</div>
+<div class="hd_faqbody"> It's quite easy and convenient. Follow this <a href="indexcca3.html?a=signup">link</a>, fill in the registration form and then press "Register". </div>
+<div class="hd_faqtitle">What is your minimum deposit?</div>
+<div class="hd_faqbody"> The required minimum deposit amount is just $10.00 (US Dollars). </div>
+<div class="hd_faqtitle">How can I withdraw funds?</div>
+<div class="hd_faqbody"> Login to your account using your username and password and check the Withdraw section. </div>
+<div class="hd_faqtitle">How long does it take for my deposit to be added to my account?</div>
+<div class="hd_faqbody"> Your account will be updated as fast, as you deposit. </div>
+<div class="hd_faqtitle">How can I change my e-mail address or password?</div>
+<div class="hd_faqbody"> Log into your Coinedge.biz account and click on the "Edit Account". You can change your e-mail address and password there. </div>
+<div class="hd_faqtitle">What if I can't log into my account because I forgot my password?</div>
+<div class="hd_faqbody"> Click <a href="index8083.html?a=forgot_password">forgot password </a> link, type your username or e-mail and you'll receive your account information. </div>
+<div class="hd_faqtitle">Does profit paid directly to my currency account?</div>
+<div class="hd_faqbody"> No, profits are gathered on your Coinedge.biz account and you can withdraw them anytime. </div>
+<div class="hd_faqtitle">How do you calculate the interest on my account?</div>
+<div class="hd_faqbody"> Depending on each plan. Interest on your Coinedge.biz account is acquired according to maturity of your plan and credited to your available balance.</div>
+<div class="hd_faqtitle">Can I do a direct deposit from my account balance?</div>
+<div class="hd_faqbody"> Yes! To make a deposit from your Coinedge.biz account balance. Simply login into your members account and click on Make Deposit and select the Deposit from Account Balance Radio button. </div>
+<div class="hd_faqtitle">Can I make an additional deposit to Coinedge.biz account once it has been opened?</div>
+<div class="hd_faqbody"> Yes, you can make as many deposit as you wish but all transactions are handled separately. </div>
+<div class="hd_faqtitle">After I make a withdrawal request, when will the funds be available on my e-currency account?</div>
+<div class="hd_faqbody"> Processing withdrawals are done instantly. This, being a process which requires NO human intervention. </div>
+<div class="hd_faqtitle">How many accounts can I have?</div>
+<div class="hd_faqbody">You can register as many accounts with same IP address as you see fit.</div>
+<div class="hd_faqtitle">Do I need to send some documents to verify my account?</div>
+<div class="hd_faqbody">Your use of investment service is anonymous.</div>
+<div class="hd_faqtitle">How can I change my password?</div>
+<div class="hd_faqbody"> You can change your password directly from your member area by editing it in your personal profile. </div>
+<div class="hd_faqtitle">Can I lose money?</div>
+<div class="hd_faqbody"> There is a risk involved with investing in all high yield investment programs. However, there are a few simple ways that can help you to reduce the risk of losing more than you can afford to. First, align your investments with your financial goals, in other words, keep the money you may need for the short-term out of more aggressive investments, reserving those investment funds for the money you intend to raise over the long-term. It's very important for you to know that we are real traders and that we invest members' funds on major investments firms </div>
+<div class="hd_faqtitle">How can I check my account balances?</div>
+<div class="hd_faqbody"> You can access the account information 24 hours, seven days a week over the Internet. </div>
+<div class="hd_faqtitle">Will you share my info to others?</div>
+<div class="hd_faqbody"> No, we will never share your information to others.</div>
+<div class="hd_faqtitle">Can I withdraw PerfectMoney if my earnings are in Payeer?</div>
+<div class="hd_faqbody"> No, you can only withdraw the balances in your account in the e-currency that the balance is.</div>
+<div class="hd_faqtitle">What is the minimum amount for withdrawal?</div>
+<div class="hd_faqbody">You can withdraw any amount that exceeds the $0.01</div>
+<div class="hd_faqtitle">Does Coinedge.biz offer any referral program?</div>
+<div class="hd_faqbody">Yes we do, our referral program is a great way for everyone to earn, you may earn 4% commission from each deposit made by people you refer to us.</div>
+<div class="hd_faqtitle">Are there promotional material?</div>
+<div class="hd_faqbody">Yes, all registered member of Coinedge.biz has a referral link, also you can use your ref id on our banner url during promotion.</div>
+<div class="hd_faqtitle">Are earning 7 days a week?</div>
+<div class="hd_faqbody">Yes, interest is earned in your account 7 days a week and 365 days a year.</div>
+<div class="hd_faqtitle">Do you charge any withdrawal fee or penalty?</div>
+<div class="hd_faqbody">No, we believe that you MUST be paid in full, the only fees that your transaction will incur are the mandatory fees of each payment processor which is not under our control.</div>
+<div class="hd_faqtitle">Do I need to have own deposit in order to receive a commission from referrals?</div>
+<div class="hd_faqbody">No, your own deposit is not required.</div>
+{include file="footer.tpl"}

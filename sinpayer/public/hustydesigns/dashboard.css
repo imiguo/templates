@@ -1,0 +1,363 @@
+@charset "utf-8";
+ 
+#ws-round  {
+    display: table;
+     margin: 0 auto;
+}
+
+.ws-left  {
+    float: left !important;
+    ;
+}
+
+.ws-right  {
+    float: right !important;
+    ;
+}
+
+.br-none  {
+    border: none !important;
+}
+
+.pano  {
+    padding: 0 !important;
+}
+
+.mano  {
+    margin:  0 !important;
+}
+
+
+.fontx  {
+    color: #106637;
+     font-weight: 700;
+     font-size: 15px;
+     text-transform: uppercase;
+     line-height: 72px;
+}
+
+#w-account  {
+    width: 100%;
+     overflow: hidden;
+     background: #DBDBDB;
+     padding: 20px 0 18px;
+     font-family:  'Roboto',  sans-serif;
+}
+
+#ws-account  {
+    width: 100%;
+     overflow: hidden;
+     padding: 0 23px 10px;
+}
+
+#ws-account *  {
+    -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+#ws-accmenu  {
+    float: left;
+     width: 268px;
+     padding-bottom: 45px;
+     background-color: #BFA511;
+     -moz-box-shadow: 0px 4px 0px rgba(191, 128, 17, 1);
+     -webkit-box-shadow: 0px 4px 0px rgba(191, 128, 17, 1);
+    box-shadow: 0px 4px 0px rgba(191, 128, 17, 1);
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+}
+
+#ws-avatar  {
+    width: 100%;
+     height: 159px;
+     text-align: center;
+     padding-top: 37px;
+}
+
+#ws-menus  {
+    width: 100%;
+     overflow: hidden;
+     padding-left: 27px;
+}
+
+#ws-menus ul  {
+    width: 100%;
+}
+
+#ws-menus ul li  {
+    width: 100%;
+}
+
+#ws-menus ul li a  {
+    width: 217px;
+     display: block;
+     color: #fff;
+     line-height: 56px;
+     font-size: 15px;
+     font-weight: 400;
+     background-position: 23px center;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+     padding-left: 20px;
+	 transform: rotateX(-90deg);
+	-o-transform: rotateX(-90deg);
+	-ms-transform: rotateX(-90deg);
+	-webkit-transform: rotateX(-90deg);
+    transform-origin: 0 0 0;
+	-ms-transform-origin: 0 0 0;
+	-webkit-transform-origin: 0 0 0;
+    transition: all 0.3s ease-in-out; 
+	-webkit-transition: all 0.3s ease-in-out;
+
+opacity: 1;
+    transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	-webkit-transform: rotateX(0deg);
+	transition-delay: 0.2s;
+	-webkit-transition-delay: 0.2s;
+
+}
+
+#ws-menus ul li a:hover  {
+    background-color: #AF960E;
+     -moz-box-shadow: 1px 1px 0px rgba(197, 170, 22, 1) , inset 1px 1px 2px rgba(0, 0, 0, 0.08);
+     -webkit-box-shadow: 1px 1px 0px rgba(197, 170, 22, 1) , inset 1px 1px 2px rgba(0, 0, 0, 0.08);
+     box-shadow: 1px 1px 0px rgba(197, 170, 22, 1) , inset 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+#ws-myaccount  {
+    float: right;
+     width: 800px;
+     height: auto;
+     background-color: #F0F0F0;
+     border: 1px solid rgba(0, 0, 0, 0.16);
+     -moz-box-shadow: 0px 4px 0px rgba(218, 218, 218, 1);
+     -webkit-box-shadow: 0px 4px 0px rgba(218, 218, 218, 1);
+     box-shadow: 0px 4px 0px rgba(218, 218, 218, 1);
+     padding: 25px 36px 36px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -o-border-radius: 3px;
+     border-radius: 3px;
+padding-right:80px;
+}
+#ws-promote  {
+    background: url(images/reff-link.png) no-repeat;
+     background-position: 17px center;
+     padding-left: 65px;
+     background-color: #434343;
+     width: 100%;
+     height: 60px;
+     -moz-box-shadow: 4px 0px 2px rgba(191, 165, 17, 1);
+     -webkit-box-shadow: 4px 0px 2px rgba(191, 165, 17, 1);
+     box-shadow: 4px 0px 2px rgba(191, 165, 17, 1);
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -o-border-radius: 3px;
+     border-radius: 3px;
+     overflow: hidden;
+}
+
+#ws-refurl  {
+    float: left;
+}
+
+#ws-refurl p  {
+    color: #FFFEFE;
+     font-weight: 700;
+     margin: 0;
+     padding: 13px 0 0;
+     font-size: 14px;
+}
+
+#ws-refurl a  {
+    color: #F1F1F1;
+    font-weight: 400;
+     margin: 0;
+     padding: 1px 10px 5px 0;
+     font-size: 14px;
+     display: block;
+}
+
+#ws-refurl a:hover  {
+    color: #bfa511;
+}
+
+#ws-reftool  {
+    float: right;
+     padding: 17px 17px 0 0;
+}
+
+#ws-reftool a  {
+    background-color: #BFA511;
+     width: 124px;
+     line-height: 24px;
+     border: 1px solid rgba(12, 64, 97, 0.16);
+     color: #fff;
+     text-transform: uppercase;
+     text-align: center;
+     font-size: 12px;
+     font-weight: 700;
+     -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+     -o-border-radius: 5px;
+     border-radius: 5px;
+     display: block;
+}
+
+#ws-reftool a:hover  {
+    background: #FFC61B;
+}
+
+#ws-buttons  {
+    width: 100%;
+     overflow: hidden;
+     padding: 20px 0 36px;
+}
+
+#ws-buttons a  {
+    background-color: #434343;
+     width: 161px;
+     height: 114px;
+     border: 1px solid rgba(0, 0, 0, 0.16);
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -o-border-radius: 3px;
+     border-radius: 3px;
+     text-align: center;
+     font-size: 14px;
+     font-weight: 400;
+     color: #fff;
+     background-position: center 19px;
+     padding-top: 73px;
+}
+
+.acc-aa  {
+    float: left;
+     margin-right: 13px;
+     background: url(images/withdraw-icon.png) no-repeat;
+}
+
+.acc-bb  {
+    float: left;
+     margin-right: 13px;
+     background: url(images/deposit-icon.png) no-repeat;
+}
+
+.acc-cc  {
+    float: left;
+     background: url(images/reff-icon.png) no-repeat;
+}
+.acc-dd  {
+    float: right;
+     background: url(images/settings-bg.png) no-repeat;
+}
+
+#ws-buttons a:hover  {
+    background-color: #bfa511;
+}
+
+#ws-reward  {
+    width: 100%;
+     padding-bottom: 30px;
+     overflow: hidden;
+}
+
+.ws-reward  {
+    width: 157px;
+     height: 160px;
+     background: url(https://coinedge.biz/hustydesigns/images/round-icon.png) no-repeat;
+     text-align: center;
+}
+
+.ws-space  {
+    float: left;
+     margin-right: 18px;
+}
+
+.ws-reward img  {
+    padding: 19px 0 10px;
+}
+
+.ws-reward h2  {
+    margin: 0;
+     line-height: 25px;
+     font-size: 29px;
+     padding-bottom: 2px;
+     color: #BFA512;
+     font-weight: 700;
+     text-transform: uppercase;
+}
+
+.ws-reward  p  {
+    margin: 0;
+     line-height: 20px;
+     font-size: 13px;
+     color: #797979;
+     font-weight: 300;
+}
+
+#ws-user  {
+    background: url(https://coinedge.biz/hustydesigns/images/account-icon02.png) no-repeat;
+     background-position: 43px center;
+     background-color: #fff;
+     width: 100%;
+     height: 142px;
+     border: 1px solid rgba(0, 0, 0, 0.16);
+     overflow: hidden;
+     -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+     border-radius: 4px;
+     padding: 7px 29px 0 133px;
+}
+
+.ws-detailed  {
+    width: 100%;
+     height: 43px;
+     line-height: 43px;
+     overflow: hidden;
+     border-bottom: 1px solid #E8E8E8;
+}
+
+#ws-input  {
+    float: left;
+     color: #949494;
+     font-size: 14px;
+     font-weight: 400;
+     padding-left: 21px;
+}
+
+#ws-output  {
+    float: right;
+     color: #BFA512;
+     font-size: 14px;
+     font-weight: 400;
+     padding-right: 14px;
+}
+.customloggedininput {
+background: url("graphics/input.png") repeat; 
+border-right: 4px solid #d1b410; border-radius: 3px; 
+margin: 0 0 10px; 
+ line-height: 71px; font-family: 'Roboto', sans-serif; font-size: 17px; color: #FFF; padding: 0 0 0 36px;
+}
+.customloggedininput p {
+display:inline;
+float:right;
+margin-right:25px;
+font-size:30px;
+color:#d1b410;
+font-weight:800;
+}
+.customloggedinbtn {
+display: block; text-align:center;font-family: 'Roboto', sans-serif; background: url("graphics/btn2.png") repeat-x; border: 1px solid #969696; border-radius: 3px; font-size: 25px; font-weight: 700; color: #2c2c2c; text-shadow: 1px 1px 1px #ffda0b; width: 179px; line-height: 56px; text-transform: uppercase; margin: 25px auto 0;
+}
