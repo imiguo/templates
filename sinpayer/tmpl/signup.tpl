@@ -1,13 +1,4 @@
 {include file="header.tpl"}
-<style>
-.hdcont h3:first-of-type {
-    margin-top: -147px !Important;
-    color: #fff;
-    font-weight: 400;
-    font-size: 35px;
-}
-</style>
-<link href="./hustydesigns/dashboard.css" rel="stylesheet" type="text/css" />
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">

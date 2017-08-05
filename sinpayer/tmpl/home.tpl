@@ -3,10 +3,10 @@
 
 <head>
     <title>{$app_full_name}</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="hustydesigns/hd_animate.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
+    <link href="hustydesigns/style.css?tag={$tag}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="hustydesigns/hd_animate.css?tag={$tag}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css?tag={$tag}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
     #style-1::-webkit-scrollbar-track {
@@ -45,7 +45,7 @@
                     <li class="wow bounceIn" data-wow-delay="0.5s"><a href=?a=support>Support</a></li>
                 </ul>
                 <div class="amk_intro amk_left">
-                    <a href=?a=home class="amk_logo"><img src="hustydesigns/graphics/logo.png" /></a>
+                    <a href=?a=home class="amk_logo"><img src="hustydesigns/graphics/logo.png?tag={$tag}" /></a>
                     <h1>FOREVER INCOME</h1>
                     <p>LET MONEY WORK FOR YOU!</p>
                     {if $userinfo.logged != 1}
@@ -105,7 +105,7 @@
         }
         </style>
 
-        <link href="./hustydesigns/dashboard.css" rel="stylesheet" type="text/css" />
+        <link href="./hustydesigns/dashboard.css?tag={$tag}" rel="stylesheet" type="text/css" />
         {/if}
         <div class="amk_revshare">
             <div class="amk_wrap">
@@ -166,12 +166,12 @@
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="hustydesigns/popup/reveal.css">
-    <link rel="stylesheet" href="calc/css/calc.css" type="text/css" />
-    <link rel="stylesheet" href="calc/css/jquery.bxslider.css" />
-    <link rel="stylesheet" href="calc/css/jquery-ui.min.css" type="text/css" />
-    <link rel="stylesheet" href="calc/css/main.css" type="text/css" />
-    <link rel="stylesheet" href="calc/css/modal.css" type="text/css" />
+    <link rel="stylesheet" href="hustydesigns/popup/reveal.css?tag={$tag}">
+    <link rel="stylesheet" href="calc/css/calc.css?tag={$tag}" type="text/css" />
+    <link rel="stylesheet" href="calc/css/jquery.bxslider.css?tag={$tag}" />
+    <link rel="stylesheet" href="calc/css/jquery-ui.min.css?tag={$tag}" type="text/css" />
+    <link rel="stylesheet" href="calc/css/main.css?tag={$tag}" type="text/css" />
+    <link rel="stylesheet" href="calc/css/modal.css?tag={$tag}" type="text/css" />
     <link rel="stylesheet" type="text/css" href="calc/source/jquery.fancybox8cbb.css?v=2.1.5" media="screen" />
     <div class="none">
         <div id="calculator">
@@ -257,13 +257,13 @@
     <div id="amk_live">
         <div class="amk_wrap">
             <div class="featured_box">
-                <span class="icon"><img src="hustydesigns/graphics/insta.png" /></span>
+                <span class="icon"><img src="hustydesigns/graphics/insta.png?tag={$tag}" /></span>
                 <h3>Instant Withdraw</h3></div>
             <div class="featured_box">
-                <span class="icon"><img src="hustydesigns/graphics/ddos.png" /></span>
+                <span class="icon"><img src="hustydesigns/graphics/ddos.png?tag={$tag}" /></span>
                 <h3>DDOS-GUARD Protection</h3></div>
             <div class="featured_box">
-                <span class="icon"><img src="hustydesigns/graphics/team.png" /></span>
+                <span class="icon"><img src="hustydesigns/graphics/team.png?tag={$tag}" /></span>
                 <h3>Professional Team</h3></div>
         </div>
     </div>
@@ -277,14 +277,14 @@
     <div class="amk_banklavel-wrap">
         <div class="amk_banklavel">
             <h3>Bank Level Security</h3>
-            <img src="hustydesigns/graphics/sitelock.png" />
-            <img src="hustydesigns/graphics/comodo.png" />
-            <img src="hustydesigns/graphics/geotrust.png" />
-            <img src="hustydesigns/graphics/avg.png" />
-            <img src="hustydesigns/graphics/trust-e.png" />
-            <img src="hustydesigns/graphics/Macffee.png" />
-            <img src="hustydesigns/graphics/DnB.png" />
-            <img src="hustydesigns/graphics/companyhouse.png" />
+            <img src="hustydesigns/graphics/sitelock.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/comodo.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/geotrust.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/avg.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/trust-e.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/Macffee.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/DnB.png?tag={$tag}" />
+            <img src="hustydesigns/graphics/companyhouse.png?tag={$tag}" />
         </div>
     </div>
     <div id="amk_about">
@@ -293,13 +293,13 @@
                 <a href=# class="amk_designed"></a>
                 <div class="amk_payments">
                     <h3>Payment Methods</h3>
-                    <img src="hustydesigns/graphics/pay-btc.png" />
-                    <img src="hustydesigns/graphics/pay-pay.png" />
-                    <img src="hustydesigns/graphics/pay-pm.png" />
+                    <img src="hustydesigns/graphics/pay-btc.png?tag={$tag}" />
+                    <img src="hustydesigns/graphics/pay-pay.png?tag={$tag}" />
+                    <img src="hustydesigns/graphics/pay-pm.png?tag={$tag}" />
                 </div>
             </div>
             <div class="amk_box2">
-                <a target="_blank" href="cert.pdf"><img src="hustydesigns/graphics/co.png" />
+                <a target="_blank" href="cert.pdf"><img src="hustydesigns/graphics/co.png?tag={$tag}" />
                 <div class="amk_cobox">
                     <h3>{$app_full_name}</h3>
                     <ul>
@@ -328,18 +328,18 @@
                 </ul>
                 <p>Copyright 2017 <a href=?a=home>{$app_site}</a> - All rights reserved.</p>
             </div>
-            <a href=?a=home class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
+            <a href=?a=home class="amk_right"><img src="hustydesigns/graphics/ft-logo.png?tag={$tag}" /></a>
         </div>
     </div>
-    <script src="//code.jquery.com/jquery-1.7.min.js"></script>
-    <script src="hustydesigns/popup/jquery.reveal.js"></script>
-    <script src="calc/js/html5.js"></script>
-    <script src="calc/js/scripts.js"></script>
-    <script src="calc/js/jquery.bxslider.min.js"></script>
-    <script src="calc/js/jquery-ui.js"></script>
-    <script src="calc/source/jquery.fancybox.js"></script>
-    <script src="hustydesigns/hd_animate.js"></script>
-    <script src="jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.7.min.js?tag={$tag}"></script>
+    <script src="hustydesigns/popup/jquery.reveal.js?tag={$tag}"></script>
+    <script src="calc/js/html5.js?tag={$tag}"></script>
+    <script src="calc/js/scripts.js?tag={$tag}"></script>
+    <script src="calc/js/jquery.bxslider.min.js?tag={$tag}"></script>
+    <script src="calc/js/jquery-ui.js?tag={$tag}"></script>
+    <script src="calc/source/jquery.fancybox.js?tag={$tag}"></script>
+    <script src="hustydesigns/hd_animate.js?tag={$tag}"></script>
+    <script src="jquery.min.js?tag={$tag}"></script>
     <script>
     wow = new WOW({
         animateClass: 'animated',

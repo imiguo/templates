@@ -3,11 +3,11 @@
 
 <head>
     <title>{$app_full_name}</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="hustydesigns/hdcustomcss.css">
-    <link rel="stylesheet" href="hustydesigns/hd_animate.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
+    <link href="hustydesigns/style.css?tag={$tag}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="hustydesigns/hdcustomcss.css?tag={$tag}">
+    <link rel="stylesheet" href="hustydesigns/hd_animate.css?tag={$tag}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css?tag={$tag}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
     #style-1::-webkit-scrollbar-track {
@@ -40,7 +40,7 @@
             </a>
             <div class="amk_wrap">
                 <div class="amk_intro amk_left" style="margin-left:300px;height:70px;">
-                    <a href="?a=home" class="amk_logo"><img src="hustydesigns/graphics/logo.png" /></a>
+                    <a href="?a=home" class="amk_logo"><img src="hustydesigns/graphics/logo.png?tag={$tag}" /></a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                     <li class="wow bounceIn" data-wow-delay="0.5s"><a href=?a=support>Support</a></li>
                 </ul>
                 <div class="amk_intro amk_left">
-                    <a href="?a=home" class="amk_logo"><img src="hustydesigns/graphics/logo.png" /></a>
+                    <a href="?a=home" class="amk_logo"><img src="hustydesigns/graphics/logo.png?tag={$tag}" /></a>
                     <h1>FOREVER INCOME</h1>
                     <p>LET MONEY WORK FOR YOU!</p>
                     {if $userinfo.logged != 1}

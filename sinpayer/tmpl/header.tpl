@@ -10,14 +10,14 @@
 }
 </style>
 
-<link href="./hustydesigns/dashboard.css" rel="stylesheet" type="text/css" />
+<link href="./hustydesigns/dashboard.css?tag={$tag}" rel="stylesheet" type="text/css" />
 
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">
             <div id="ws-accmenu">
                 <div id="ws-avatar">
-                    <img src="./hustydesigns/images/account-icon01.png" />
+                    <img src="./hustydesigns/images/account-icon01.png?tag={$tag}" />
                 </div>
                 <div id="ws-menus">
                     <ul>

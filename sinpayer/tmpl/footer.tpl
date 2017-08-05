@@ -17,11 +17,11 @@
             </ul>
             <p>Copyright 2017 <a href="?a=home">{$app_site}</a> - All rights reserved.</p>
         </div>
-        <a href="?a=home" class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
+        <a href="?a=home" class="amk_right"><img src="hustydesigns/graphics/ft-logo.png?tag={$tag}" /></a>
     </div>
 </div>
-<script src="jquery.min.js"></script>
-<script src="hustydesigns/hd_animate.js"></script>
+<script src="jquery.min.js?tag={$tag}"></script>
+<script src="hustydesigns/hd_animate.js?tag={$tag}"></script>
 <script>
 wow = new WOW({
     animateClass: 'animated',
