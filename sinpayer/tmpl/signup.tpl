@@ -14,7 +14,7 @@
             <h3>Registration at {$app_site}</h3>
             <br>
             <script language=javascript>
-            function checkform() {
+            function check_reg_form() {
                 if (document.regform.fullname.value == '') {
                     alert("Please enter your full name!");
                     document.regform.fullname.focus();
@@ -75,7 +75,7 @@
                 return IsNumber;
             }
             </script>
-            <form method=post onsubmit="return checkform()" name="regform">
+            <form method=post onsubmit="return check_reg_form()" name="regform">
                 <input type=hidden name=a value="signup">
                 <input type=hidden name=action value="signup">
                 <table cellspacing=0 cellpadding=2 border=0>
@@ -107,7 +107,7 @@
                     <tr>
                         <td>Your PerfectMoney Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=pay_account[18] value="{$frm.perfectmoney|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=perfectmoney value="{$frm.perfectmoney|escape:"quotes"}">
                         </td>
                     </tr>
                     {/if}
@@ -115,7 +115,7 @@
                     <tr>
                         <td>Your Payeer Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=pay_account[43] value="{$frm.payeer|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=payeer value="{$frm.payeer|escape:"quotes"}">
                         </td>
                     </tr>
                     {/if}
@@ -123,7 +123,7 @@
                     <tr>
                         <td>Your Bitcoin Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=pay_account[48] value="{$frm.bitcoin|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=bitcoin value="{$frm.bitcoin|escape:"quotes"}">
                         </td>
                     </tr>
                     {/if}

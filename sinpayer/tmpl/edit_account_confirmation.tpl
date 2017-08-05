@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 
 <h3>Confirm Your Identity</h3><br><br>
-<form action="index.php" method=post name=editform>
+<form method=post name=editform>
 <input type=hidden name=a value=edit_account>
 <input type=hidden name=action value=edit_account>
 <input type=hidden name=action2 value=confirm>

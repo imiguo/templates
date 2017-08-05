@@ -87,7 +87,7 @@ function checkform() {
 {/literal}
 
 <h3>Your account</h3><br><br>
-<form action="index.php" method=post onsubmit="return checkform()" name=editform>
+<form method=post onsubmit="return checkform()" name=editform>
 <input type=hidden name=a value=edit_account>
 <input type=hidden name=action value=edit_account>
 {if $frm.say eq 'changed'}
@@ -156,11 +156,25 @@ Your account data has been updated successfully.<br><br>
 </tr>
 <tr>
  <td>PerfectMoney Account:</td>
- <td>{$userinfo.perfectmoney_account}</td>
+ <td>
+ <input type=text name=perfectmoney_account value='{$userinfo.perfectmoney_account|escape:"quotes"}' class=inpts size=30>
+ </td>
+</tr>
+<tr>
+ <td>Payeer Account:</td>
+ <td>
+ <input type=text name=payeer_account value='{$userinfo.payeer_account|escape:"quotes"}' class=inpts size=30>
+ </td>
+</tr>
+<tr>
+ <td>Bitcoin Account:</td>
+ <td>
+ <input type=text name=bitcoin_account value='{$userinfo.bitcoin_account|escape:"quotes"}' class=inpts size=30>
+ </td>
 </tr>
 <tr>
  <td>Your Full Name:</td>
- <td><input type=text name=fullname value='{$userinfo.name|escape:"quotes"}' class=inpts size=30>
+ <td><input type=text name=fullname value='{$userinfo.name|escape:"quotes"}' class=inpts size=30></td>
 </tr>
 {if $settings.use_user_location}
 <tr>
