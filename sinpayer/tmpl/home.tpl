@@ -310,7 +310,7 @@
                 </div>
             </div>
             <div class="amk_box2">
-                <a target="_blank" href="cert.pdf">"><img src="hustydesigns/graphics/co.png" />
+                <a target="_blank" href="cert.pdf"><img src="hustydesigns/graphics/co.png" />
                 <div class="amk_cobox">
                     <h3>{$app_full_name}</h3>
                     <ul>
