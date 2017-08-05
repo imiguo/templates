@@ -3,12 +3,9 @@
 
 <head>
     <title>{$app_full_name}</title>
-    <base #href="">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="hustydesigns/hd_animate.css">
-    <script type="text/javascript" src="hustydesigns/hd_animate.js"></script>
-    <script src="jquery.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -170,14 +167,6 @@
         </div>
     </div>
     <link rel="stylesheet" href="hustydesigns/popup/reveal.css">
-    <script type="text/javascript" src="../code.jquery.com/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="hustydesigns/popup/jquery.reveal.js"></script>
-    <script src="calc/js/html5.js" type="text/javascript"></script>
-    <script src="calc/js/scripts.js" type="text/javascript"></script>
-    <script src="calc/js/jquery.bxslider.min.js" type="text/javascript"></script>
-    <script src="calc/js/jquery-ui.js" type="text/javascript"></script>
-    <script type="text/javascript" src="calc/source/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="calc/source/helpers/jquery.fancybox-media.html"></script>
     <link rel="stylesheet" href="calc/css/calc.css" type="text/css" />
     <link rel="stylesheet" href="calc/css/jquery.bxslider.css" />
     <link rel="stylesheet" href="calc/css/jquery-ui.min.css" type="text/css" />
@@ -342,13 +331,20 @@
             <a href=?a=home class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
         </div>
     </div>
-
+    <script src="//code.jquery.com/jquery-1.7.min.js"></script>
+    <script src="hustydesigns/popup/jquery.reveal.js"></script>
+    <script src="calc/js/html5.js"></script>
+    <script src="calc/js/scripts.js"></script>
+    <script src="calc/js/jquery.bxslider.min.js"></script>
+    <script src="calc/js/jquery-ui.js"></script>
+    <script src="calc/source/jquery.fancybox.js"></script>
+    <script src="hustydesigns/hd_animate.js"></script>
+    <script src="jquery.min.js"></script>
     <script>
     wow = new WOW({
         animateClass: 'animated',
         offset: 100,
         callback: function(box) {
-            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
         }
     });
     wow.init();

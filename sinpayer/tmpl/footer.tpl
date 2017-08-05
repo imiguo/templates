@@ -20,6 +20,8 @@
         <a href="?a=home" class="amk_right"><img src="hustydesigns/graphics/ft-logo.png" /></a>
     </div>
 </div>
+<script src="jquery.min.js"></script>
+<script src="hustydesigns/hd_animate.js"></script>
 <script>
 wow = new WOW({
     animateClass: 'animated',
@@ -28,6 +30,26 @@ wow = new WOW({
     }
 });
 wow.init();
+</script>
+<script>
+$(document).ready(function() {
+    $(".hdopen").click(function() {
+        $(".addmenu").slideDown();
+    });
+    $(".hdclose").click(function() {
+        $(".addmenu").slideUp();
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $(".hdopensmall").click(function() {
+        $(".addmenusmall").slideDown();
+    });
+    $(".hdclosesmall").click(function() {
+        $(".addmenusmall").slideUp();
+    });
+});
 </script>
 </body>
 

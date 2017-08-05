@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <base #href="">
     <title>{$app_full_name}</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="hustydesigns/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="hustydesigns/hdcustomcss.css">
     <link rel="stylesheet" href="hustydesigns/hd_animate.css">
-    <script type="text/javascript" src="hustydesigns/hd_animate.js"></script>
-    <script src="jquery.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -37,26 +34,6 @@
 <body id="style-1" class="scrollbar">
     <!-- For top pages to have no sidebar -->
     <div id="amk_top">
-        <script>
-        $(document).ready(function() {
-            $(".hdopen").click(function() {
-                $(".addmenu").slideDown();
-            });
-            $(".hdclose").click(function() {
-                $(".addmenu").slideUp();
-            });
-        });
-        </script>
-        <script>
-        $(document).ready(function() {
-            $(".hdopensmall").click(function() {
-                $(".addmenusmall").slideDown();
-            });
-            $(".hdclosesmall").click(function() {
-                $(".addmenusmall").slideUp();
-            });
-        });
-        </script>
         <div class="amk_slider addmenusmall" style="display:none;">
             <a class="hdclosesmall hdopen floatcloseopenbtn  tooltip"><i class="material-icons  md-48">keyboard_arrow_down</i>
             <span class="tooltiptext">Click to Open menu</span>
