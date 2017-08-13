@@ -75,7 +75,6 @@ function checkform() {
         <tr>
             <td>&nbsp;</td>
             <td>
-                <input type="hidden" name="support_token" value="{$token}">
                 <input type=submit value="Send" class=sbmt>
             </td>
         </tr>

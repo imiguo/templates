@@ -153,7 +153,6 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
-                            <input type="hidden" name="signup_token" value="{$token}">
                             <input type=submit value="Register" class=sbmt>
                         </td>
                     </tr>

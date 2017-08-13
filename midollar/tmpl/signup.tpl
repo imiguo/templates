@@ -102,8 +102,8 @@ Fill the form available below to open an account with Midollar. Please make sure
   var IsNumber=true;
   var Char;
   if (sText == '') return false;
-  for (i = 0; i < sText.length && IsNumber == true; i++) { 
-    Char = sText.charAt(i); 
+  for (i = 0; i < sText.length && IsNumber == true; i++) {
+    Char = sText.charAt(i);
     if (ValidChars.indexOf(Char) == -1) {
       IsNumber = false;
     }
@@ -112,10 +112,10 @@ Fill the form available below to open an account with Midollar. Please make sure
  }
  </script>
  {/literal}
- 
+
  {if $errors}
   <ul style="color:red">
-  {section name=e loop=$errors} 
+  {section name=e loop=$errors}
    {if $errors[e] eq 'full_name'}
     <li>Please enter your full name!
    {/if}
@@ -138,12 +138,12 @@ Fill the form available below to open an account with Midollar. Please make sure
     <li>Please enter your username!
    {/if}
    {if $errors[e] eq 'username_exists'}
-    <li>Sorry, such user already exists! Please try another username. 
+    <li>Sorry, such user already exists! Please try another username.
    {/if}
    {if $errors[e] eq 'email_exists'}
-    <li>Sorry, such email already exists! Please try another email. 
-   {/if} 
-   {if $errors[e] eq 'password'} 
+    <li>Sorry, such email already exists! Please try another email.
+   {/if}
+   {if $errors[e] eq 'password'}
     <li>Please enter a password!
    {/if}
    {if $errors[e] eq 'password_confirm'}
@@ -151,23 +151,23 @@ Fill the form available below to open an account with Midollar. Please make sure
    {/if}
    {if $errors[e] eq 'password_too_small'}
     <li>The password you provided is too small, please enter at least {$settings.min_user_password_length} characters!
-   {/if} 
-   {if $errors[e] eq 'transaction_code'} 
+   {/if}
+   {if $errors[e] eq 'transaction_code'}
     <li>Please enter the Transaction Code!
-   {/if} 
-   {if $errors[e] eq 'transaction_code_confirm'} 
+   {/if}
+   {if $errors[e] eq 'transaction_code_confirm'}
     <li>Please check your Transaction Code!
    {/if}
    {if $errors[e] eq 'transaction_code_too_small'}
     <li>The Transaction Code you provided is too small, please enter at least {$settings.min_user_password_length} characters!
    {/if}
-   {if $errors[e] eq 'transaction_code_vs_password'} 
+   {if $errors[e] eq 'transaction_code_vs_password'}
     <li>The Transaction Code should differ from the Password!
    {/if}
-   {if $errors[e] eq 'egold'} 
+   {if $errors[e] eq 'egold'}
     <li>Please enter your e-gold account number!
    {/if}
-   {if $errors[e] eq 'email'} 
+   {if $errors[e] eq 'email'}
     <li>Please enter your e-mail!
    {/if}
    {if $errors[e] eq 'agree'}
@@ -175,18 +175,18 @@ Fill the form available below to open an account with Midollar. Please make sure
    {/if}
    {if $errors[e] eq 'turing_image'}
     <li>Enter the verification code as it is shown in the corresponding box.
-   {/if} 
+   {/if}
    {if $errors[e] eq 'no_upline'}
     <li>The system requires an upline to register. {if $settings.get_rand_ref}You have to be agreed to random one or found a referral link in the net.{/if}
-   {/if} 
+   {/if}
    {if $errors[e] eq 'ip_exists_in_database'}
     <li>Your IP already exists in our database. Sorry, but registration impossible.
    {/if}
 
-   <br> 
+   <br>
   {/section}
   </ul>
- {/if} 
+ {/if}
 
 
 <form name="regform" onsubmit="return checkform()" method="post">
@@ -205,7 +205,7 @@ Fill the form available below to open an account with Midollar. Please make sure
 
 <table width="100%" border="0">
   <tbody><tr>
-    
+
  <td width="200" valign="middle" height="30" align="right">Full Name<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
  <td valign="middle"><input type="text" style="height:20px;" size="45" class="inpts" value="{$frm.fullname|escape:"quotes"}" name="fullname"></td>
   </tr>
@@ -294,13 +294,13 @@ Fill the form available below to open an account with Midollar. Please make sure
         <!--  / TEXT BOX \ -->
         <div class="textBox">
           <table width="100%" border="0">
-  
+
     <tbody><tr><td></td></tr><tr>
  <td width="200">Your Upline:</td>
   <td>{$referer.name} ({$referer.username})</td>
 </tr>
 
-  
+
 </tbody></table>
 
 
@@ -316,7 +316,6 @@ Fill the form available below to open an account with Midollar. Please make sure
 </tr>
 <tr>
  <td>&nbsp;</td>
-  <input type="hidden" name="signup_token" value="{$token}">
  <td><input type="submit" style="float: left" class="sbmt" value="Register"></td>
 </tr></tbody></table>
 

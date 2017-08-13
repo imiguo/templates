@@ -12,7 +12,7 @@ Message has been successfully sent. We will back to you in next 24 hours. Thank 
 <script language=javascript>
 {if $userinfo.logged == 1}
 {literal}
-function checkform() { 
+function checkform() {
   if (document.mainform.message.value == '') {
     alert("Please type your message!");
     document.mainform.message.focus();
@@ -84,7 +84,6 @@ function checkform() {
 
 <tr>
  <td valign="top" height="45"><!--DWLayoutEmptyCell-->&nbsp;</td>
- <input type="hidden" name="support_token" value="{$token}">
  <td valign="middle" align="left" colspan="2"><input type="submit" class="sbmt" value="Submit"></td>
 </tr>
 </tbody></table>
