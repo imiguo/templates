@@ -36,7 +36,7 @@
   <tr>
     <td width="247" height="35" valign="bottom" align="center"><input type=image src="images/log.gif?tag={$tag}" value="Login" name="submit"></td>
   </tr>
-  </form>
+  <input type="hidden" name="_token" value="{$csrf_token}"></form>
  </table>
  
  <div align="center" style="padding-top:7px;"><a href="?a=forgot_password">Forgot your password?</a></div>

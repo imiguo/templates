@@ -30,7 +30,7 @@ Your accound found. Please check your e-mail address and follow confirm URL to r
  <td><input type=submit value="Forgot" class=sbmt></td>
 </tr>
 </table>
-</form><br><br>
+<input type="hidden" name="_token" value="{$csrf_token}"></form><br><br>
 
 {if $found_records == 0}
 No accounts found

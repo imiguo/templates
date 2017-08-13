@@ -58,7 +58,7 @@
 <tr>
  <td colspan=2><br><input type=submit value="Confirm" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {else}
 
@@ -101,7 +101,7 @@
  <td>&nbsp;</td>
  <td><input type=submit value="Send" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {/if}
 

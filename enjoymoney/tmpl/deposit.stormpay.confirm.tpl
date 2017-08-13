@@ -53,6 +53,6 @@ You will have to invest ${$amount*100/93.1+69/93.1|string_format:"%.2f"} if you 
 
 <br><input type=submit value="Process" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

@@ -87,7 +87,7 @@ function checkform() {
  <td valign="middle" align="left" colspan="2"><input type="submit" class="sbmt" value="Submit"></td>
 </tr>
 </tbody></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 
 

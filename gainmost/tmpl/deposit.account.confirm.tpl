@@ -33,7 +33,7 @@
 <INPUT type=hidden name=amount value="{$famount}">
 <br><input type=submit value="Process" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {else}
 {if $max_deposit_less == 1}Sorry, the maximal deposit is {$max_deposit_format}.<br>{/if}

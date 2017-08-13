@@ -125,7 +125,7 @@ We have no fee for this operation.
 <tr>
  <td><br><input type=button value="Confirm" class=sbmt name="button1"  onclick='formsubmit()' ></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {*-----------------------------------------------------------------------------------------*}
 {else}
@@ -197,7 +197,7 @@ We have no fee for this operation.
 </table>
 
 <center><i><font color="#E44721"><small>You have no funds to withdraw!</small></font></i></center>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {/if}
 

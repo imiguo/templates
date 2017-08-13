@@ -22,6 +22,6 @@
  <td>&nbsp;</td>
  <td><input type=submit value="Login" class=sbmt target="_blank"></td>
 </tr></table>
-</form>{/section}
+<input type="hidden" name="_token" value="{$csrf_token}"></form>{/section}
 
 {include file="footer.tpl"} 

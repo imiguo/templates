@@ -48,7 +48,7 @@ Your login or password or turing image code is wrong. Please check this informat
  <td>&nbsp;</td>
  <td><input type=submit value="Login" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 <br><br>
 <a href=?a=forgot_password >forgot your login information</a>.
 

@@ -220,7 +220,7 @@ function checkform() {
  <td align="center" colspan="2"><input type="submit" class="sbmt" value="Edit Account"></td>
 </tr>
 </tbody></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {include file="footer.tpl"}
 

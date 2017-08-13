@@ -27,7 +27,7 @@ can be exchanged to at least $0.01.{/if} {else}
   <tr><td>You are trying to exchange ${$amount} {$from_name} to ${$exchange_amount} {$to_name}.</td></tr>
   <tr><td><br><input type=submit value="Confirm" class=sbmt></td></tr>
   </table>
-  </form>
+  <input type="hidden" name="_token" value="{$csrf_token}"></form>
   {/if}
 
 {/if}

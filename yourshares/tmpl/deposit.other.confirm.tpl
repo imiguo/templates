@@ -101,7 +101,7 @@ Amount ({$currency_sign}): <b>{$amount}</b> of {$cname}<br>
 
 <br><input type=submit value="Save" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onClick="document.location='?a=deposit'">
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {else}
 

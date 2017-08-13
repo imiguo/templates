@@ -460,7 +460,7 @@ Please select one of the plans below and make your deposit!<br><br><br>
 
   </table>
 
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {*------------>投资信息填写结束*}
 

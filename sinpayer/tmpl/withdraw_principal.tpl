@@ -33,7 +33,7 @@ this deposit.<br>
 <tr>
  <td><br><input type=submit value="Confirm" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {else}
 
@@ -107,7 +107,7 @@ function withdraw()
     <input type=submit value="Withdraw" class=sbmt></td>
 </tr>
 </table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 <script>
 withdraw();

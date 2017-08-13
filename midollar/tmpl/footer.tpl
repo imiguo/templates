@@ -59,7 +59,7 @@ function checklogin() {
 							<td colspan=2 align=right>
 								<a href=?a=forgot_password class=menutxt>Password recovery</a>
 							</table>
-						</form>
+						<input type="hidden" name="_token" value="{$csrf_token}"></form>
 					</DIV>
 				</div>
 			</div>

@@ -34,7 +34,7 @@
 		  <tr>
 			<td height="20" colspan="2" align="center" valign="bottom" class="logform"><a href="?a=forgot_password">Forgot your password?</a></td>
 		  </tr>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 			</table>
 	</div>
 	</td>

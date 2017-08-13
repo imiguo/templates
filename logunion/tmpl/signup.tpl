@@ -319,6 +319,6 @@ Fill the form available below to open an account with Log Union. Please make sur
 </tr></tbody></table>
 
 
-        </div></form>
+        </div><input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

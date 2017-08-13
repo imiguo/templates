@@ -240,7 +240,7 @@ Your account data has been updated successfully.<br><br>
  <td>&nbsp;</td>
  <td><input type=submit value="Change" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {include file="footer.tpl"}
 

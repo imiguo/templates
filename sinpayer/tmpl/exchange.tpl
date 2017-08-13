@@ -208,7 +208,7 @@ function chng_bg(id, color)
 </tr>
 {/section}
 </table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {else}
 Currently you have no funds to exchange.<br><br>
 {/if}

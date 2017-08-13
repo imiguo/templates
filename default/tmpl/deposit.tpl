@@ -133,7 +133,7 @@
             <td colspan=2><input type=submit value="Spend" class=sbmt></td>
         </tr>
     </table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {literal}
     <script language=javascript>
         for (i = 0; i < document.spendform.type.length; i++) {

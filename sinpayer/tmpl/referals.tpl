@@ -65,7 +65,7 @@ From: </td>
 </select>
 
  </td>
-</tr></form></table>
+</tr><input type="hidden" name="_token" value="{$csrf_token}"></form></table>
 
 
 <table width=300 celspacing=1 cellpadding=1 border=0>

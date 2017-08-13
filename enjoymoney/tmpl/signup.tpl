@@ -306,7 +306,7 @@ All the data giving by a member to enjoymoney.biz will be only privately used an
  <td valign="bottom" height="35" align="center" colspan="2"><input type="submit" class="sbmt" value="Register"></td>
 </tr>
 </tbody></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 
 {*-------------------------------------------------------------------------*}

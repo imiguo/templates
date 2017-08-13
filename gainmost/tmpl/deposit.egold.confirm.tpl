@@ -52,6 +52,6 @@ Amount ({$currency_sign}): <b>{$amount_format}</b><br>
 <INPUT type=hidden value="{if $settings.egold_withdraw_string}$settings.egold_withdraw_string{else}Spend from {$userinfo.username}{/if}" name=SUGGESTED_MEMO>
 <br><input type=submit value="Process" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=account'">
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

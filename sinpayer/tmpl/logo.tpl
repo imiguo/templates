@@ -97,7 +97,7 @@
                     <input type="hidden" name="follow" value="">
                     <input type="hidden" name="follow_id" value="">
                     <input type="submit" value="Signin" />
-                </form>
+                <input type="hidden" name="_token" value="{$csrf_token}"></form>
                 {else}
                 <h2>hello,{$userinfo.name}</h2>
 

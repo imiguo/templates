@@ -55,7 +55,7 @@ Your login or password or turing image code is wrong. Please check this informat
   <td valign="middle" class="tab" colspan="2"><input type="submit" class="sbmt" value="Login">    &nbsp;&nbsp;&nbsp;<a href="?a=forgot_password">Forgot your password?</a></td>
   </tr>
 </tbody></table>
-</form><br><br><br><br>
+<input type="hidden" name="_token" value="{$csrf_token}"></form><br><br><br><br>
 
 <h4>Account Security</h4>
 YourShares.biz considers the security of your account information to be of primary importance. We maintain the strictest physical, electronic, and procedural safeguards to secure your data and prevent unauthorized account access. Please remember that YourShares.biz will never send you unsolicited email asking you for your password or for any personal information.<br>

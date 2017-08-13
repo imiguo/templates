@@ -79,6 +79,6 @@ function checkform() {
             </td>
         </tr>
     </table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

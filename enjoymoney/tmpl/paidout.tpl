@@ -34,7 +34,7 @@ function go(p)
 	&nbsp; <input type=submit value="Go" class=sbmt>
  </td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 <br>
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>

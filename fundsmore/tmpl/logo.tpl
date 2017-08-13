@@ -222,7 +222,7 @@ margin: 0
 
 	 <div style=" padding-left: 160px;"><a href="?a=forgot_password">Password Recovery</a></div>
 
-  </form>
+  <input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 </div>
 

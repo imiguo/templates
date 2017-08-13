@@ -122,7 +122,7 @@ Specified Program not found.
 CalculatePercent();
 CalculateProfit();
 </script>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 </body>
 </html>

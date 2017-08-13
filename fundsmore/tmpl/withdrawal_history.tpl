@@ -96,7 +96,7 @@ To: <select name=month_to class=inpts>
 
 </tr></table>
 
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 <br><br>
 

@@ -77,7 +77,7 @@ To: <select name=month_to class=inpts>
 	&nbsp; <input type=submit value="Go" class=sbmt>
  </td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 <br><br>
 
 {if $settings.use_history_balance_mode}

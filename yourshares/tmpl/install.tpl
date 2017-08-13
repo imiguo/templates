@@ -60,7 +60,7 @@ Ask this information your hosting provider if you not sure.
  <td><input type=submit value='Install' class=sbmt></td>
 
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {else}
 <h1>Script successfully installed!</h1>
 <br><br>

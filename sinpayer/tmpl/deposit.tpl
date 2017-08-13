@@ -213,7 +213,7 @@ Please select one of the plans below and make your deposit!<br><br><br>
         <input type=submit value="Spend" class=sbmt></td>
     </tr>
   </table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {*------------>投资信息填写结束*}
 {literal}
 <script language=javascript>

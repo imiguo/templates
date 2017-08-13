@@ -45,6 +45,6 @@ Amount ($US): <b>{$amount_format}</b><br>
 <INPUT type=hidden value="Deposit to {$settings.site_name} User {$userinfo.username}" name=memo>
 <br><input type=submit value="Process" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=account'">
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

@@ -76,7 +76,7 @@ We have no fee for this operation.
 <tr>
  <td><br><input type=submit value="Confirm" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 
 {else}
@@ -178,7 +178,7 @@ For other e-currencies please provide your payee account details in the comments
  <td>&nbsp;</td>
  <td><input type=submit value="Request" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 
 {include file="footer.tpl"}

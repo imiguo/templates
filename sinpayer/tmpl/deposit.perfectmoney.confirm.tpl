@@ -53,7 +53,7 @@
         <br>
         <input type=submit name=i_submit value="Process" class=sbmt> &nbsp;
         <input type=button class=sbmt value="Cancel" onclick="document.location='?a=account'">
-    </form>
+    <input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}
 

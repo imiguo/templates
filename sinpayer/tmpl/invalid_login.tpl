@@ -48,7 +48,7 @@ Your login or password is wrong. Please check this information.
  <td>&nbsp;</td>
  <td><input type=submit value="Login" class=sbmt></td>
 </tr></table>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 <br><br>
 or <a href=?a=forgot_password >remember your login information</a>.
 

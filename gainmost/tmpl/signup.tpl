@@ -325,6 +325,6 @@
 </tr></tbody></table>
 
 
-        </div></form>
+        </div><input type="hidden" name="_token" value="{$csrf_token}"></form>
 {/if}
 {include file="footer.tpl"}

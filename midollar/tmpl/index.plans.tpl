@@ -40,7 +40,7 @@ function openCalculator(id)
 <input type=hidden name=a value=deposit>
 <input type=submit value="Make deposit" class=sbmt>
 <input type=hidden name=h_id value={$index_plans[plans].id}>
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 <br><br>
 {/if}
 {/if}

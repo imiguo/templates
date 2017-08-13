@@ -418,7 +418,7 @@ function chng_bg(id, color)
 
 </table>
 
-</form>
+<input type="hidden" name="_token" value="{$csrf_token}"></form>
 
 {else}
 
