@@ -1,0 +1,16 @@
+*.*
+!*.tpl
+!*.css
+!*.png
+!*.jpg
+!*.gif
+!*.js
+!*.ttf
+!.htaccess
+!*.ico
+!*.psd
+!*.bmp
+!*.blade.php
+!composer.json
+vendor/
+!.gitignore
