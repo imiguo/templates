@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 <h3>Registration completed:</h3><br>
@@ -7,4 +7,4 @@ Thank you for your your registration.<br>
 
 Do not provide your login and password to anyone!
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

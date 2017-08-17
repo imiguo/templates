@@ -9,7 +9,7 @@
     
 	
 	
-{literal} 	
+{%literal%} 	
 <script language="javascript"><!--
 function openCalculator(id)
 {
@@ -19,15 +19,15 @@ function openCalculator(id)
   window.open('?a=calendar&type=' + id, 'calculator' + id, "top="+t+",left="+l+",width="+w+",height="+h+",resizable=1,scrollbars=0");
 }
 --></script>
-{/literal} 
+{%/literal%} 
 
 
-{if $userinfo.logged != 1}
+{%if $userinfo.logged != 1%}
 <div class="pbox">
 <div class="tit">We accept</div>
 <div class="cont">
-<img src="images/payments.png?tag={$tag}"/>
-<center><img src="images/ap.gif?tag={$tag}"/></center>
+<img src="images/payments.png?tag={%$tag%}"/>
+<center><img src="images/ap.gif?tag={%$tag%}"/></center>
 </div>
 </div>
 
@@ -35,12 +35,12 @@ function openCalculator(id)
 <div class="pbox">
 <div class="tit2">Referral program</div>
 <div class="cont">
-<img src="images/ref.png?tag={$tag}"/>
+<img src="images/ref.png?tag={%$tag%}"/>
 
 
 </div>
 </div>
-{else}
+{%else%}
 <div class="logbox">
 <div class="tit2">Account Menu</div>
 <!--End of box1-->
@@ -64,7 +64,7 @@ function openCalculator(id)
 
 </div>
 </div>
-{/if}
+{%/if%}
 
 
 
@@ -108,7 +108,7 @@ function openCalculator(id)
   <div class="underfooter">
     <p class="copy notext"></p>
     <p class="fmenu">
-      {if $userinfo.logged != 1}
+      {%if $userinfo.logged != 1%}
 
       <a href="?a=home">Home</a>
       |
@@ -132,7 +132,7 @@ function openCalculator(id)
       <a href="?a=cust&amp;page=rateus">Rate us</a>
       |
       <a href="?a=support">Support</a>
-    {else}
+    {%else%}
       <a href="?a=home">Home</a>
       |
   
@@ -153,7 +153,7 @@ function openCalculator(id)
       <a href="?a=support">Support</a>
       |
       <a href="?a=logout">Logout</a>
-      {/if}
+      {%/if%}
     </p>
   </div>	
 
@@ -163,7 +163,7 @@ function openCalculator(id)
                        
 
                 </div>
-{literal} 
+{%literal%} 
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -177,7 +177,7 @@ function openCalculator(id)
   })();
 
 </script>
-{/literal} 			
+{%/literal%} 			
 				
 
         </body>

@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h3>Get started</h3><br>
 
@@ -73,4 +73,4 @@ In order to open accounts in <strong>Perfect Money</strong>, you can do it by go
 
 <font color="#2f2f2f">For other questions related with <strong>FundsMore</strong> website please contact our <a href="?a=support"><strong>support department</strong></a>, which is at your disposal 24 hours a day, 7 days a week and 365 days a year.</font><br><br><br>
 <p></p>	                                             
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

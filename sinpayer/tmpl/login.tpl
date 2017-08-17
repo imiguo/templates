@@ -1,27 +1,27 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <script language=javascript>
-function checkform() {
+function checkform() {%
     if (document.mainform.username.value == '') {
         alert("Please type your username!");
         document.mainform.username.focus();
         return false;
-    }
-    if (document.mainform.password.value == '') {
+    %}
+    if (document.mainform.password.value == '') {%
         alert("Please type your password!");
         document.mainform.password.focus();
         return false;
-    }
+    %}
     return true;
 }
 </script>
 
 
-{if $frm.say eq 'invalid_login'}
+{%if $frm.say eq 'invalid_login'%}
 <h3>Login error</h3><br><br>
 Your login or password or turing image code is wrong. Please check this information.
-{else}
+{%else%}
 <h3>Login</h3>
-{/if}
+{%/if%}
 <br><br>
 <br>
 <form method=post name=mainform onsubmit="return checkform()">
@@ -32,7 +32,7 @@ Your login or password or turing image code is wrong. Please check this informat
         <tr>
             <td>Username:</td>
             <td>
-                <input type=text name=username value='{$frm.username|escape:"html"}' class=inpts size=30 autofocus="autofocus">
+                <input type=text name=username value='{%$frm.username|escape:"html"%}' class=inpts size=30 autofocus="autofocus">
             </td>
         </tr>
         <tr>
@@ -48,7 +48,7 @@ Your login or password or turing image code is wrong. Please check this informat
             </td>
         </tr>
     </table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 <br>
 <br> or <a href="?a=forgot_password">remember your login information</a>.
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

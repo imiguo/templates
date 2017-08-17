@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>HYIP Manager. Install Script.</title>
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css">
 </head>
 
 <body bgcolor="#FFFFF2" link="#666699" vlink="#666699" alink="#666699" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
@@ -12,7 +12,7 @@
     <td valign=top height=142>
       <table cellspacing=0 cellpadding=0 border=0 width=100% height=142>
 	    <tr>
-		  <td background="images/ver.gif?tag={$tag}" bgcolor=#FF8D00><img src="images/top.gif?tag={$tag}" width=304 height=142 border="0" align=left></td>
+		  <td background="images/ver.gif?tag={%$tag%}" bgcolor=#FF8D00><img src="images/top.gif?tag={%$tag%}" width=304 height=142 border="0" align=left></td>
  	    </tr>
 	  </table>
      </td>

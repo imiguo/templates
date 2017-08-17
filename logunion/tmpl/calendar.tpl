@@ -1,8 +1,8 @@
 <html>
 <head>
 <title>Calculator</title>
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
-{literal}
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css">
+{%literal%}
 <script>
 var colorBlank       = '#FFFFFF';
 var colorActive      = '#FFFFFF';
@@ -24,16 +24,16 @@ var LastDay;
 var lastrow = '';
 
 var percents = new Array;
-{/literal}
-{section name=p loop=$plans}
-percents[{$plans[p].i}] = new Array({$plans[p].min_deposit}, {$plans[p].max_deposit}, {$plans[p].percent});
-{/section}
-{literal}
-paymentperiod = '{/literal}{$type.period}{literal}'; // 'd' - daily, 'w' - weekly, 'bw' - beweekly, 'm' - monthly, 'y' - yearly
-var maxdays = {/literal}{$type.q_days+$type.delay}{literal};
-var returnprofit = {/literal}{$type.return_profit}{literal};
-var compound = {/literal}{$type.use_compound}{literal};
-var delay = {/literal}{$type.delay}{literal};
+{%/literal%}
+{%section name=p loop=$plans%}
+percents[{%$plans[p].i%}] = new Array({%$plans[p].min_deposit%}, {%$plans[p].max_deposit%}, {%$plans[p].percent%});
+{%/section%}
+{%literal%}
+paymentperiod = '{%/literal%}{%$type.period%}{%literal%}'; // 'd' - daily, 'w' - weekly, 'bw' - beweekly, 'm' - monthly, 'y' - yearly
+var maxdays = {%/literal%}{%$type.q_days+$type.delay%}{%literal%};
+var returnprofit = {%/literal%}{%$type.return_profit%}{%literal%};
+var compound = {%/literal%}{%$type.use_compound%}{%literal%};
+var delay = {%/literal%}{%$type.delay%}{%literal%};
 
 function CalculatePercent()
 {
@@ -626,7 +626,7 @@ function Spend()
   }
 }
 </script>
-{/literal}
+{%/literal%}
 </head>
 <body>
 <form name="data" onsubmit="CalculateProfit(); return false;">
@@ -634,7 +634,7 @@ function Spend()
 <tr>
   <td><a href="javascript:PrevMonth()">&lt;&lt;</a></td>
   <td align=center>
-   <select name="monthes" onchange="{literal}InitCalendar(document.data.monthes.value, document.data.years.value){/literal}" class=inpts>
+   <select name="monthes" onchange="{%literal%}InitCalendar(document.data.monthes.value, document.data.years.value){%/literal%}" class=inpts>
     <option value=1>Jan</option>
     <option value=2>Feb</option>
     <option value=3>Mar</option>
@@ -648,7 +648,7 @@ function Spend()
     <option value=11>Nov</option>
     <option value=12>Dec</option>
    </select>
-   <select name="years" onchange="{literal}InitCalendar(document.data.monthes.value, document.data.years.value){/literal}" class=inpts>
+   <select name="years" onchange="{%literal%}InitCalendar(document.data.monthes.value, document.data.years.value){%/literal%}" class=inpts>
    </select>
   </td>
   <td><a href="javascript:NextMonth()">&gt;&gt;</a></td>
@@ -722,7 +722,7 @@ function Spend()
   </tr>
 </table>
 </td></tr></table>
-{literal}
+{%literal%}
 <script>
 document.data.monthes.options[CurDate.getMonth()].selected = true;
 for (var i = CurDate.getFullYear(); i < CurDate.getFullYear() + 10; i++)
@@ -731,7 +731,7 @@ for (var i = CurDate.getFullYear(); i < CurDate.getFullYear() + 10; i++)
 }
 InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 </script>
-{/literal}
+{%/literal%}
 <table>
 <tr>
   <td>From:</td><td><b><script>document.write(CurDate.getMonth()+1 + '/' + CurDate.getDate() + '/' + CurDate.getFullYear())</script></b></td>
@@ -740,35 +740,35 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
   <td>To:</td><td><b><span id="to">Select in the calendar</span></b></td>
 </tr>
 <tr>
-  <td>{$type.period_name}:</td><td><b><span id="days">N/A</span></b></td>
+  <td>{%$type.period_name%}:</td><td><b><span id="days">N/A</span></b></td>
 </tr>
 </tr>
-  <td>Amount:</td><td nowrap>{$currency_sign} <input type="text" name="amount" value="{$type.min_deposit}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
+  <td>Amount:</td><td nowrap>{%$currency_sign%} <input type="text" name="amount" value="{%$type.min_deposit%}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
 </tr>
-{if $type.use_compound}
+{%if $type.use_compound%}
 <tr>
   <td>Compounding Percent:</td><td nowrap><input type="text" name="compounding_percent" value="10" size=5 class=inpts> % <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
 </tr>
-{/if}
+{%/if%}
 <tr>
   <td>Percent:</td><td><b><span id="percent">N/A</span></b></td>
 </tr>
 <tr>
-  <td>Profit {$currency_sign}:</td><td><b><span id="profit">N/A</span></b></td>
+  <td>Profit {%$currency_sign%}:</td><td><b><span id="profit">N/A</span></b></td>
 </tr>
 <tr>
-  <td nowrap>Deposit {$currency_sign}:</td><td><b><span id="deposit">N/A</span></b></td>
+  <td nowrap>Deposit {%$currency_sign%}:</td><td><b><span id="deposit">N/A</span></b></td>
 </tr>
 
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 <tr>
   <td><input type="button" value="Spend" onclick="Spend();" class=sbmt></td>
 </tr>
-{/if}
+{%/if%}
 </table>
 <script>
 CalculatePercent();
 </script>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 </body>
 </html>

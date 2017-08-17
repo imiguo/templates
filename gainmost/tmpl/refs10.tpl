@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h2>Referrers Top 20</h2>
 
@@ -9,20 +9,20 @@
     <td class=inheader width=200><b>Active</b></td>
     <td class=inheader width=170><b>Total</b></td>
 </tr>
-{if $stats}
-{section name=s loop=$stats}
+{%if $stats%}
+{%section name=s loop=$stats%}
 <tr>
- <td align=center><b>{$smarty.section.s.index+1}</b></td>
- <td><b>{$stats[s].username}</b></td>
- <td align=right><b>{$stats[s].active_col}</b></td>
- <td align=right><b>{$stats[s].col}</b></td>
+ <td align=center><b>{%$smarty.section.s.index+1%}</b></td>
+ <td><b>{%$stats[s].username%}</b></td>
+ <td align=right><b>{%$stats[s].active_col%}</b></td>
+ <td align=right><b>{%$stats[s].col%}</b></td>
 </tr>
-{/section}
-{else}
+{%/section%}
+{%else%}
 <tr>
  <td colspan=4 align=center>No referrers found</td>
 </tr>
-{/if}
+{%/if%}
 </table>
-<br><br>Last reset on {$start_date}
-{include file="footer.tpl"}
+<br><br>Last reset on {%$start_date%}
+{%include file="footer.tpl"%}

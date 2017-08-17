@@ -1,19 +1,19 @@
 <html>
 <head>
 <title>Calculator</title>
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
-{if $error eq ''}
-{literal}
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css">
+{%if $error eq ''%}
+{%literal%}
 <script>
 var percents = new Array;
-{/literal}
-{section name=p loop=$plans}
-percents[{$plans[p].i}] = new Array({$plans[p].min_deposit}, {$plans[p].max_deposit}, {$plans[p].percent});
-{/section}
-{literal}
-var maxdays = {/literal}{$type.q_days}{literal};
-var Amount = {/literal}{$type.min_deposit}{literal};
-var returnprofit = {/literal}{$type.return_profit}{literal};
+{%/literal%}
+{%section name=p loop=$plans%}
+percents[{%$plans[p].i%}] = new Array({%$plans[p].min_deposit%}, {%$plans[p].max_deposit%}, {%$plans[p].percent%});
+{%/section%}
+{%literal%}
+var maxdays = {%/literal%}{%$type.q_days%}{%literal%};
+var Amount = {%/literal%}{%$type.min_deposit%}{%literal%};
+var returnprofit = {%/literal%}{%$type.return_profit%}{%literal%};
 
 function CalculatePercent()
 {
@@ -84,45 +84,45 @@ function Spend()
   }
 }
 </script>
-{/literal}
-{/if}
+{%/literal%}
+{%/if%}
 </head>
 <body>
-{if $error}
+{%if $error%}
 <center>
-{if $error eq 'type_not_found'}
+{%if $error eq 'type_not_found'%}
 Specified Program not found.
-{/if}
+{%/if%}
 </center>
-{else}
+{%else%}
 <form name="data" onsubmit="CalculateProfit(); return false;">
 <table>
 <tr>
-  <td>From:</td><td><b>{$type.from_date}</b></td>
+  <td>From:</td><td><b>{%$type.from_date%}</b></td>
 </tr>
 <tr>
-  <td>To:</td><td><b>{$type.to_date}</b></td>
+  <td>To:</td><td><b>{%$type.to_date%}</b></td>
 </tr>
 </tr>
-  <td>Amount:</td><td nowrap>{$currency_sign} <input type="text" name="amount" value="{$type.min_deposit}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
+  <td>Amount:</td><td nowrap>{%$currency_sign%} <input type="text" name="amount" value="{%$type.min_deposit%}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
 </tr>
 <tr>
   <td>Percent:</td><td><b><span id="percent">N/A</span></b></td>
 </tr>
 <tr>
-  <td>Profit {$currency_sign}:</td><td><b><span id="profit">N/A</span></b></td>
+  <td>Profit {%$currency_sign%}:</td><td><b><span id="profit">N/A</span></b></td>
 </tr>
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 <tr>
   <td><input type="button" value="Spend" onclick="Spend();" class=sbmt></td>
 </tr>
-{/if}
+{%/if%}
 </table>
 <script>
 CalculatePercent();
 CalculateProfit();
 </script>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
-{/if}
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
+{%/if%}
 </body>
 </html>

@@ -1,10 +1,10 @@
-{include file="header_install.tpl"}
+{%include file="header_install.tpl"%}
 
 
 
 
 
-{if $wrong_license == 1}
+{%if $wrong_license == 1%}
 
 </center>
 
@@ -18,13 +18,13 @@ Please contact <a href="http://www.goldcoders.com">www.goldcoders.com</a> if you
 
 <center>
 
-{/if}
+{%/if%}
 
 
 
 
 
-{if $wrong_mysql_data}
+{%if $wrong_mysql_data%}
 
 </center>
 
@@ -40,11 +40,11 @@ Ask this information your hosting provider if you not sure.
 
 <center>
 
-{/if}
+{%/if%}
 
 
 
-{if $installed != 1}
+{%if $installed != 1%}
 
 <form method=post>
 
@@ -60,25 +60,25 @@ Ask this information your hosting provider if you not sure.
 
  <td>Mysql host:</td>
 
- <td><input type=text name=mysql_host value='{if $form_data.mysql_host}{$form_data.mysql_host}{else}localhost{/if}' class=inpts size=30></td>
+ <td><input type=text name=mysql_host value='{%if $form_data.mysql_host%}{%$form_data.mysql_host%}{%else%}localhost{%/if%}' class=inpts size=30></td>
 
 </tr><tr>
 
  <td>Mysql database name:</td>
 
- <td><input type=text name=mysql_db value='{$form_data.mysql_db}' class=inpts size=30></td>
+ <td><input type=text name=mysql_db value='{%$form_data.mysql_db%}' class=inpts size=30></td>
 
 </tr><tr>
 
  <td>Mysql username:</td>
 
- <td><input type=text name=mysql_username value='{$form_data.mysql_username}' class=inpts size=30></td>
+ <td><input type=text name=mysql_username value='{%$form_data.mysql_username%}' class=inpts size=30></td>
 
 </tr><tr>
 
  <td>Mysql password:</td>
 
- <td><input type=text name=mysql_password value='{$form_data.mysql_password}' class=inpts size=30></td>
+ <td><input type=text name=mysql_password value='{%$form_data.mysql_password%}' class=inpts size=30></td>
 
 </tr><tr>
 
@@ -88,13 +88,13 @@ Ask this information your hosting provider if you not sure.
 
  <td>Host:</td>
 
- <td>{$hostname}</td>
+ <td>{%$hostname%}</td>
 
 </tr><tr>
 
  <td>License key:</td>
 
- <td><input type=text name=license_string value='{$form_data.license_string}' class=inpts size=30></td>
+ <td><input type=text name=license_string value='{%$form_data.license_string%}' class=inpts size=30></td>
 
 </tr><tr>
 
@@ -104,7 +104,7 @@ Ask this information your hosting provider if you not sure.
 
  <td>E-mail:</td>
 
- <td><input type=text name=admin_email value='{$form_data.admin_email}' class=inpts size=30></td>
+ <td><input type=text name=admin_email value='{%$form_data.admin_email%}' class=inpts size=30></td>
 
 </tr><tr>
 
@@ -122,9 +122,9 @@ Ask this information your hosting provider if you not sure.
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{else}
+{%else%}
 
 <h1>Script successfully installed!</h1>
 
@@ -136,11 +136,11 @@ Please delete install.php file for security reason.<br><br>
 
 
 
-Path to script: <a href="{$script_path}" target=_blank>{$script_path}</a><br>
+Path to script: <a href="{%$script_path%}" target=_blank>{%$script_path%}</a><br>
 
 Admin login: admin<br>
 
-Admin password: {$form_data.admin_password}<br><br>
+Admin password: {%$form_data.admin_password%}<br><br>
 
 
 
@@ -148,9 +148,9 @@ Login to admin area, go to settings screen and specify your sitename, e-gold acc
 
 </td></tr></table>
 
-{/if}
+{%/if%}
 
 
 
-{include file="footer_install.tpl"}
+{%include file="footer_install.tpl"%}
 

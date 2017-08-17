@@ -1,16 +1,16 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h2>Register Account</h2>
 You may ONLY open one account by email address. With one account, you may open as many investments as you wish, in USD using the e-currency you want (Liberty Reserve, Perfect Money, Solid Trust Pay or Ego Pay).<br>
 <br>
 You must register at least one e-currency account. You may NOT change/add your e-currency account numbers later. Make sure your Perfectmoney account is started by "U", Solidtrustpay is "username" and NOT email, Egopay account is your Email ID used in their website.<br><br><br><br>
 
-{if $deny_registration}
+{%if $deny_registration%}
  We are closed for new registrations now.
-{elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref}
+{%elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref%}
  You  do not have a upline. Our system require a upline for each user.
-{else}
- {literal}
+{%else%}
+ {%literal%}
 
  <script language=javascript>
  function checkform() {
@@ -19,9 +19,9 @@ You must register at least one e-currency account. You may NOT change/add your e
     document.regform.fullname.focus();
     return false;
   }
- {/literal}
- {if $settings.use_user_location}
- {literal}
+ {%/literal%}
+ {%if $settings.use_user_location%}
+ {%literal%}
   if (document.regform.address.value == '') {
     alert("Please enter your address!");
     document.regform.address.focus();
@@ -47,9 +47,9 @@ You must register at least one e-currency account. You may NOT change/add your e
     document.regform.country.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.username.value == '') {
     alert("Please enter your username!");
     document.regform.username.focus();
@@ -65,9 +65,9 @@ You must register at least one e-currency account. You may NOT change/add your e
     document.regform.password2.focus();
     return false;
   }
- {/literal}
- {if $settings.use_transaction_code}
- {literal}
+ {%/literal%}
+ {%if $settings.use_transaction_code%}
+ {%literal%}
   if (document.regform.transaction_code.value == '') {
     alert("Please enter your transaction code!");
     document.regform.transaction_code.focus();
@@ -78,9 +78,9 @@ You must register at least one e-currency account. You may NOT change/add your e
     document.regform.transaction_code2.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.email.value == '') {
     alert("Please enter your e-mail address!");
     document.regform.email.focus();
@@ -112,84 +112,84 @@ You must register at least one e-currency account. You may NOT change/add your e
   return IsNumber;
  }
  </script>
- {/literal}
+ {%/literal%}
 
- {if $errors}
+ {%if $errors%}
   <ul style="color:red">
-  {section name=e loop=$errors}
-   {if $errors[e] eq 'full_name'}
+  {%section name=e loop=$errors%}
+   {%if $errors[e] eq 'full_name'%}
     <li>Please enter your full name!
-   {/if}
-   {if $errors[e] eq 'address'}
+   {%/if%}
+   {%if $errors[e] eq 'address'%}
     <li>Please enter your address!
-   {/if}
-   {if $errors[e] eq 'city'}
+   {%/if%}
+   {%if $errors[e] eq 'city'%}
     <li>Please enter your city!
-   {/if}
-   {if $errors[e] eq 'state'}
+   {%/if%}
+   {%if $errors[e] eq 'state'%}
     <li>Please enter your state!
-   {/if}
-   {if $errors[e] eq 'zip'}
+   {%/if%}
+   {%if $errors[e] eq 'zip'%}
     <li>Please enter your zip!
-   {/if}
-   {if $errors[e] eq 'country'}
+   {%/if%}
+   {%if $errors[e] eq 'country'%}
     <li>Please choose your country!
-   {/if}
-   {if $errors[e] eq 'username'}
+   {%/if%}
+   {%if $errors[e] eq 'username'%}
     <li>Please enter your username!
-   {/if}
-   {if $errors[e] eq 'username_exists'}
+   {%/if%}
+   {%if $errors[e] eq 'username_exists'%}
     <li>Sorry, such user already exists! Please try another username.
-   {/if}
-   {if $errors[e] eq 'email_exists'}
+   {%/if%}
+   {%if $errors[e] eq 'email_exists'%}
     <li>Sorry, such email already exists! Please try another email.
-   {/if}
-   {if $errors[e] eq 'password'}
+   {%/if%}
+   {%if $errors[e] eq 'password'%}
     <li>Please enter a password!
-   {/if}
-   {if $errors[e] eq 'password_confirm'}
+   {%/if%}
+   {%if $errors[e] eq 'password_confirm'%}
     <li>Please check your password!
-   {/if}
-   {if $errors[e] eq 'password_too_small'}
-    <li>The password you provided is too small, please enter at least {$settings.min_user_password_length} characters!
-   {/if}
-   {if $errors[e] eq 'transaction_code'}
+   {%/if%}
+   {%if $errors[e] eq 'password_too_small'%}
+    <li>The password you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code'%}
     <li>Please enter the Transaction Code!
-   {/if}
-   {if $errors[e] eq 'transaction_code_confirm'}
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_confirm'%}
     <li>Please check your Transaction Code!
-   {/if}
-   {if $errors[e] eq 'transaction_code_too_small'}
-    <li>The Transaction Code you provided is too small, please enter at least {$settings.min_user_password_length} characters!
-   {/if}
-   {if $errors[e] eq 'transaction_code_vs_password'}
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_too_small'%}
+    <li>The Transaction Code you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_vs_password'%}
     <li>The Transaction Code should differ from the Password!
-   {/if}
-   {if $errors[e] eq 'egold'}
+   {%/if%}
+   {%if $errors[e] eq 'egold'%}
     <li>Please enter your e-gold account number!
-   {/if}
-   {if $errors[e] eq 'email'}
+   {%/if%}
+   {%if $errors[e] eq 'email'%}
     <li>Please enter your e-mail!
-   {/if}
-   {if $errors[e] eq 'agree'}
+   {%/if%}
+   {%if $errors[e] eq 'agree'%}
     <li>You have to agree with the Terms and Conditions!
-   {/if}
-   {if $errors[e] eq 'turing_image'}
+   {%/if%}
+   {%if $errors[e] eq 'turing_image'%}
     <li>Enter the verification code as it is shown in the corresponding box.
-   {/if}
-   {if $errors[e] eq 'no_upline'}
-    <li>The system requires an upline to register. {if $settings.get_rand_ref}You have to be agreed to random one or found a referral link in the net.{/if}
-   {/if}
-   {if $errors[e] eq 'ip_exists_in_database'}
+   {%/if%}
+   {%if $errors[e] eq 'no_upline'%}
+    <li>The system requires an upline to register. {%if $settings.get_rand_ref%}You have to be agreed to random one or found a referral link in the net.{%/if%}
+   {%/if%}
+   {%if $errors[e] eq 'ip_exists_in_database'%}
     <li>Your IP already exists in our database. Sorry, but registration impossible.
-   {/if}
+   {%/if%}
 
    <br>
-  {/section}
+  {%/section%}
   </ul>
- {/if}
+ {%/if%}
 
- {*------------------------------------------------------------------------------------*}
+ {%*------------------------------------------------------------------------------------*%}
 <form name="regform" onsubmit="return checkform()" method="post">
 <input type="hidden" value="signup" name="a">
 <input type="hidden" value="signup" name="action">
@@ -203,31 +203,31 @@ You must register at least one e-currency account. You may NOT change/add your e
     <!--DWLayoutTable-->
   <tbody><tr>
     <td width="170" valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Name:</td>
-    <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.fullname|escape:"quotes"}" name="fullname"></td>
+    <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.fullname|escape:"quotes"%}" name="fullname"></td>
   <td width="190" valign="middle" class="dots">First name and last name here.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> E-mail Address:</td>
-    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.email|escape:"quotes"}" name="email"></td>
+    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.email|escape:"quotes"%}" name="email"></td>
   <td valign="middle" class="dots">Your valid e-mail address.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Retype E-mail:</td>
-    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.email1|escape:"quotes"}" name="email1"></td>
+    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.email1|escape:"quotes"%}" name="email1"></td>
   <td valign="middle" class="dots">Retype Your Email address.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Secret question:</td>
-    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.sq|escape:"quotes"}" name="sq"></td>
+    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.sq|escape:"quotes"%}" name="sq"></td>
   <td valign="middle" class="dots">Type a Secret Question.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Secret answer<font color="#FF0000">&nbsp;</font>:</td>
-    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.sa|escape:"quotes"}" name="sa"></td>
+    <td valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.sa|escape:"quotes"%}" name="sa"></td>
   <td valign="middle" class="dots">Enter your answer.</td>
   </tr>
 </tbody></table><br><br><br><br>
@@ -239,19 +239,19 @@ You must register at least one e-currency account. You may NOT change/add your e
     <!--DWLayoutTable-->
   <tbody><tr>
     <td width="170" valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Username:</td>
-    <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{$frm.username|escape:"quotes"}" name="username"></td>
+    <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" value="{%$frm.username|escape:"quotes"%}" name="username"></td>
   <td width="190" valign="middle" class="dots">Your username.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Chose your password:</td>
-    <td valign="middle" class="dots"><input type="password" style="width:175;height:20;" class="input2" value="{$frm.password|escape:"quotes"}" name="password"></td>
+    <td valign="middle" class="dots"><input type="password" style="width:175;height:20;" class="input2" value="{%$frm.password|escape:"quotes"%}" name="password"></td>
   <td valign="middle" class="dots">Minimum of 6 characters in length.</td>
   </tr>
 
   <tr>
     <td valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Retype password:</td>
-    <td valign="middle" class="dots"><input type="password" style="width:175;height:20;" class="input2" value="{$frm.password2|escape:"quotes"}" name="password2"></td>
+    <td valign="middle" class="dots"><input type="password" style="width:175;height:20;" class="input2" value="{%$frm.password2|escape:"quotes"%}" name="password2"></td>
   <td valign="middle" class="dots">Retype your password.</td>
   </tr>
 </tbody></table><br><br><br><br>
@@ -261,18 +261,18 @@ You must register at least one e-currency account. You may NOT change/add your e
 
 <table width="490" height="29" cellspacing="0" cellpadding="0" border="0" bgcolor="#FAFAFA" align="center">
     <tbody>
-{section name=ps loop=$pay_accounts}
+{%section name=ps loop=$pay_accounts%}
 <tr>
- <td width="170" valign="middle" height="34" class="reg">{$pay_accounts[ps].name} Account:</td>
+ <td width="170" valign="middle" height="34" class="reg">{%$pay_accounts[ps].name%} Account:</td>
  <td width="200" valign="middle" class="dots">
-  <input type="text" style="width:175;height:20;" class="input2" name=pay_account[{$pay_accounts[ps].id}] value="{$pay_accounts[ps].account|escape:html}"></td>
+  <input type="text" style="width:175;height:20;" class="input2" name=pay_account[{%$pay_accounts[ps].id%}] value="{%$pay_accounts[ps].account|escape:html%}"></td>
  <td width="190" valign="middle" class="dots">Your account number.</td>
 </tr>
-{/section}
-{*
+{%/section%}
+{%*
  <tr>
  <td width="170" valign="middle" height="34" class="reg">Payza Account:</td>
- <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" name=city value="{$frm.city|escape:"quotes"}"></td>
+ <td width="200" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" name=city value="{$frm.city|escape:"quotes"%}"></td>
  <td width="190" valign="middle" class="dots">Your account number.</td>
 </tr>
 *}
@@ -283,7 +283,7 @@ You must register at least one e-currency account. You may NOT change/add your e
 <table width="490" cellspacing="0" cellpadding="0" border="0" align="center" class="tab">
 <tbody><tr>
  <td width="200">Your Upline:</td>
- <td>{$referer.name} ({$referer.username})</td>
+ <td>{%$referer.name%} ({%$referer.username%})</td>
 </tr>
 
 <tr>
@@ -299,16 +299,16 @@ All the data giving by a member to enjoymoney.biz will be only privately used an
 </tr>
 
 <tr>
- <td valign="middle" height="30" align="center" colspan="2"><input type="checkbox" value="1 {if $frm.agree}checked{/if}" name="agree">
+ <td valign="middle" height="30" align="center" colspan="2"><input type="checkbox" value="1 {%if $frm.agree%}checked{%/if%}" name="agree">
  I agree with <b><a href="?a=rules">Terms and Conditions</a></b></td>
 </tr>
 <tr valign="middle">
  <td valign="bottom" height="35" align="center" colspan="2"><input type="submit" class="sbmt" value="Register"></td>
 </tr>
 </tbody></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 
-{*-------------------------------------------------------------------------*}
-{/if}
-{include file="footer.tpl"}
+{%*-------------------------------------------------------------------------*%}
+{%/if%}
+{%include file="footer.tpl"%}

@@ -6,13 +6,13 @@
       
       <!--  / RIGHT CONTAINER \ -->
       <div id="rightCntr">
-{if $userinfo.logged != 1}
+{%if $userinfo.logged != 1%}
 
         <!--  / GET BOX \ -->
 
         <div class="getBox">
           
-{literal} 
+{%literal%} 
 <script language=javascript>
 function checklogin() {   
   if (document.loginform.username.value=='') {
@@ -28,7 +28,7 @@ function checklogin() {
   return true;
 }
 </script>
-{/literal} 
+{%/literal%} 
 <form method=post name=loginform onsubmit="return checklogin()">
 <input type=hidden name=a value='do_login'>
 <input type=hidden name=follow value=''>
@@ -95,8 +95,8 @@ function checklogin() {
                 <center>
                   
                 <div class="cont">
-                <img src="images/payments.png?tag={$tag}">
-                <center><img src="images/ap.gif?tag={$tag}"></center>
+                <img src="images/payments.png?tag={%$tag%}">
+                <center><img src="images/ap.gif?tag={%$tag%}"></center>
                 </div>
               </center>
 
@@ -119,7 +119,7 @@ function checklogin() {
           </div>
         </div>
         <!--  \ INVESTMENT BOX / -->
-        {else}
+        {%else%}
 
         <!--  / GET BOX \ -->
 
@@ -149,7 +149,7 @@ function checklogin() {
 
 
 
-        {/if}
+        {%/if%}
 
 
       </div>

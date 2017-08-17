@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -20,7 +20,7 @@
 
     <td width="375" valign="middle" height="45" class="regbg l">Your Username:</td>
 
-    <td valign="middle" class="regbg"><b>{$userinfo.username}</b></td>
+    <td valign="middle" class="regbg"><b>{%$userinfo.username%}</b></td>
 
    </tr>
 
@@ -28,7 +28,7 @@
 
     <td width="375" valign="middle" height="45" class="regbg l">Last Access:</td>
 
-    <td valign="middle" class="regbg">{$last_access}&nbsp;</td>
+    <td valign="middle" class="regbg">{%$last_access%}&nbsp;</td>
 
    </tr>
 
@@ -36,7 +36,7 @@
 
     <td valign="middle" height="45" class="regbg l">Account Balance:</td>
 
-    <td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.total}</b><br>
+    <td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.total%}</b><br>
 
  <small>
 
@@ -50,7 +50,7 @@
 
 		<td width="195" valign="middle" height="45" class="regbg l">Earned Total:</td>
 
-		<td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.earning}</b></td>
+		<td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.earning%}</b></td>
 
    </tr>
 
@@ -78,7 +78,7 @@
 
 		<td valign="middle" height="45" class="regbg l">Active Deposit:</td>
 
-		<td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.active_deposit}</b></td>
+		<td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.active_deposit%}</b></td>
 
    </tr>
 
@@ -86,7 +86,7 @@
 
 		<td width="190" valign="middle" height="45" class="regbg l">Last Deposit</td>
 
-		<td valign="middle" class="regbg">{$currency_sign}<b>{$last_deposit}</b> &nbsp; <small>{$last_deposit_date}</small></td>
+		<td valign="middle" class="regbg">{%$currency_sign%}<b>{%$last_deposit%}</b> &nbsp; <small>{%$last_deposit_date%}</small></td>
 
    </tr>
 
@@ -94,7 +94,7 @@
 
 		<td valign="middle" height="45" class="regbg l">Total Deposit:</td>
 
-		<td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.deposit}</b></td>
+		<td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.deposit%}</b></td>
 
    </tr>
 
@@ -122,7 +122,7 @@
 
     <td valign="middle" height="45" class="regbg l">Pending Withdrawal:</td>
 
-    <td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.withdraw_pending}</b></td>
+    <td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.withdraw_pending%}</b></td>
 
    </tr>
 
@@ -130,7 +130,7 @@
 
     <td width="195" valign="middle" height="45" class="regbg l">Last Withdrawal:</td>
 
-    <td valign="middle" class="regbg">{$currency_sign}<b>{$last_withdrawal}</b> &nbsp; <small>{$last_withdrawal_date}</small>	</td>
+    <td valign="middle" class="regbg">{%$currency_sign%}<b>{%$last_withdrawal%}</b> &nbsp; <small>{%$last_withdrawal_date%}</small>	</td>
 
    </tr>
 
@@ -138,7 +138,7 @@
 
     <td valign="middle" height="45" class="regbg l">Total Withdrawal:</td>
 
-    <td valign="middle" class="regbg">{$currency_sign}<b>{$ab_formated.deposit}</b></td>
+    <td valign="middle" class="regbg">{%$currency_sign%}<b>{%$ab_formated.deposit%}</b></td>
 
    </tr>
 
@@ -162,7 +162,7 @@
 
  <td valign="middle" class="regbg2">
 
-<img width="150" height="150" class="alignleft" src="images/info.png?tag={$tag}"> <br>
+<img width="150" height="150" class="alignleft" src="images/info.png?tag={%$tag%}"> <br>
 
 
 
@@ -208,5 +208,5 @@
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

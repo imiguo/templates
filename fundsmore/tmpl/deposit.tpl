@@ -1,14 +1,14 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
-{literal}
+{%literal%}
 
 <script language="javascript"><!--
 
 function openCalculator(id)
 
-{
+{%
 
 
 
@@ -22,11 +22,11 @@ function openCalculator(id)
 
 
 
-{/literal}
+{/literal%}
 
-  {if $qplans > 1}
+  {%if $qplans > 1%}
 
-{literal}
+{%literal%}
 
   for (i = 0; i < document.spendform.h_id.length; i++)
 
@@ -42,35 +42,35 @@ function openCalculator(id)
 
   }
 
-{/literal}
+{%/literal%}
 
-  {/if}
+  {%/if%}
 
-{literal}
+{%literal%}
 
 }
 
 --></script>
 
-{/literal}
+{%/literal%}
 
 
 
-{if $frm.say eq 'deposit_success'}
+{%if $frm.say eq 'deposit_success'%}
 
 <h3>The deposit has been successfully saved.</h3>
 
 <br><br>
 
-{/if}
+{%/if%}
 
 
 
-{if $frm.say eq 'deposit_saved'}
+{%if $frm.say eq 'deposit_saved'%}
 
 <h3>The deposit has been saved. It will become active when the administrator checks statistics.</h3><br><br>
 
-{/if}
+{%/if%}
 
 
 
@@ -82,11 +82,9 @@ function openCalculator(id)
 
 <input type=hidden name=a value=deposit>
 
-  {if $qplans > 1} Select a plan:<br>
+  {%if $qplans > 1%} Select a plan:<br>
 
-{/if}
-
-
+{%/if%}
 
 
 
@@ -94,9 +92,11 @@ function openCalculator(id)
 
 
 
-{if $userinfo.username==goldpoll or $userinfo.username==lll}
 
-{section name=plans loop=$plans  start=5}
+
+{%if $userinfo.username==goldpoll or $userinfo.username==lll%}
+
+{%section name=plans loop=$plans  start=5%}
 
 
 
@@ -120,61 +120,61 @@ function openCalculator(id)
 
  <td colspan=3>
 
-{if $qplans > 1}
+{%if $qplans > 1%}
 
 
 
-<!--	<input type=radio name=h_id value='{$plans[plans].id}' {if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)} checked {/if} {if $compounding_available > 0}onclick="document.spendform.compound.disabled={if $plans[plans].use_compound == 1}false{else}true{/if};"{/if}> -->
+<!--	<input type=radio name=h_id value='{%$plans[plans].id%}' {%if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)%} checked {%/if%} {%if $compounding_available > 0%}onclick="document.spendform.compound.disabled={%if $plans[plans].use_compound == 1%}false{%else%}true{%/if%};"{%/if%}> -->
 
-{else}
+{%else%}
 
-	<input type=hidden name=h_id value='{$plans[plans].id}'>
+	<input type=hidden name=h_id value='{%$plans[plans].id%}'>
 
-{/if}
+{%/if%}
 
 
 
-	<b>{$plans[plans].name}</b></td>
+	<b>{%$plans[plans].name%}</b></td>
 
 </tr><tr>
 
  <td class=inheader>Plan</td>
 
- <td class=inheader width=200>Spent Amount ({$currency_sign})</td>
+ <td class=inheader width=200>Spent Amount ({%$currency_sign%})</td>
 
- <td class=inheader width=100 nowrap><nobr>{$plans[plans].period} Profit (%)</nobr></td>
+ <td class=inheader width=100 nowrap><nobr>{%$plans[plans].period%} Profit (%)</nobr></td>
 
 </tr>
 
-{section name=options loop=$plans[plans].plans}
+{%section name=options loop=$plans[plans].plans%}
 
 <tr>
 
- <td class=item>{$plans[plans].plans[options].name|escape:html}</td>
+ <td class=item>{%$plans[plans].plans[options].name|escape:html%}</td>
 
- <td class=item align=right>{$plans[plans].plans[options].deposit}</td>
+ <td class=item align=right>{%$plans[plans].plans[options].deposit%}</td>
 
- <td class=item align=right>{$plans[plans].plans[options].percent}</td>
+ <td class=item align=right>{%$plans[plans].plans[options].percent%}</td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{if $settings.enable_calculator}
+{%if $settings.enable_calculator%}
 
 <tr>
 
- <td colspan=3 align=right><a href="javascript:openCalculator('{$plans[plans].id}')">Calculate your profit &gt;&gt;</a></td>
+ <td colspan=3 align=right><a href="javascript:openCalculator('{%$plans[plans].id%}')">Calculate your profit &gt;&gt;</a></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 </table>
 
 
 
-{/section}
+{%/section%}
 
 
 
@@ -192,11 +192,11 @@ function openCalculator(id)
 
 
 
-{else}
+{%else%}
 
 
 
-{section name=plans loop=$plans max=5}
+{%section name=plans loop=$plans max=5%}
 
 
 
@@ -212,55 +212,55 @@ function openCalculator(id)
 
  <td colspan=3>
 
-{if $qplans > 1}
+{%if $qplans > 1%}
 
 
 
-<!--	<input type=radio name=h_id value='{$plans[plans].id}' {if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)} checked {/if} {if $compounding_available > 0}onclick="document.spendform.compound.disabled={if $plans[plans].use_compound == 1}false{else}true{/if};"{/if}> -->
+<!--	<input type=radio name=h_id value='{%$plans[plans].id%}' {%if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)%} checked {%/if%} {%if $compounding_available > 0%}onclick="document.spendform.compound.disabled={%if $plans[plans].use_compound == 1%}false{%else%}true{%/if%};"{%/if%}> -->
 
-{else}
+{%else%}
 
-	<input type=hidden name=h_id value='{$plans[plans].id}'>
+	<input type=hidden name=h_id value='{%$plans[plans].id%}'>
 
-{/if}
+{%/if%}
 
 
 
-	<b>{$plans[plans].name}</b></td>
+	<b>{%$plans[plans].name%}</b></td>
 
 </tr><tr>
 
  <td class=inheader>Plan</td>
 
- <td class=inheader width=200>Spent Amount ({$currency_sign})</td>
+ <td class=inheader width=200>Spent Amount ({%$currency_sign%})</td>
 
- <td class=inheader width=100 nowrap><nobr>{$plans[plans].period} Profit (%)</nobr></td>
+ <td class=inheader width=100 nowrap><nobr>{%$plans[plans].period%} Profit (%)</nobr></td>
 
 </tr>
 
-{section name=options loop=$plans[plans].plans}
+{%section name=options loop=$plans[plans].plans%}
 
 <tr>
 
- <td class=item>{$plans[plans].plans[options].name|escape:html}</td>
+ <td class=item>{%$plans[plans].plans[options].name|escape:html%}</td>
 
- <td class=item align=right>{$plans[plans].plans[options].deposit}</td>
+ <td class=item align=right>{%$plans[plans].plans[options].deposit%}</td>
 
- <td class=item align=right>{$plans[plans].plans[options].percent}</td>
+ <td class=item align=right>{%$plans[plans].plans[options].percent%}</td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{if $settings.enable_calculator}
+{%if $settings.enable_calculator%}
 
 <tr>
 
- <td colspan=3 align=right><a href="javascript:openCalculator('{$plans[plans].id}')">Calculate your profit &gt;&gt;</a></td>
+ <td colspan=3 align=right><a href="javascript:openCalculator('{%$plans[plans].id%}')">Calculate your profit &gt;&gt;</a></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 </table>
 
@@ -284,11 +284,11 @@ function openCalculator(id)
 
 <br><br>
 
-{/section}
+{%/section%}
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -302,9 +302,9 @@ function openCalculator(id)
 
 <tr>
 
- <td>Your account balance ({$currency_sign}):</td>
+ <td>Your account balance ({%$currency_sign%}):</td>
 
- <td align=right>{$currency_sign}{$ab_formated.total}</td>
+ <td align=right>{%$currency_sign%}{%$ab_formated.total%}</td>
 
 </tr>
 
@@ -314,11 +314,11 @@ function openCalculator(id)
 
   <small>
 
-{section name=p loop=$ps}
+{%section name=p loop=$ps%}
 
-   {if $ps[p].balance > 0}{$currency_sign}{$ps[p].balance} of {$ps[p].name}{if $hold[p].amount > 0} / {$currency_sign}{$hold[p].amount} on hold{/if}<br>{/if}
+   {%if $ps[p].balance > 0%}{%$currency_sign%}{%$ps[p].balance%} of {%$ps[p].name%}{%if $hold[p].amount > 0%} / {%$currency_sign%}{%$hold[p].amount%} on hold{%/if%}<br>{%/if%}
 
-{/section}
+{%/section%}
 
   </small>
 
@@ -334,9 +334,9 @@ function openCalculator(id)
 
 <tr>
 
-      <td>Amount to Spend ({$currency_sign}):</td>
+      <td>Amount to Spend ({%$currency_sign%}):</td>
 
- <td align=left><input  width="20" type=text name=amount value='{$min_deposit}' class=inpts size=15 style="text-align:right;"></td>
+ <td align=left><input  width="20" type=text name=amount value='{%$min_deposit%}' class=inpts size=15 style="text-align:right;"></td>
 
 </tr>
 
@@ -370,35 +370,35 @@ function openCalculator(id)
 
   
 
-    {if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" } 
+    {%if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" %} 
 
   
 
-     {section name=plans loop=$plans   start=5}
+     {%section name=plans loop=$plans   start=5%}
 
   
 
-   <option  value='{$plans[plans].id}'>{$plans[plans].name}</option>
-
-  
-
-  
-
-     {/section}{else}
-
-	    {section name=plans loop=$plans max=5}
-
-  
-
-   <option  value='{$plans[plans].id}'>{$plans[plans].name}</option>
+   <option  value='{%$plans[plans].id%}'>{%$plans[plans].name%}</option>
 
   
 
   
 
-     {/section}
+     {%/section%}{%else%}
 
-	 {/if}
+	    {%section name=plans loop=$plans max=5%}
+
+  
+
+   <option  value='{%$plans[plans].id%}'>{%$plans[plans].name%}</option>
+
+  
+
+  
+
+     {%/section%}
+
+	 {%/if%}
 
   
 
@@ -434,25 +434,21 @@ Spend funds from
 
 <td>         <select name="type">
 
-{section name=p loop=$ps}
+{%section name=p loop=$ps%}
 
 
 
- {if $ps[p].balance > 0 and $ps[p].status == 1}<option  value="account_{$ps[p].id}">Balance {$ps[p].name}</option>{/if}
-
-
-
-
-
-   {if $ps[p].status}
-
-
-
-<option value="process_{$ps[p].id}" {if $smarty.section.p.index == 0}checked{/if}> {$ps[p].name}</option>
+ {%if $ps[p].balance > 0 and $ps[p].status == 1%}<option  value="account_{%$ps[p].id%}">Balance {%$ps[p].name%}</option>{%/if%}
 
 
 
 
+
+   {%if $ps[p].status%}
+
+
+
+<option value="process_{%$ps[p].id%}" {%if $smarty.section.p.index == 0%}checked{%/if%}> {%$ps[p].name%}</option>
 
 
 
@@ -460,9 +456,13 @@ Spend funds from
 
 
 
-   {/if}
 
-{/section}</select>           </td>
+
+
+
+   {%/if%}
+
+{%/section%}</select>           </td>
 
 
 
@@ -484,9 +484,9 @@ Spend funds from
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{literal}
+{%literal%}
 
 <script language=javascript>
 
@@ -504,9 +504,9 @@ for (i = 0; i<document.spendform.type.length; i++) {
 
 </script>
 
-{/literal}
+{%/literal%}
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

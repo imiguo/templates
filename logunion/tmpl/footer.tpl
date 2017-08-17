@@ -1,5 +1,5 @@
       </div>          
-{literal}
+{%literal%}
 <script language=javascript>
 function checklogin() {   
   if (document.loginform.username.value=='') {
@@ -15,10 +15,10 @@ function checklogin() {
   return true;
 }
 </script>
-{/literal}
+{%/literal%}
 
 <div class="sidebar">
-	{if $userinfo.logged != 1}
+	{%if $userinfo.logged != 1%}
 	<div class="logbox">
 		<div class="gadget">
 			<DIV class="login">
@@ -59,7 +59,7 @@ function checklogin() {
 							<td colspan=2 align=right>
 								<a href=?a=forgot_password class=menutxt>Password recovery</a>
 							</table>
-						<input type="hidden" name="_token" value="{$csrf_token}"></form>
+						<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 					</DIV>
 				</div>
 			</div>
@@ -70,20 +70,20 @@ function checklogin() {
 					<DIV id="info">
 						<table>
 							<tr><td colspan=2>We accept &nbsp</td></tr>
-							<tr><td>&nbsp</td><td><img src="images/payments.png?tag={$tag}"></td></tr>
+							<tr><td>&nbsp</td><td><img src="images/payments.png?tag={%$tag%}"></td></tr>
 						</table>
 					</DIV>
 					<br><br><br><br>
 					<DIV id="info">
 						<table>
 							<tr><td colspan=2>Referral program &nbsp</td></tr>
-							<tr><td>&nbsp</td><td><img src="images/ref.png?tag={$tag}"></td></tr>
+							<tr><td>&nbsp</td><td><img src="images/ref.png?tag={%$tag%}"></td></tr>
 						</table>
 					</DIV>
 					<br><br><br><br>
 				</div>
 			</div>
-			{else}
+			{%else%}
 			<div class="gadget">
         	 <h2 class="star">Account Navigation</h2>
         	 <div class="clr"></div>
@@ -103,7 +103,7 @@ function checklogin() {
         	 </ul>
         	</div>
   
-			{/if}
+			{%/if%}
 		</div>
 
       <div class="clr"></div>
@@ -122,11 +122,11 @@ function checklogin() {
     <div class="footer_resize">
   <p class="lf">
   	<a href="?a=home">Home Page</a>
-  	| {if $userinfo.logged != 1}
+  	| {%if $userinfo.logged != 1%}
   	<a href="?a=signup">Sign Up</a>
   	|
   	<a href="?a=login">Login</a>
-  	|  {/if}
+  	|  {%/if%}
   	<a href="?a=rules">Terms</a>
   	|
   	<a href="?a=faq">F.A.Q</a>
@@ -136,9 +136,9 @@ function checklogin() {
   	<a href="?a=cust&page=howtoinvest">How to Invest</a>
   	|
   	<a href="?a=support">Contacts</a>
-  	{if $userinfo.logged == 1} |
+  	{%if $userinfo.logged == 1%} |
   	<a href="?a=logout">Logout</a>
-  	{/if}
+  	{%/if%}
   </p>
       <div class="clr"></div>
     </div>

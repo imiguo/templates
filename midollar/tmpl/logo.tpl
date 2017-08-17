@@ -8,25 +8,25 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css" />
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" type="text/css" href="coin-slider.css?tag={$tag}" />
+<link rel="stylesheet" type="text/css" href="coin-slider.css?tag={%$tag%}" />
 
-<script type="text/javascript" src="js/cufon-yui.js?tag={$tag}"></script>
+<script type="text/javascript" src="js/cufon-yui.js?tag={%$tag%}"></script>
 
-<script type="text/javascript" src="js/cufon-libsans-r-b.js?tag={$tag}"></script>
+<script type="text/javascript" src="js/cufon-libsans-r-b.js?tag={%$tag%}"></script>
 
-<script type="text/javascript" src="js/jquery-1.4.2.min.js?tag={$tag}"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js?tag={%$tag%}"></script>
 
-<script type="text/javascript" src="js/script.js?tag={$tag}"></script>
+<script type="text/javascript" src="js/script.js?tag={%$tag%}"></script>
 
-<script type="text/javascript" src="js/coin-slider.min.js?tag={$tag}"></script>
+<script type="text/javascript" src="js/coin-slider.min.js?tag={%$tag%}"></script>
 
 
 
 <!-- CuFon ends -->
 
-{literal}
+{%literal%}
 
 <script type="text/javascript">
 
@@ -54,7 +54,7 @@
 
 </script>
 
-{/literal}
+{%/literal%}
 
 </head>
 
@@ -70,7 +70,7 @@
 
       <div class="logo">
 
-        <a href="?a=home"><img src="images/logo.gif?tag={$tag}" width="321" height="75" border="0"></a>
+        <a href="?a=home"><img src="images/logo.gif?tag={%$tag%}" width="321" height="75" border="0"></a>
 
       </div>
 
@@ -86,31 +86,31 @@
 
           <ul>
 
-            <li {if !$frm.a || $frm.a == 'home'}class="active"{/if}><A href="?a=home"><span>Home Page</span></a></li>
+            <li {%if !$frm.a || $frm.a == 'home'%}class="active"{%/if%}><A href="?a=home"><span>Home Page</span></a></li>
 
-            {if $userinfo.logged != 1}
+            {%if $userinfo.logged != 1%}
 
-                <li {if $frm.a == 'signup'}class="active"{/if}><a href="?a=signup"><span>Sign Up</span></a></li>
+                <li {%if $frm.a == 'signup'%}class="active"{%/if%}><a href="?a=signup"><span>Sign Up</span></a></li>
 
-      			<li {if $frm.a == 'login'}class="active"{/if}><a href="?a=login"><span>Login</span></a></li>
+      			<li {%if $frm.a == 'login'%}class="active"{%/if%}><a href="?a=login"><span>Login</span></a></li>
 
-      		  {/if}
+      		  {%/if%}
 
-               <li {if $frm.a == 'rules'}class="active"{/if}><a href="?a=rules"><span>Terms</span></a></li>
+               <li {%if $frm.a == 'rules'%}class="active"{%/if%}><a href="?a=rules"><span>Terms</span></a></li>
 
-            	 <li {if $frm.a == 'faq'}class="active"{/if}><a href="?a=faq"><span> F.A.Q</span></a></li>
+            	 <li {%if $frm.a == 'faq'%}class="active"{%/if%}><a href="?a=faq"><span> F.A.Q</span></a></li>
 
-      			   <li {if $frm.page == 'aboutus'}class="active"{/if}><a href="?a=cust&page=aboutus"><span>About Us</span></a></li>
+      			   <li {%if $frm.page == 'aboutus'%}class="active"{%/if%}><a href="?a=cust&page=aboutus"><span>About Us</span></a></li>
 
-            	 <li {if $frm.page == 'howtoinvest'}class="active"{/if}><a href="?a=cust&page=howtoinvest"><span>How to Invest</span></a></li>
+            	 <li {%if $frm.page == 'howtoinvest'%}class="active"{%/if%}><a href="?a=cust&page=howtoinvest"><span>How to Invest</span></a></li>
 
-            	 <li {if $frm.a == 'support'}class="active"{/if}><a href="?a=support"><span>Contacts</span></a></li>
+            	 <li {%if $frm.a == 'support'%}class="active"{%/if%}><a href="?a=support"><span>Contacts</span></a></li>
 
-            	 {if $userinfo.logged == 1}
+            	 {%if $userinfo.logged == 1%}
 
-            	 <li {if $frm.a == 'logout'}class="active"{/if}><a href="?a=logout"><span>LogOut</span></a></li>
+            	 <li {%if $frm.a == 'logout'%}class="active"{%/if%}><a href="?a=logout"><span>LogOut</span></a></li>
 
-            {/if}
+            {%/if%}
 
 
 
@@ -124,9 +124,9 @@
 
         <div id="coin-slider">
 
-          <img src="images/slide1.jpg?tag={$tag}" width="940" height="369" alt="slide1">
+          <img src="images/slide1.jpg?tag={%$tag%}" width="940" height="369" alt="slide1">
 
-          <img src="images/slide2.jpg?tag={$tag}" width="940" height="369" alt="slide2">
+          <img src="images/slide2.jpg?tag={%$tag%}" width="940" height="369" alt="slide2">
 
         </div>
 

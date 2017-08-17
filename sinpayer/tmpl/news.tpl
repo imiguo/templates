@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <h3>News</h3>
 <br>
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
@@ -21,4 +21,4 @@
         </td>
     </tr>
 </table>
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

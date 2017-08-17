@@ -11,7 +11,7 @@
   <tr>
     <td width="299" height="140" valign="top" class="box">
   <div style="padding-left:25px;padding-right:20px;">
-  {if $userinfo.logged != 1}
+  {%if $userinfo.logged != 1%}
   <h2>Members Login</h2>
   Please enter your username and password to login to your account. If you have an account with us and have forgotten your password, please click on the "Forgot your password?" link.<br>
   <br>
@@ -34,16 +34,16 @@
   </tr>
   
   <tr>
-    <td width="247" height="35" valign="bottom" align="center"><input type=image src="images/log.gif?tag={$tag}" value="Login" name="submit"></td>
+    <td width="247" height="35" valign="bottom" align="center"><input type=image src="images/log.gif?tag={%$tag%}" value="Login" name="submit"></td>
   </tr>
-  <input type="hidden" name="_token" value="{$csrf_token}"></form>
+  <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
  </table>
  
  <div align="center" style="padding-top:7px;"><a href="?a=forgot_password">Forgot your password?</a></div>
   </div>
   </td>
   </tr>
-  {else}
+  {%else%}
     <h2>Account Navigation</h2>
   Use the menu below to access the areas of your account!<br>
   <br>
@@ -126,17 +126,17 @@
   </div>
   </td>
   </tr>
-  {/if}
+  {%/if%}
   
   <tr>
-    <td height="10" valign="top"><img src="images/boxbottom.gif?tag={$tag}" width="299" height="10"></td>
+    <td height="10" valign="top"><img src="images/boxbottom.gif?tag={%$tag%}" width="299" height="10"></td>
   </tr>
 </table>
   </div>
   
   
   
-<div style="padding-top:15px;" align="center"><img src="images/reff.jpg?tag={$tag}" width="257" height="282" /></div>  
+<div style="padding-top:15px;" align="center"><img src="images/reff.jpg?tag={%$tag%}" width="257" height="282" /></div>  
   </td>
   </tr>
 </table>
@@ -144,12 +144,12 @@
 <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
   <!--DWLayoutTable-->
   <tr>
-    <td height="16" colspan="2" valign="top"><img src="images/index_23.gif?tag={$tag}" width="950" height="16"></td>
+    <td height="16" colspan="2" valign="top"><img src="images/index_23.gif?tag={%$tag%}" width="950" height="16"></td>
   </tr>
   <tr>
     <td width="309" height="70" valign="middle" class="foot"><a href="?a=home">HOME</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="?a=rules">TERMS OF SERVICE</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="?a=support">SUPPORT</a> </td>
 
-  <td width="641" align="right" valign="middle" class="ftext"><img src="images/security.png?tag={$tag}" width="227" height="32"></td>
+  <td width="641" align="right" valign="middle" class="ftext"><img src="images/security.png?tag={%$tag%}" width="227" height="32"></td>
   </tr>
 </table>
 

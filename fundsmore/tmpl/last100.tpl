@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -18,23 +18,23 @@
 
 </tr>
 
-{if $top}
+{%if $top%}
 
-{section name=s loop=$top}
+{%section name=s loop=$top%}
 
 <tr>
 
- <td><b>{$top[s].username}</b></td>
+ <td><b>{%$top[s].username%}</b></td>
 
- <td><b>{$top[s].dd}</b></td>
+ <td><b>{%$top[s].dd%}</b></td>
 
- <td align=right><b><img src="images/{$top[s].ec}.gif?tag={$tag}" width="44" height="17" />{$top[s].balance}</b></td>
+ <td align=right><b><img src="images/{%$top[s].ec%}.gif?tag={%$tag%}" width="44" height="17" />{%$top[s].balance%}</b></td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{else}
+{%else%}
 
 <tr>
 
@@ -52,11 +52,11 @@
 
 </tr>
 
-{/if}
+{%/if%}
 
 </table>
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

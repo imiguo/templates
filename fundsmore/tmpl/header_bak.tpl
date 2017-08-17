@@ -1,4 +1,4 @@
-{include file="logo.tpl"}
+{%include file="logo.tpl"%}
 
 
 
@@ -22,9 +22,9 @@
 
              <tr class=bgcolorleft valign="top"> 
 
-              <td width=300 align=center><img src="images/q.gif?tag={$tag}" width=180 height=1>
+              <td width=300 align=center><img src="images/q.gif?tag={%$tag%}" width=180 height=1>
 
-{include file="left.tpl"}
+{%include file="left.tpl"%}
 
               </td>
 

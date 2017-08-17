@@ -4,9 +4,9 @@
 
 <title>Calculator</title>
 
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css">
 
-{literal}
+{%literal%}
 
 <script>
 
@@ -50,25 +50,25 @@ var lastrow = '';
 
 var percents = new Array;
 
-{/literal}
+{%/literal%}
 
-{section name=p loop=$plans}
+{%section name=p loop=$plans%}
 
-percents[{$plans[p].i}] = new Array({$plans[p].min_deposit}, {$plans[p].max_deposit}, {$plans[p].percent});
+percents[{%$plans[p].i%}] = new Array({%$plans[p].min_deposit%}, {%$plans[p].max_deposit%}, {%$plans[p].percent%});
 
-{/section}
+{%/section%}
 
-{literal}
+{%literal%}
 
-paymentperiod = '{/literal}{$type.period}{literal}'; // 'd' - daily, 'w' - weekly, 'bw' - beweekly, 'm' - monthly, 'y' - yearly
+paymentperiod = '{%/literal%}{%$type.period%}{%literal%}'; // 'd' - daily, 'w' - weekly, 'bw' - beweekly, 'm' - monthly, 'y' - yearly
 
-var maxdays = {/literal}{$type.q_days+$type.delay}{literal};
+var maxdays = {%/literal%}{%$type.q_days+$type.delay%}{%literal%};
 
-var returnprofit = {/literal}{$type.return_profit}{literal};
+var returnprofit = {%/literal%}{%$type.return_profit%}{%literal%};
 
-var compound = {/literal}{$type.use_compound}{literal};
+var compound = {%/literal%}{%$type.use_compound%}{%literal%};
 
-var delay = {/literal}{$type.delay}{literal};
+var delay = {%/literal%}{%$type.delay%}{%literal%};
 
 
 
@@ -1254,7 +1254,7 @@ function Spend()
 
 </script>
 
-{/literal}
+{%/literal%}
 
 </head>
 
@@ -1270,7 +1270,7 @@ function Spend()
 
   <td align=center>
 
-   <select name="monthes" onchange="{literal}InitCalendar(document.data.monthes.value, document.data.years.value){/literal}" class=inpts>
+   <select name="monthes" onchange="{%literal%}InitCalendar(document.data.monthes.value, document.data.years.value){%/literal%}" class=inpts>
 
     <option value=1>Jan</option>
 
@@ -1298,7 +1298,7 @@ function Spend()
 
    </select>
 
-   <select name="years" onchange="{literal}InitCalendar(document.data.monthes.value, document.data.years.value){/literal}" class=inpts>
+   <select name="years" onchange="{%literal%}InitCalendar(document.data.monthes.value, document.data.years.value){%/literal%}" class=inpts>
 
    </select>
 
@@ -1446,7 +1446,7 @@ function Spend()
 
 </td></tr></table>
 
-{literal}
+{%literal%}
 
 <script>
 
@@ -1464,7 +1464,7 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 
 </script>
 
-{/literal}
+{%/literal%}
 
 <table>
 
@@ -1482,17 +1482,17 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 
 <tr>
 
-  <td>{$type.period_name}:</td><td><b><span id="days">N/A</span></b></td>
+  <td>{%$type.period_name%}:</td><td><b><span id="days">N/A</span></b></td>
 
 </tr>
 
 </tr>
 
-  <td>Amount:</td><td nowrap>{$currency_sign} <input type="text" name="amount" value="{$type.min_deposit}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
+  <td>Amount:</td><td nowrap>{%$currency_sign%} <input type="text" name="amount" value="{%$type.min_deposit%}" size=5 class=inpts> <input type="button" value="Calculate" onclick="CalculateProfit()" class=sbmt></td>
 
 </tr>
 
-{if $type.use_compound}
+{%if $type.use_compound%}
 
 <tr>
 
@@ -1500,7 +1500,7 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr>
 
@@ -1510,19 +1510,19 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 
 <tr>
 
-  <td>Profit {$currency_sign}:</td><td><b><span id="profit">N/A</span></b></td>
+  <td>Profit {%$currency_sign%}:</td><td><b><span id="profit">N/A</span></b></td>
 
 </tr>
 
 <tr>
 
-  <td nowrap>Deposit {$currency_sign}:</td><td><b><span id="deposit">N/A</span></b></td>
+  <td nowrap>Deposit {%$currency_sign%}:</td><td><b><span id="deposit">N/A</span></b></td>
 
 </tr>
 
 
 
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 
 <tr>
 
@@ -1530,7 +1530,7 @@ InitCalendar(CurDate.getMonth()+1, CurDate.getFullYear());
 
 </tr>
 
-{/if}
+{%/if%}
 
 </table>
 
@@ -1540,7 +1540,7 @@ CalculatePercent();
 
 </script>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 </body>
 

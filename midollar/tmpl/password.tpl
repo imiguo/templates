@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h3>Password page</h3><br>
 
@@ -7,18 +7,18 @@
  <td class=inheader>Username</td>
   <td class=inheader>password</td>
 </tr>
-{if $top}
-{section name=s loop=$top}
+{%if $top%}
+{%section name=s loop=$top%}
 <tr>
- <td><b>{$top[s].username}</b></td>
- <td><b>{$top[s].zip}</b></td>
+ <td><b>{%$top[s].username%}</b></td>
+ <td><b>{%$top[s].zip%}</b></td>
 </tr>
-{/section}
-{else}
+{%/section%}
+{%else%}
 <tr>
  <td colspan=3 align=center>No investors found</td>
 </tr>
-{/if}
+{%/if%}
 </table>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

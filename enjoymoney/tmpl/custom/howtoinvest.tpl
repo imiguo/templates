@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 	<h2>How to Invest</h2>
 	Program participation is available to any individual, who is over 18 years of age and has a reliable Internet access. To start, one has to create the EnjoyMoney.biz personal investment account. We assure you that you will get exceptional service and customer support.<br><br>
@@ -7,7 +7,7 @@
 You have to AGREE to our <a href="?a=rules">Terms and Conditions</a> to proceed. Please fill your accurate information to avoid account suspension in the future. Please choose at least a 6-digit PIN, which will be used for withdrawal requests and account changes. Keep your password and PIN number securely from unauthorized access. Remember these are for your own security and changing your Transaction Code (PIN) would take you some time and needs you to provide your security question and answer, so use a memorable PIN and keep a note of it.<br>
 <br>
 
-<span class="floatr"><br><br><img width="105" height="34" src="images/lr.gif?tag={$tag}"></span>
+<span class="floatr"><br><br><img width="105" height="34" src="images/lr.gif?tag={%$tag%}"></span>
 <h3>Create your e-currency account.</h3>
 
 Create an account in one of the following websites:<br><br>
@@ -44,4 +44,4 @@ Review and confirm the submitted information. Your withdrawal request will be ad
 Please note that your amount will be sent to your e-currency account. So if you have changed your E-Currency account, please contact our staff before requesting a withdrawal.
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

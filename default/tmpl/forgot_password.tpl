@@ -1,6 +1,6 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{literal}
+{%literal%}
 <script language=javascript>
 function checkform() {
   if (document.forgotform.email.value == '') {
@@ -11,7 +11,7 @@ function checkform() {
   return true;
 }
 </script>
-{/literal}
+{%/literal%}
 <h3>Forgot your password:</h3><br>
 
 <form method=post name=forgotform onsubmit="return checkform();">
@@ -27,12 +27,12 @@ function checkform() {
  <td><input type=submit value="Forgot" class=sbmt></td>
 </tr>
 </table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form><br><br>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form><br><br>
 
-{if $found_records == 0}
+{%if $found_records == 0%}
 No accounts found
-{elseif $found_records > 0}
+{%elseif $found_records > 0%}
 Login and password send to you. Please check your e-mail account
-{/if}
+{%/if%}
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

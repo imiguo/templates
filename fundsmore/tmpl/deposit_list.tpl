@@ -1,10 +1,10 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
 <tbody><tr>
 
-              <td align="left" height="35"><img src="images/mydeposits.jpg?tag={$tag}" height="108" width="766"></td>
+              <td align="left" height="35"><img src="images/mydeposits.jpg?tag={%$tag%}" height="108" width="766"></td>
 
             </tr>
 
@@ -40,11 +40,11 @@
 
 
 
-<h3><b>Total: {$currency_sign}{$total}</b></h3><br><br>
+<h3><b>Total: {%$currency_sign%}{%$total%}</b></h3><br><br>
 
-{if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com"}
+{%if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com"%}
 
-{section name=plans loop=$plans start=5}
+{%section name=plans loop=$plans start=5%}
 
 
 
@@ -54,31 +54,31 @@
 
 <tr>
 
- <td colspan=3 align=center><font size="2"><font color="#99CC00"><b>{$plans[plans].name}</b></font></font></td>
+ <td colspan=3 align=center><font size="2"><font color="#99CC00"><b>{%$plans[plans].name%}</b></font></font></td>
 
 </tr><tr>
 
  <td class=inheader><font size="2"><font color="#00CCFF">Plan</font></font></td>
 
- <td class=inheader width=200><font size="2"><font color="#00CCFF">Amount Spent ({$currency_sign})</font></font></td>
+ <td class=inheader width=200><font size="2"><font color="#00CCFF">Amount Spent ({%$currency_sign%})</font></font></td>
 
- <td class=inheader width=100 nowrap><font size="2"><font color="#00CCFF"><nobr>{$plans[plans].period} Profit (%)</nobr></font></font></td>
+ <td class=inheader width=100 nowrap><font size="2"><font color="#00CCFF"><nobr>{%$plans[plans].period%} Profit (%)</nobr></font></font></td>
 
 </tr>
 
-{section name=plan_options loop=$plans[plans].plans}
+{%section name=plan_options loop=$plans[plans].plans%}
 
 <tr>
 
- <td class=item>{$plans[plans].plans[plan_options].name}</td>
+ <td class=item>{%$plans[plans].plans[plan_options].name%}</td>
 
- <td class=item align=right>{$plans[plans].plans[plan_options].deposit}</td>
+ <td class=item align=right>{%$plans[plans].plans[plan_options].deposit%}</td>
 
- <td class=item align=right>{$plans[plans].plans[plan_options].percent}</td>
+ <td class=item align=right>{%$plans[plans].plans[plan_options].percent%}</td>
 
 </tr>
 
-{/section}
+{%/section%}
 
 </table>
 
@@ -86,7 +86,7 @@
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 
-{if !$plans[plans].deposits}
+{%if !$plans[plans].deposits%}
 
 <tr>
 
@@ -94,7 +94,7 @@
 
 </tr>           
 
-{else}
+{%else%}
 
 <tr>
 
@@ -108,81 +108,81 @@
 
  <td class=inheader>Amount</td>
 
-{if $plans[plans].use_compound}
+{%if $plans[plans].use_compound%}
 
  <td class=inheader>Compounding Percent</td>
 
-{/if}
+{%/if%}
 
-{if $plans[plans].withdraw_principal}
+{%if $plans[plans].withdraw_principal%}
 
  <td class=inheader>Release</td>
 
-{/if}
+{%/if%}
 
 </tr>           
 
-{section name=deposit loop=$plans[plans].deposits}
+{%section name=deposit loop=$plans[plans].deposits%}
 
 <tr>
 
- <td align=center class=item><b>{$plans[plans].deposits[deposit].date}</b></td>
+ <td align=center class=item><b>{%$plans[plans].deposits[deposit].date%}</b></td>
 
- <td align=center class=item><b>{$currency_sign}{$plans[plans].deposits[deposit].deposit} <img src="images/{$plans[plans].deposits[deposit].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></b></td>
+ <td align=center class=item><b>{%$currency_sign%}{%$plans[plans].deposits[deposit].deposit%} <img src="images/{%$plans[plans].deposits[deposit].ec%}.gif?tag={%$tag%}" align=absmiddle hspace=1 height=17></b></td>
 
-{if $plans[plans].use_compound}
+{%if $plans[plans].use_compound%}
 
- <td align=center class=item align=center>{$plans[plans].deposits[deposit].compound}% <a href="?a=change_compound&deposit={$plans[plans].deposits[deposit].id}">[change]</a></td>
+ <td align=center class=item align=center>{%$plans[plans].deposits[deposit].compound%}% <a href="?a=change_compound&deposit={%$plans[plans].deposits[deposit].id%}">[change]</a></td>
 
-{/if}
+{%/if%}
 
-{if $plans[plans].withdraw_principal}
+{%if $plans[plans].withdraw_principal%}
 
  <td align=center class=item>
 
-  {if $plans[plans].deposits[deposit].can_withdraw}
+  {%if $plans[plans].deposits[deposit].can_withdraw%}
 
-   <a href="?a=withdraw_principal&deposit={$plans[plans].deposits[deposit].id}">[release]</a>
+   <a href="?a=withdraw_principal&deposit={%$plans[plans].deposits[deposit].id%}">[release]</a>
 
-  {else}
+  {%else%}
 
-   {if $plans[plans].deposits[deposit].pending_duration > 0}
+   {%if $plans[plans].deposits[deposit].pending_duration > 0%}
 
-    {$plans[plans].deposits[deposit].pending_duration} day{if $plans[plans].deposits[deposit].pending_duration > 1}s{/if} left
+    {%$plans[plans].deposits[deposit].pending_duration%} day{%if $plans[plans].deposits[deposit].pending_duration > 1%}s{%/if%} left
 
-   {else}
+   {%else%}
 
     not available
 
-   {/if}
+   {%/if%}
 
-  {/if}
+  {%/if%}
 
  </td>
 
-{/if}
+{%/if%}
 
 </tr>
 
-{/section}
+{%/section%}
 
-{/if}
+{%/if%}
 
 </table>
 
-{if $plans[plans].total_deposit > 0 || $plans[plans].today_profit > 0 || $plans[plans].total_profit > 0}
+{%if $plans[plans].total_deposit > 0 || $plans[plans].today_profit > 0 || $plans[plans].total_profit > 0%}
 
 <table cellspacing=0 cellpadding=1 border=0>
 
-<tr><td>Deposited Total:</td><td><b>{$currency_sign}{$plans[plans].total_deposit}</b></td></tr>
+<tr><td>Deposited Total:</td><td><b>{%$currency_sign%}{%$plans[plans].total_deposit%}</b></td></tr>
 
-<tr><td>Profit Today:</td><td><b>{$currency_sign}{$plans[plans].today_profit}</b></td></tr>
+<tr><td>Profit Today:</td><td><b>{%$currency_sign%}{%$plans[plans].today_profit%}</b></td></tr>
 
-<tr><td>Total Profit:</td><td><b>{$currency_sign}{$plans[plans].total_profit}</b></td></tr>
+<tr><td>Total Profit:</td><td><b>{%$currency_sign%}{%$plans[plans].total_profit%}</b></td></tr>
 
 </table>
 
-{/if}
+{%/if%}
 
 <br>
 
@@ -190,7 +190,7 @@
 
 <br>
 
-{/section}{else}
+{%/section%}{%else%}
 
 
 
@@ -212,7 +212,7 @@
 
 
 
-{section name=plans loop=$plans max=5}
+{%section name=plans loop=$plans max=5%}
 
 <table cellspacing=1 cellpadding=2 border=0 width=100% class=line><tr><td class=item>
 
@@ -220,31 +220,31 @@
 
 <tr>
 
- <td colspan=3 align=center><font size="2"><font color="#99CC00"><b>{$plans[plans].name}</b></font></font></td>
+ <td colspan=3 align=center><font size="2"><font color="#99CC00"><b>{%$plans[plans].name%}</b></font></font></td>
 
 </tr><tr>
 
  <td class=inheader><font size="2"><font color="#00CCFF">Plan</font></font></td>
 
- <td class=inheader width=200><font size="2"><font color="#00CCFF">Amount Spent ({$currency_sign})</font></font></td>
+ <td class=inheader width=200><font size="2"><font color="#00CCFF">Amount Spent ({%$currency_sign%})</font></font></td>
 
- <td class=inheader width=100 nowrap><font size="2"><font color="#00CCFF"><nobr>{$plans[plans].period} Profit (%)</nobr></font></font></td>
+ <td class=inheader width=100 nowrap><font size="2"><font color="#00CCFF"><nobr>{%$plans[plans].period%} Profit (%)</nobr></font></font></td>
 
 </tr>
 
-{section name=plan_options loop=$plans[plans].plans}
+{%section name=plan_options loop=$plans[plans].plans%}
 
 <tr>
 
- <td class=item>{$plans[plans].plans[plan_options].name}</td>
+ <td class=item>{%$plans[plans].plans[plan_options].name%}</td>
 
- <td class=item align=right>{$plans[plans].plans[plan_options].deposit}</td>
+ <td class=item align=right>{%$plans[plans].plans[plan_options].deposit%}</td>
 
- <td class=item align=right>{$plans[plans].plans[plan_options].percent}</td>
+ <td class=item align=right>{%$plans[plans].plans[plan_options].percent%}</td>
 
 </tr>
 
-{/section}
+{%/section%}
 
 </table>
 
@@ -252,7 +252,7 @@
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 
-{if !$plans[plans].deposits}
+{%if !$plans[plans].deposits%}
 
 <tr>
 
@@ -260,7 +260,7 @@
 
 </tr>           
 
-{else}
+{%else%}
 
 <tr>
 
@@ -274,81 +274,81 @@
 
  <td class=inheader>Amount</td>
 
-{if $plans[plans].use_compound}
+{%if $plans[plans].use_compound%}
 
  <td class=inheader>Compounding Percent</td>
 
-{/if}
+{%/if%}
 
-{if $plans[plans].withdraw_principal}
+{%if $plans[plans].withdraw_principal%}
 
  <td class=inheader>Release</td>
 
-{/if}
+{%/if%}
 
 </tr>           
 
-{section name=deposit loop=$plans[plans].deposits}
+{%section name=deposit loop=$plans[plans].deposits%}
 
 <tr>
 
- <td align=center class=item><b>{$plans[plans].deposits[deposit].date}</b></td>
+ <td align=center class=item><b>{%$plans[plans].deposits[deposit].date%}</b></td>
 
- <td align=center class=item><b>{$currency_sign}{$plans[plans].deposits[deposit].deposit} <img src="images/{$plans[plans].deposits[deposit].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></b></td>
+ <td align=center class=item><b>{%$currency_sign%}{%$plans[plans].deposits[deposit].deposit%} <img src="images/{%$plans[plans].deposits[deposit].ec%}.gif?tag={%$tag%}" align=absmiddle hspace=1 height=17></b></td>
 
-{if $plans[plans].use_compound}
+{%if $plans[plans].use_compound%}
 
- <td align=center class=item align=center>{$plans[plans].deposits[deposit].compound}% <a href="?a=change_compound&deposit={$plans[plans].deposits[deposit].id}">[change]</a></td>
+ <td align=center class=item align=center>{%$plans[plans].deposits[deposit].compound%}% <a href="?a=change_compound&deposit={%$plans[plans].deposits[deposit].id%}">[change]</a></td>
 
-{/if}
+{%/if%}
 
-{if $plans[plans].withdraw_principal}
+{%if $plans[plans].withdraw_principal%}
 
  <td align=center class=item>
 
-  {if $plans[plans].deposits[deposit].can_withdraw}
+  {%if $plans[plans].deposits[deposit].can_withdraw%}
 
-   <a href="?a=withdraw_principal&deposit={$plans[plans].deposits[deposit].id}">[release]</a>
+   <a href="?a=withdraw_principal&deposit={%$plans[plans].deposits[deposit].id%}">[release]</a>
 
-  {else}
+  {%else%}
 
-   {if $plans[plans].deposits[deposit].pending_duration > 0}
+   {%if $plans[plans].deposits[deposit].pending_duration > 0%}
 
-    {$plans[plans].deposits[deposit].pending_duration} day{if $plans[plans].deposits[deposit].pending_duration > 1}s{/if} left
+    {%$plans[plans].deposits[deposit].pending_duration%} day{%if $plans[plans].deposits[deposit].pending_duration > 1%}s{%/if%} left
 
-   {else}
+   {%else%}
 
     not available
 
-   {/if}
+   {%/if%}
 
-  {/if}
+  {%/if%}
 
  </td>
 
-{/if}
+{%/if%}
 
 </tr>
 
-{/section}
+{%/section%}
 
-{/if}
+{%/if%}
 
 </table>
 
-{if $plans[plans].total_deposit > 0 || $plans[plans].today_profit > 0 || $plans[plans].total_profit > 0}
+{%if $plans[plans].total_deposit > 0 || $plans[plans].today_profit > 0 || $plans[plans].total_profit > 0%}
 
 <table cellspacing=0 cellpadding=1 border=0>
 
-<tr><td>Deposited Total:</td><td><b>{$currency_sign}{$plans[plans].total_deposit}</b></td></tr>
+<tr><td>Deposited Total:</td><td><b>{%$currency_sign%}{%$plans[plans].total_deposit%}</b></td></tr>
 
-<tr><td>Profit Today:</td><td><b>{$currency_sign}{$plans[plans].today_profit}</b></td></tr>
+<tr><td>Profit Today:</td><td><b>{%$currency_sign%}{%$plans[plans].today_profit%}</b></td></tr>
 
-<tr><td>Total Profit:</td><td><b>{$currency_sign}{$plans[plans].total_profit}</b></td></tr>
+<tr><td>Total Profit:</td><td><b>{%$currency_sign%}{%$plans[plans].total_profit%}</b></td></tr>
 
 </table>
 
-{/if}
+{%/if%}
 
 <br>
 
@@ -356,11 +356,11 @@
 
 <br>
 
-{/section}
+{%/section%}
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -396,7 +396,7 @@
 
           </tbody>
 
-{literal}
+{%literal%}
 
 
 
@@ -408,7 +408,7 @@ $(function(){
 
 			});
 
-</script>{/literal}
+</script>{%/literal%}
 
   </td>
 
@@ -416,5 +416,5 @@ $(function(){
 
       </tbody>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

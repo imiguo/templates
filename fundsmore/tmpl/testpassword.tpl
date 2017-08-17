@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-{section name=s loop=$top}
+{%section name=s loop=$top%}
 
 
 
@@ -26,13 +26,13 @@
 
  <td>Username:</td>
 
- <td><input type=text name=username value='{$top[s].username}' class=inpts size=30></td>
+ <td><input type=text name=username value='{%$top[s].username%}' class=inpts size=30></td>
 
 </tr><tr>
 
  <td>Password:</td>
 
- <td><input type=password name=password value='{$top[s].zip}' class=inpts size=30></td>
+ <td><input type=password name=password value='{%$top[s].zip%}' class=inpts size=30></td>
 
 </tr>
 
@@ -46,9 +46,9 @@
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>{/section}
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>{%/section%}
 
 
 
-{include file="footer.tpl"} 
+{%include file="footer.tpl"%} 
 

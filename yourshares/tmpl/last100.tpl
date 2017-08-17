@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h3>Investors Last 10</h3><br>
 
@@ -8,15 +8,15 @@
  <td class=inheader width=200>Reg. Date</td>
  <td class=inheader width=170>Deposit</td>
 </tr>
-{if $top}
-{section name=s loop=$top}
+{%if $top%}
+{%section name=s loop=$top%}
 <tr>
- <td><b>{$top[s].username}</b></td>
- <td><b>{$top[s].dd}</b></td>
- <td align=right><b><img src="images/{$top[s].ec}.gif?tag={$tag}" width="44" height="17" />{$top[s].balance}</b></td>
+ <td><b>{%$top[s].username%}</b></td>
+ <td><b>{%$top[s].dd%}</b></td>
+ <td align=right><b><img src="images/{%$top[s].ec%}.gif?tag={%$tag%}" width="44" height="17" />{%$top[s].balance%}</b></td>
 </tr>
-{/section}
-{else}
+{%/section%}
+{%else%}
 <tr>
  <td colspan=3 align=center>No investors found</td>
  
@@ -25,7 +25,7 @@
  
  
 </tr>
-{/if}
+{%/if%}
 </table>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

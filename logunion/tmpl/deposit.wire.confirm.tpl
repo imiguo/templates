@@ -1,45 +1,45 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{if $ok == 1}
+{%if $ok == 1%}
 <h3>Please confirm your deposit:</h3><br><br>
 
-{$wire_txt}<br><br>
+{%$wire_txt%}<br><br>
 
-Amount ($US): <b>{$amount}</b><br>
+Amount ($US): <b>{%$amount%}</b><br>
 <form name=spend method=post>
-{if $use_compound}
-{if $compound_min_percents == $compound_max_percents && !$compound_percents}
-<input type=hidden name=compound value="{$compound_min_percents}">
-{else}
+{%if $use_compound%}
+{%if $compound_min_percents == $compound_max_percents && !$compound_percents%}
+<input type=hidden name=compound value="{%$compound_min_percents%}">
+{%else%}
 <table cellspacing=0 cellpadding=2 border=0>
 <tr><td nowrap width=1%>Compounding percent: </td>
-  {if $compound_percents}
+  {%if $compound_percents%}
 <td><select name='compound' class=inpts>
-{section name=p loop=$compound_percents}<option value="{$compound_percents[p].percent}">{$compound_percents[p].percent}%</option>{/section}
+{%section name=p loop=$compound_percents%}<option value="{%$compound_percents[p].percent%}">{%$compound_percents[p].percent%}%</option>{%/section%}
 </select></td>
-  {else}
-<td width=99%><input type=text name='compound' value="{$compound_min_percents}" class=inpts size=5></td></tr>
-<tr><td nowrap colspan=2>(You can set any percent between <b>{$compound_min_percents}%</b> and <b>{$compound_max_percents}%</b>)</td>
-  {/if}
+  {%else%}
+<td width=99%><input type=text name='compound' value="{%$compound_min_percents%}" class=inpts size=5></td></tr>
+<tr><td nowrap colspan=2>(You can set any percent between <b>{%$compound_min_percents%}%</b> and <b>{%$compound_max_percents%}%</b>)</td>
+  {%/if%}
 </tr>
-<!--tr><td colspan=2><small>Example: {$compounding}% of your earning will be accumulate on deposit.</small></td></tr-->
+<!--tr><td colspan=2><small>Example: {%$compounding%}% of your earning will be accumulate on deposit.</small></td></tr-->
 </table>
-{/if}
-{/if}
+{%/if%}
+{%/if%}
 <br>
 
 <input type=hidden name=a value=deposit>
 <input type=hidden name=action value=confirm>
 <input type=hidden name=type value=wire>
-<!--input type=hidden name=compound value="{$compounding}"-->
-<input type=hidden name=h_id value={$h_id}>
-<INPUT type=hidden name=amount value="{$famount}">
+<!--input type=hidden name=compound value="{%$compounding%}"-->
+<input type=hidden name=h_id value={%$h_id%}>
+<INPUT type=hidden name=amount value="{%$famount%}">
 <table cellspacing=0 cellpadding=2 border=0>
 <tr>
  <td colspan=2><b>Personal information:</b></td>
 </tr><tr>
  <td>Name:</td>
- <td><input type=text name=pname value="{$userinfo.name}" class=inpts></td>
+ <td><input type=text name=pname value="{%$userinfo.name%}" class=inpts></td>
 </tr><tr>
  <td>Address:</td>
  <td><input type=text name=paddress value="" class=inpts></td>
@@ -90,22 +90,22 @@ Amount ($US): <b>{$amount}</b><br>
 
 <br><input type=submit value="Save" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{else}
+{%else%}
 
-{if $max_deposit_less == 1}
-Sorry, max deposit is {$max_deposit_format}.<br>
-{/if} {if $wrong_paln == 1} The Plan does not exist. {/if} {if $not_enough_funds 
-== 1} You have not enough funds to complete the&nbsp; operation.<br>
-{/if}
-{if $less_than_min == 1}
-Min spend amount for '{$plan_name}' is US${$min_amount}.<br>
-{/if}
+{%if $max_deposit_less == 1%}
+Sorry, max deposit is {%$max_deposit_format%}.<br>
+{%/if%} {%if $wrong_paln == 1%} The Plan does not exist. {%/if%} {%if $not_enough_funds 
+== 1%} You have not enough funds to complete the&nbsp; operation.<br>
+{%/if%}
+{%if $less_than_min == 1%}
+Min spend amount for '{%$plan_name%}' is US${%$min_amount%}.<br>
+{%/if%}
 <br>
 Click <a href="?a=deposit">here</a> and try again.
 
 
-{/if}
+{%/if%}
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

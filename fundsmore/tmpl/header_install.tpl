@@ -6,7 +6,7 @@
 
 <title>HYIP Manager. Install Script.</title>
 
-<link href="style.css?tag={$tag}" rel="stylesheet" type="text/css">
+<link href="style.css?tag={%$tag%}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -26,7 +26,7 @@
 
 	    <tr>
 
-		  <td background="images/ver.gif?tag={$tag}" bgcolor=#FF8D00><img src="images/top.gif?tag={$tag}" width=304 height=142 border="0" align=left></td>
+		  <td background="images/ver.gif?tag={%$tag%}" bgcolor=#FF8D00><img src="images/top.gif?tag={%$tag%}" width=304 height=142 border="0" align=left></td>
 
  	    </tr>
 

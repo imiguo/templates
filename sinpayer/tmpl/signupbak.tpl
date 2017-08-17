@@ -1,14 +1,14 @@
-{include file="header.tpl"}
-<h3>Registration at {$settings.site_name}</h3>
+{%include file="header.tpl"%}
+<h3>Registration at {%$settings.site_name%}</h3>
 <br>
 
-{if $deny_registration}
+{%if $deny_registration%}
  We are closed for new registrations now.
-{elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref}
+{%elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref%}
  You  do not have a upline. Our system require a upline for each user.
 
-{else}
- {literal}
+{%else%}
+ {%literal%}
 <script language=javascript>
  function checkform() {
   if (document.regform.fullname.value == '') {
@@ -16,9 +16,9 @@
     document.regform.fullname.focus();
     return false;
   }
- {/literal}
- {if $settings.use_user_location}
- {literal}
+ {%/literal%}
+ {%if $settings.use_user_location%}
+ {%literal%}
   if (document.regform.address.value == '') {
     alert("Please enter your address!");
     document.regform.address.focus();
@@ -44,9 +44,9 @@
     document.regform.country.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.username.value == '') {
     alert("Please enter your username!");
     document.regform.username.focus();
@@ -62,9 +62,9 @@
     document.regform.password2.focus();
     return false;
   }
- {/literal}
- {if $settings.use_transaction_code}
- {literal}
+ {%/literal%}
+ {%if $settings.use_transaction_code%}
+ {%literal%}
   if (document.regform.transaction_code.value == '') {
     alert("Please enter your transaction code!");
     document.regform.transaction_code.focus();
@@ -75,9 +75,9 @@
     document.regform.transaction_code2.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.email.value == '') {
     alert("Please enter your e-mail address!");
     document.regform.email.focus();
@@ -109,97 +109,97 @@
   return IsNumber;
  }
  </script>
-{/literal}
+{%/literal%}
 
- {if $errors}
+ {%if $errors%}
 <ul style="color:red">
-  {section name=e loop=$errors}
-   {if $errors[e] eq 'full_name'}
+  {%section name=e loop=$errors%}
+   {%if $errors[e] eq 'full_name'%}
   <li>Please enter your full name!</li>
-  {/if}
-   {if $errors[e] eq 'address'}
+  {%/if%}
+   {%if $errors[e] eq 'address'%}
   <li>Please enter your address!</li>
-  {/if}
-   {if $errors[e] eq 'city'}
+  {%/if%}
+   {%if $errors[e] eq 'city'%}
   <li>Please enter your city!</li>
-  {/if}
-   {if $errors[e] eq 'state'}
+  {%/if%}
+   {%if $errors[e] eq 'state'%}
   <li>Please enter your state!</li>
-  {/if}
-   {if $errors[e] eq 'zip'}
+  {%/if%}
+   {%if $errors[e] eq 'zip'%}
   <li>Please enter your zip!</li>
-  {/if}
+  {%/if%}
   <li>
-    {if $errors[e] eq 'country'}
+    {%if $errors[e] eq 'country'%}
               Please choose your country!
   </li>
-  {/if}
+  {%/if%}
   <li>
-    {if $errors[e] eq 'username'}
+    {%if $errors[e] eq 'username'%}
                 Please enter your username!
   </li>
-  {/if}
-   {if $errors[e] eq 'username_exists'}
+  {%/if%}
+   {%if $errors[e] eq 'username_exists'%}
   <li>
     Sorry, such user already exists! Please try another username.
   </li>
-  {/if}
+  {%/if%}
   <li>
-    {if $errors[e] eq 'email_exists'}
+    {%if $errors[e] eq 'email_exists'%}
                     Sorry, such email already exists! Please try another email.
   </li>
-  {/if}
-   {if $errors[e] eq 'password'}
+  {%/if%}
+   {%if $errors[e] eq 'password'%}
   <li>Please enter a password!</li>
-  {/if}
-   {if $errors[e] eq 'password_confirm'}
+  {%/if%}
+   {%if $errors[e] eq 'password_confirm'%}
   <li>Please check your password!</li>
-  {/if}
-   {if $errors[e] eq 'password_too_small'}
+  {%/if%}
+   {%if $errors[e] eq 'password_too_small'%}
   <li>
-    The password you provided is too small, please enter at least {$settings.min_user_password_length} characters!
+    The password you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
   </li>
-  {/if}
-   {if $errors[e] eq 'transaction_code'}
+  {%/if%}
+   {%if $errors[e] eq 'transaction_code'%}
   <li>Please enter the Transaction Code!</li>
-  {/if}
-   {if $errors[e] eq 'transaction_code_confirm'}
+  {%/if%}
+   {%if $errors[e] eq 'transaction_code_confirm'%}
   <li>Please check your Transaction Code!</li>
-  {/if}
-   {if $errors[e] eq 'transaction_code_too_small'}
+  {%/if%}
+   {%if $errors[e] eq 'transaction_code_too_small'%}
   <li>
-    The Transaction Code you provided is too small, please enter at least {$settings.min_user_password_length} characters!
+    The Transaction Code you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
   </li>
-  {/if}
-   {if $errors[e] eq 'transaction_code_vs_password'}
+  {%/if%}
+   {%if $errors[e] eq 'transaction_code_vs_password'%}
   <li>The Transaction Code should differ from the Password!</li>
-  {/if}
-   {if $errors[e] eq 'egold'}
+  {%/if%}
+   {%if $errors[e] eq 'egold'%}
   <li>Please enter your e-gold account number!</li>
-  {/if}
-   {if $errors[e] eq 'email'}
+  {%/if%}
+   {%if $errors[e] eq 'email'%}
   <li>Please enter your e-mail!</li>
-  {/if}
-   {if $errors[e] eq 'agree'}
+  {%/if%}
+   {%if $errors[e] eq 'agree'%}
   <li>You have to agree with the Terms and Conditions!</li>
-  {/if}
-   {if $errors[e] eq 'turing_image'}
+  {%/if%}
+   {%if $errors[e] eq 'turing_image'%}
   <li>
     Enter the verification code as it is shown in the corresponding box.
   </li>
-  {/if}
-   {if $errors[e] eq 'no_upline'}
+  {%/if%}
+   {%if $errors[e] eq 'no_upline'%}
   <li>
-    The system requires an upline to register. {if $settings.get_rand_ref}You have to be agreed to random one or found a referral link in the net.{/if}
+    The system requires an upline to register. {%if $settings.get_rand_ref%}You have to be agreed to random one or found a referral link in the net.{%/if%}
   </li>
-  {/if}
-   {if $errors[e] eq 'ip_exists_in_database'}
+  {%/if%}
+   {%if $errors[e] eq 'ip_exists_in_database'%}
   <li>
     Your IP already exists in our database. Sorry, but registration impossible.
   </li>
-  {/if}
-  <br>{/section}</ul>
-{/if}
+  {%/if%}
+  <br>{%/section%}</ul>
+{%/if%}
 <form method=post onsubmit="return checkform()" name="regform">
   <input type=hidden name=a value="signup">
   <input type=hidden name=action value="signup">
@@ -207,148 +207,148 @@
     <tr>
       <td>Your Full Name:</td>
       <td>
-        <input type=text name=fullname value="{$frm.fullname|escape:"quotes"}" class=inpts size=30></td>
+        <input type=text name=fullname value="{%$frm.fullname|escape:"quotes"%}" class=inpts size=30></td>
     </tr>
-    {if $settings.use_user_location}
+    {%if $settings.use_user_location%}
     <tr>
       <td>Your Address:</td>
       <td>
-        <input type=text name=address value="{$frm.address|escape:"quotes"}" class=inpts size=30></td>
+        <input type=text name=address value="{%$frm.address|escape:"quotes"%}" class=inpts size=30></td>
     </tr>
     <tr>
       <td>Your City:</td>
       <td>
-        <input type=text name=city value="{$frm.city|escape:"quotes"}" class=inpts size=30></td>
+        <input type=text name=city value="{%$frm.city|escape:"quotes"%}" class=inpts size=30></td>
     </tr>
     <tr>
       <td>Your State:</td>
       <td>
-        <input type=text name=state value="{$frm.state|escape:"quotes"}" class=inpts size=30></td>
+        <input type=text name=state value="{%$frm.state|escape:"quotes"%}" class=inpts size=30></td>
     </tr>
     <tr>
       <td>Your Zip:</td>
       <td>
-        <input type=text name=zip value="{$frm.zip|escape:"quotes"}" class=inpts size=30></td>
+        <input type=text name=zip value="{%$frm.zip|escape:"quotes"%}" class=inpts size=30></td>
     </tr>
     <tr>
       <td>Your Country:</td>
       <td>
         <select name='country' class=inpts>
           <option value=''>--SELECT--</option>
-          {section name=c loop=$countries}
-          <option {if $countries[c].name eq $frm.country}selected{/if}>{$countries[c].name|escape:"quotes"}</option>
-          {/section}
+          {%section name=c loop=$countries%}
+          <option {%if $countries[c].name eq $frm.country%}selected{%/if%}>{%$countries[c].name|escape:"quotes"%}</option>
+          {%/section%}
         </td>
       </tr>
-      {/if}
+      {%/if%}
       <tr>
         <td>Your Username:</td>
         <td>
-          <input type=text name=username value="{$frm.username|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=username value="{%$frm.username|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Define Password:</td>
         <td>
-          <input type=password name=password value="{$frm.password|escape:"quotes"}" class=inpts size=30></td>
+          <input type=password name=password value="{%$frm.password|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Retype Password:</td>
         <td>
-          <input type=password name=password2 value="{$frm.password2|escape:"quotes"}" class=inpts size=30></td>
+          <input type=password name=password2 value="{%$frm.password2|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
-      {if $settings.use_transaction_code}
+      {%if $settings.use_transaction_code%}
       <tr>
         <td>Difine Transaction Code:</td>
         <td>
-          <input type=password name=transaction_code value="{$frm.transaction_code|escape:"quotes"}" class=inpts size=30></td>
+          <input type=password name=transaction_code value="{%$frm.transaction_code|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Retype Transaction Code:</td>
         <td>
-          <input type=password name=transaction_code2 value="{$frm.transaction_code2|escape:"quotes"}" class=inpts size=30></td>
+          <input type=password name=transaction_code2 value="{%$frm.transaction_code2|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
-      {/if}
+      {%/if%}
 
 
 
-{section name=ps loop=$pay_accounts}
+{%section name=ps loop=$pay_accounts%}
       <tr>
-        <td>Your {$pay_accounts[ps].name} Account:</td>
+        <td>Your {%$pay_accounts[ps].name%} Account:</td>
         <td>
-          <input type=text class=inpts size=30 name=pay_account[{$pay_accounts[ps].id}] value="{$pay_accounts[ps].account|escape:html}"></td>
+          <input type=text class=inpts size=30 name=pay_account[{%$pay_accounts[ps].id%}] value="{%$pay_accounts[ps].account|escape:html%}"></td>
       </tr>
-      {/section}
+      {%/section%}
       <tr>
         <td>Payza Account</td>
         <td>
-          <input type=text name=city value="{$frm.city|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=city value="{%$frm.city|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
 
       <tr>
         <td>Your E-mail Address:</td>
         <td>
-          <input type=text name=email value="{$frm.email|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=email value="{%$frm.email|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Retype Your E-mail:</td>
         <td>
-          <input type=text name=email1 value="{$frm.email1|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=email1 value="{%$frm.email1|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Secret question:</td>
         <td>
-          <input type=text name=sq value="{$frm.sq|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=sq value="{%$frm.sq|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
       <tr>
         <td>Secret answer:</td>
         <td>
-          <input type=text name=sa value="{$frm.sa|escape:"quotes"}" class=inpts size=30></td>
+          <input type=text name=sa value="{%$frm.sa|escape:"quotes"%}" class=inpts size=30></td>
       </tr>
-      {if $settings.use_referal_program}
-{if $referer}
+      {%if $settings.use_referal_program%}
+{%if $referer%}
       <tr>
         <td>Your Upline:</td>
-        <td>{$referer.name} ({$referer.username})</td>
+        <td>{%$referer.name%} ({%$referer.username%})</td>
       </tr>
-      {else}
-{if $settings.force_upline}
- {if $settings.get_rand_ref}
+      {%else%}
+{%if $settings.force_upline%}
+ {%if $settings.get_rand_ref%}
       <tr>
         <td colspan=2>
           You do not have an upline. Our system requires an upline for each user. You'll have to agree to get a random one or find a referral link on the net.
           <input type=checkbox name="rand_ref" value=1></td>
       </tr>
-      {else}
+      {%else%}
       <tr>
         <td colspan=2>
           You do not have an upline. Our system requires an upline for each user.
         </td>
       </tr>
-      {/if}
-{/if}
-{/if}
-{/if}
+      {%/if%}
+{%/if%}
+{%/if%}
+{%/if%}
       <tr>
         <td colspan=2>
-          <input type=checkbox name=agree value=1 {if $frm.agree}checked{/if} >
+          <input type=checkbox name=agree value=1 {%if $frm.agree%}checked{%/if%} >
           I agree with
           <a href=?a=rules>Terms and conditions</a>
         </td>
       </tr>
-      {if $userinfo.validation_enabled == 1}
+      {%if $userinfo.validation_enabled == 1%}
       <tr>
         <td class=menutxt align=right>
-          <img src="?a=show_validation_image&{$userinfo.session_name}={$userinfo.session_id}&rand={$userinfo.rand}"></td>
+          <img src="?a=show_validation_image&{%$userinfo.session_name%}={%$userinfo.session_id%}&rand={%$userinfo.rand%}"></td>
         <td>
           <input type=text name=validation_number class=inpts size=15></td>
       </tr>
-      {/if}
+      {%/if%}
       <tr>
         <td>&nbsp;</td>
         <td>
           <input type=submit value="Register" class=sbmt></td>
       </tr>
     </table>
-  <input type="hidden" name="_token" value="{$csrf_token}"></form>
-                                              {/if}
-{include file="footer.tpl"}
+  <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
+                                              {%/if%}
+{%include file="footer.tpl"%}

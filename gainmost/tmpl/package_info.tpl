@@ -1,6 +1,6 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h2>Package description:</h2><br><br>
-{$package.dsc}<br><br>
+{%$package.dsc%}<br><br>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

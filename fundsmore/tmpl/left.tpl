@@ -1,34 +1,34 @@
 				   <!-- Image Table: Start -->
 
-{if $frm.a ne 'login'}
+{%if $frm.a ne 'login'%}
 
-{include file="login_box.tpl"}
+{%include file="login_box.tpl"%}
 
-{/if}
+{%/if%}
 
 				   
 
-{if $settings.show_stats_box}
+{%if $settings.show_stats_box%}
 
 <br>
 
-{include file="stats_box.tpl"}
+{%include file="stats_box.tpl"%}
 
-{/if}
+{%/if%}
 
                                    
 
-{if $settings.show_info_box}
+{%if $settings.show_info_box%}
 
 <br>
 
-{include file="info_box.tpl"}
+{%include file="info_box.tpl"%}
 
-{/if}
+{%/if%}
 
 					<!-- Stats Table: End -->
 
-{if $settings.show_kitco_dollar_per_ounce_box == 1}
+{%if $settings.show_kitco_dollar_per_ounce_box == 1%}
 
 					<!-- Image Table: Start -->
 
@@ -40,7 +40,7 @@
 
                      </tr><tr>
 
-	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_usoz_2.gif?tag={$tag}" width=172 height=124></td>
+	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_usoz_2.gif?tag={%$tag%}" width=172 height=124></td>
 
 					 </tr>
 
@@ -48,9 +48,9 @@
 
 					<br>
 
-{/if}
+{%/if%}
 
-{if $settings.show_kitco_euro_per_ounce_box == 1}
+{%if $settings.show_kitco_euro_per_ounce_box == 1%}
 
 					<!-- Image Table: Start -->
 
@@ -62,7 +62,7 @@
 
                      </tr><tr>
 
-	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_euoz_2.gif?tag={$tag}" width=172 height=124></td>
+	                  <td align=center><img src="http://kitconet.com/charts/metals/gold/t24_au_en_euoz_2.gif?tag={%$tag%}" width=172 height=124></td>
 
 					 </tr>
 
@@ -70,7 +70,7 @@
 
 					<br>
 
-{/if}
+{%/if%}
 
 					<!-- Image Table: End -->
 

@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
   <h2>Welcome to YourShares.biz!</h2>
@@ -10,18 +10,18 @@
 <tbody>
 <tr>
 <td width="270" valign="top" height="150">
-{if $User_IP=="72.232.85.138" or $userinfo.username=="enjoy"}
+{%if $User_IP=="72.232.85.138" or $userinfo.username=="enjoy"%}
 <h3>HOW WE DO IT</h3>
 Our investment approach is to seek out companies that can deliver above-average returns without above-average risk. Among the companies of size worldwide, very few present worthwhile investment opportunities when measured against this demanding criterion. Long-term research shows that the companies that can deliver such above-average share price returns over the medium-to-long term, have one overriding characteristic: the ability to sustain above-average earnings growth.
 <br><br>
 Identifying these exceptional companies and buying them inexpensively relative to their true value is central to our detailed and disciplined stock screening process. Our analysis takes into account all global equities, all global bonds, commodities, currencies and the impact that foreign exchange rates have on markets. 
-{else}
+{%else%}
 <h3>INVESTMENT PLANS</h3>
 <font color="#A0A0A0">Every investment is risky. Though it is possible to minimize the risk but no one can guarantee eliminating it. YourShares.biz is proud to provide you with an investment platform which lowers investment risks to an affordable level. </font><br>
 <br>
 
-<img width="270" height="285" src="images/plan.gif?tag={$tag}">
-{/if}
+<img width="270" height="285" src="images/plan.gif?tag={%$tag%}">
+{%/if%}
 </td>
   
 <td width="40"><!--DWLayoutEmptyCell-->&nbsp;</td>
@@ -32,12 +32,12 @@ Identifying these exceptional companies and buying them inexpensively relative t
   We aim to perform the best in order to accomplish our highest potential. Working offline for a long time gives us this power to make sure you are in good hands.<br>
   <br>
   
-  <img width="270" height="171" src="images/1.jpg?tag={$tag}">
-  <div style="padding-top:10px;"><img width="270" height="3" src="images/dots.gif?tag={$tag}"></div>
+  <img width="270" height="171" src="images/1.jpg?tag={%$tag%}">
+  <div style="padding-top:10px;"><img width="270" height="3" src="images/dots.gif?tag={%$tag%}"></div>
   </td>
   </tr>
 </tbody></table>
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

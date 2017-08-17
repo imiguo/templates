@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h3>Confirm Your Identity:</h3><br><br>
 <form action="/" method=post name=editform>
@@ -6,9 +6,9 @@
 <input type=hidden name=action value=edit_account>
 <input type=hidden name=action2 value=confirm>
 
-{if $say == 'invalid_code'}
+{%if $say == 'invalid_code'%}
 <b style="color: red">Invalid Confirmation Code</b><br><br>
-{/if}
+{%/if%}
 
 The system sent you an e-mail with the confirmation code used to confirm your identity. Please check your e-mail.
 <br><br>
@@ -21,7 +21,7 @@ The system sent you an e-mail with the confirmation code used to confirm your id
  <td>&nbsp;</td>
  <td><input type=submit value="Confirm" class=sbmt></td>
 </tr></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-{literal}
+{%literal%}
 
 
 
@@ -18,7 +18,7 @@ function openCalculator(id)
 
 
 
-{
+{%
 
 
 
@@ -46,15 +46,15 @@ function openCalculator(id)
 
 
 
-{/literal}
+{/literal%}
 
 
 
-  {if $qplans > 1}
+  {%if $qplans > 1%}
 
 
 
-{literal}
+{%literal%}
 
 
 
@@ -86,15 +86,15 @@ function openCalculator(id)
 
 
 
-{/literal}
+{%/literal%}
 
 
 
-  {/if}
+  {%/if%}
 
 
 
-{literal}
+{%literal%}
 
 
 
@@ -106,7 +106,7 @@ function openCalculator(id)
 
 
 
-{/literal}
+{%/literal%}
 
 
 
@@ -114,7 +114,7 @@ function openCalculator(id)
 
 
 
-{if $frm.say eq 'deposit_success'}
+{%if $frm.say eq 'deposit_success'%}
 
 
 
@@ -126,7 +126,7 @@ function openCalculator(id)
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -134,7 +134,7 @@ function openCalculator(id)
 
 
 
-{if $frm.say eq 'deposit_saved'}
+{%if $frm.say eq 'deposit_saved'%}
 
 
 
@@ -142,7 +142,7 @@ function openCalculator(id)
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -180,11 +180,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-  {if $qplans > 1} Select a plan:<br>
+  {%if $qplans > 1%} Select a plan:<br>
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -192,11 +192,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{* ---------------------------------------------------------------------------------- *}
+{%* ---------------------------------------------------------------------------------- *%}
 
-{if $userinfo.username==goldpoll or $userinfo.username==lll}
+{%if $userinfo.username==goldpoll or $userinfo.username==lll%}
 
-{section name=plans loop=$plans  start=3}
+{%section name=plans loop=$plans  start=3%}
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 
@@ -204,55 +204,55 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
  <td colspan=3>
 
-{if $qplans > 1}
+{%if $qplans > 1%}
 
-<!--	<input type=radio name=h_id value='{$plans[plans].id}' {if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)} checked {/if} {if $compounding_available > 0}onclick="document.spendform.compound.disabled={if $plans[plans].use_compound == 1}false{else}true{/if};"{/if}> -->
+<!--	<input type=radio name=h_id value='{%$plans[plans].id%}' {%if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)%} checked {%/if%} {%if $compounding_available > 0%}onclick="document.spendform.compound.disabled={%if $plans[plans].use_compound == 1%}false{%else%}true{%/if%};"{%/if%}> -->
 
-{else}
+{%else%}
 
-	<input type=hidden name=h_id value='{$plans[plans].id}'>
+	<input type=hidden name=h_id value='{%$plans[plans].id%}'>
 
-{/if}
+{%/if%}
 
-	<b>{$plans[plans].name}</b></td>
+	<b>{%$plans[plans].name%}</b></td>
 
 </tr><tr>
 
  <td width="167" bgcolor="#EFF0E1" align="center" class="heading">Plan</td>
 
- <td width="167" bgcolor="#EFF0E1" align="center" class="heading">Spent Amount ({$currency_sign})</td>
+ <td width="167" bgcolor="#EFF0E1" align="center" class="heading">Spent Amount ({%$currency_sign%})</td>
 
- <td width="167" bgcolor="#EFF0E1" align="center" class="heading"><nobr>{$plans[plans].period} Profit (%)</nobr></td>
+ <td width="167" bgcolor="#EFF0E1" align="center" class="heading"><nobr>{%$plans[plans].period%} Profit (%)</nobr></td>
 
 </tr>
 
-{section name=options loop=$plans[plans].plans}
+{%section name=options loop=$plans[plans].plans%}
 
 <tr>
 
- <td width="167" bgcolor="#FEEDA0" align="center" class="heading">{$plans[plans].plans[options].name|escape:html}</td>
+ <td width="167" bgcolor="#FEEDA0" align="center" class="heading">{%$plans[plans].plans[options].name|escape:html%}</td>
 
- <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{$plans[plans].plans[options].deposit}</td>
+ <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{%$plans[plans].plans[options].deposit%}</td>
 
- <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{$plans[plans].plans[options].percent}</td>
+ <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{%$plans[plans].plans[options].percent%}</td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{if $settings.enable_calculator}
+{%if $settings.enable_calculator%}
 
 <tr>
 
- <td colspan=3 align=right><a href="javascript:openCalculator('{$plans[plans].id}')">Calculate your profit &gt;&gt;</a></td>
+ <td colspan=3 align=right><a href="javascript:openCalculator('{%$plans[plans].id%}')">Calculate your profit &gt;&gt;</a></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 </table>
 
-{/section}
+{%/section%}
 
 
 
@@ -264,17 +264,17 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{* ---------------------------------------------------------------------------------- *}
+{%* ---------------------------------------------------------------------------------- *%}
 
-{else}
-
-
-
-{*section name=plans loop=$plans max=5*}
+{%else%}
 
 
 
-{section name=plans loop=$plans  max=3}
+{%*section name=plans loop=$plans max=5*%}
+
+
+
+{%section name=plans loop=$plans  max=3%}
 
 
 
@@ -290,7 +290,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{if $qplans > 1}
+{%if $qplans > 1%}
 
 
 
@@ -298,19 +298,19 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-<!--	<input type=radio name=h_id value='{$plans[plans].id}' {if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)} checked {/if} {if $compounding_available > 0}onclick="document.spendform.compound.disabled={if $plans[plans].use_compound == 1}false{else}true{/if};"{/if}> -->
+<!--	<input type=radio name=h_id value='{%$plans[plans].id%}' {%if (($smarty.section.plans.first == 1) && ($frm.h_id eq '')) || ($frm.h_id == $plans[plans].id)%} checked {%/if%} {%if $compounding_available > 0%}onclick="document.spendform.compound.disabled={%if $plans[plans].use_compound == 1%}false{%else%}true{%/if%};"{%/if%}> -->
 
 
 
-{else}
+{%else%}
 
 
 
-	<input type=hidden name=h_id value='{$plans[plans].id}'>
+	<input type=hidden name=h_id value='{%$plans[plans].id%}'>
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -318,7 +318,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-	<b>{$plans[plans].name}</b></td>
+	<b>{%$plans[plans].name%}</b></td>
 
 
 
@@ -330,11 +330,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
- <td width="167" bgcolor="#EFF0E1" align="center" class="heading">Spent Amount ({$currency_sign})</td>
+ <td width="167" bgcolor="#EFF0E1" align="center" class="heading">Spent Amount ({%$currency_sign%})</td>
 
 
 
- <td width="167" bgcolor="#EFF0E1" align="center" class="heading"><nobr>{$plans[plans].period} Profit (%)</nobr></td>
+ <td width="167" bgcolor="#EFF0E1" align="center" class="heading"><nobr>{%$plans[plans].period%} Profit (%)</nobr></td>
 
 
 
@@ -342,7 +342,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{section name=options loop=$plans[plans].plans}
+{%section name=options loop=$plans[plans].plans%}
 
 
 
@@ -350,15 +350,15 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
- <td width="167" bgcolor="#FEEDA0" align="center" class="heading">{$plans[plans].plans[options].name|escape:html}</td>
+ <td width="167" bgcolor="#FEEDA0" align="center" class="heading">{%$plans[plans].plans[options].name|escape:html%}</td>
 
 
 
- <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{$plans[plans].plans[options].deposit}</td>
+ <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{%$plans[plans].plans[options].deposit%}</td>
 
 
 
- <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{$plans[plans].plans[options].percent}</td>
+ <td width="167" bgcolor="#E0E0E0" align="center" class="heading">{%$plans[plans].plans[options].percent%}</td>
 
 
 
@@ -366,11 +366,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{/section}
+{%/section%}
 
 
 
-{if $settings.enable_calculator}
+{%if $settings.enable_calculator%}
 
 
 
@@ -378,7 +378,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
- <td colspan=3 align=right><a href="javascript:openCalculator('{$plans[plans].id}')">Calculate your profit &gt;&gt;</a></td>
+ <td colspan=3 align=right><a href="javascript:openCalculator('{%$plans[plans].id%}')">Calculate your profit &gt;&gt;</a></td>
 
 
 
@@ -386,7 +386,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -434,7 +434,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{/section}
+{%/section%}
 
 
 
@@ -442,7 +442,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -470,11 +470,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
- <td>Your account balance ({$currency_sign}):</td>
+ <td>Your account balance ({%$currency_sign%}):</td>
 
 
 
- <td align=right>{$currency_sign}{$ab_formated.total}</td>
+ <td align=right>{%$currency_sign%}{%$ab_formated.total%}</td>
 
 
 
@@ -494,15 +494,15 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-{section name=p loop=$ps}
+{%section name=p loop=$ps%}
 
 
 
-   {if $ps[p].balance > 0}{$currency_sign}{$ps[p].balance} of {$ps[p].name}{if $hold[p].amount > 0} / {$currency_sign}{$hold[p].amount} on hold{/if}<br>{/if}
+   {%if $ps[p].balance > 0%}{%$currency_sign%}{%$ps[p].balance%} of {%$ps[p].name%}{%if $hold[p].amount > 0%} / {%$currency_sign%}{%$hold[p].amount%} on hold{%/if%}<br>{%/if%}
 
 
 
-{/section}
+{%/section%}
 
 
 
@@ -534,11 +534,11 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-      <td>Amount to Spend ({$currency_sign}):</td>
+      <td>Amount to Spend ({%$currency_sign%}):</td>
 
 
 
- <td align=left><input  width="20" type=text name=amount value='{$min_deposit}' class=inpts size=15 style="text-align:right;"></td>
+ <td align=left><input  width="20" type=text name=amount value='{%$min_deposit%}' class=inpts size=15 style="text-align:right;"></td>
 
 
 
@@ -604,17 +604,9 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
   
 
-{* ---------------------------------------------------------------------------------- *}
+{%* ---------------------------------------------------------------------------------- *%}
 
-    {if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" } 
-
-
-
-  
-
-
-
-     {section name=plans loop=$plans   start=3}
+    {%if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" %} 
 
 
 
@@ -622,7 +614,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-   <option  value='{$plans[plans].id}'>{$plans[plans].name}</option>
+     {%section name=plans loop=$plans   start=3%}
 
 
 
@@ -630,27 +622,7 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-  
-
-
-
-     {/section}
-
-{* ---------------------------------------------------------------------------------- *}
-
-     {else}
-
-
-
-	    {*section name=plans loop=$plans max=3*}
-
-
-
-     {section name=plans loop=$plans   max=3}
-
-
-
-   <option  value='{$plans[plans].id}'>{$plans[plans].name}</option>
+   <option  value='{%$plans[plans].id%}'>{%$plans[plans].name%}</option>
 
 
 
@@ -662,13 +634,41 @@ From this area  you can invest funds in any of your desired plans. Please follow
 
 
 
-     {/section}
+     {%/section%}
+
+{%* ---------------------------------------------------------------------------------- *%}
+
+     {%else%}
 
 
 
-	 {/if}
+	    {%*section name=plans loop=$plans max=3*%}
 
-{* ---------------------------------------------------------------------------------- *}
+
+
+     {%section name=plans loop=$plans   max=3%}
+
+
+
+   <option  value='{%$plans[plans].id%}'>{%$plans[plans].name%}</option>
+
+
+
+  
+
+
+
+  
+
+
+
+     {%/section%}
+
+
+
+	 {%/if%}
+
+{%* ---------------------------------------------------------------------------------- *%}
 
   
 
@@ -738,7 +738,7 @@ Spend funds from
 
 
 
-{section name=p loop=$ps}
+{%section name=p loop=$ps%}
 
 
 
@@ -746,27 +746,7 @@ Spend funds from
 
 
 
- {if $ps[p].balance > 0 and $ps[p].status == 1}<option  value="account_{$ps[p].id}">Balance {$ps[p].name}</option>{/if}
-
-
-
-
-
-
-
-
-
-
-
-   {if $ps[p].status}
-
-
-
-
-
-
-
-<option value="process_{$ps[p].id}" {if $smarty.section.p.index == 0}checked{/if}> {$ps[p].name}</option>
+ {%if $ps[p].balance > 0 and $ps[p].status == 1%}<option  value="account_{%$ps[p].id%}">Balance {%$ps[p].name%}</option>{%/if%}
 
 
 
@@ -775,6 +755,18 @@ Spend funds from
 
 
 
+
+
+
+   {%if $ps[p].status%}
+
+
+
+
+
+
+
+<option value="process_{%$ps[p].id%}" {%if $smarty.section.p.index == 0%}checked{%/if%}> {%$ps[p].name%}</option>
 
 
 
@@ -790,11 +782,19 @@ Spend funds from
 
 
 
-   {/if}
 
 
 
-{/section}</select>           </td>
+
+
+
+
+
+   {%/if%}
+
+
+
+{%/section%}</select>           </td>
 
 
 
@@ -838,11 +838,11 @@ Spend funds from
 
 
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 
 
-{literal}
+{%literal%}
 
 
 
@@ -878,7 +878,7 @@ for (i = 0; i<document.spendform.type.length; i++) {
 
 
 
-{/literal}
+{%/literal%}
 
 
 
@@ -886,7 +886,7 @@ for (i = 0; i<document.spendform.type.length; i++) {
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 
 
 

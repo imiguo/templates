@@ -1,13 +1,13 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{if $frm.say eq 'deposit_success'}
+{%if $frm.say eq 'deposit_success'%}
     <h3>The deposit has been successfully saved.</h3>
     <br><br>
-{/if}
+{%/if%}
 
-{if $frm.say eq 'deposit_saved'}
+{%if $frm.say eq 'deposit_saved'%}
     <h3>The deposit has been saved. It will became active when the administrator checks statistics.</h3><br><br>
-{/if}
+{%/if%}
 
 <h3>Deposit to Account:</h3>
 <br>
@@ -16,40 +16,40 @@
     <input type=hidden name=h_id value=-1>
     <table cellspacing=0 cellpadding=2 border=0>
         <tr>
-            <td>Your account balance ({$currency_sign}):</td>
-            <td align=right>{$currency_sign}{$ab_formated.total}</td>
+            <td>Your account balance ({%$currency_sign%}):</td>
+            <td align=right>{%$currency_sign%}{%$ab_formated.total%}</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
             <td align=right>
                <small>
-                  {section name=p loop=$ps}
-                    {if $ps[p].balance > 0}
-                        {$currency_sign}{$ps[p].balance} of {$ps[p].name}<br>
-                    {/if}
-                  {/section}
+                  {%section name=p loop=$ps%}
+                    {%if $ps[p].balance > 0%}
+                        {%$currency_sign%}{%$ps[p].balance%} of {%$ps[p].name%}<br>
+                    {%/if%}
+                  {%/section%}
                </small>
             </td>
         </tr>
         <tr>
-            <td>Amount to Spend ({$currency_sign}):</td>
+            <td>Amount to Spend ({%$currency_sign%}):</td>
             <td align=right><input type=text name=amount value='10.00' class=inpts size=15 style="text-align:right;"></td>
         </tr>
         <tr>
             <td colspan=2>
             <table cellspacing=0 cellpadding=2 border=0>
-                {section name=p loop=$ps}
-                    {if $ps[p].status}
+                {%section name=p loop=$ps%}
+                    {%if $ps[p].status%}
                     <tr>
                         <td>
-                         <input type=radio name=type value="process_{$ps[p].id}" {if $smarty.section.p.index == 0}checked{/if}>
+                         <input type=radio name=type value="process_{%$ps[p].id%}" {%if $smarty.section.p.index == 0%}checked{%/if%}>
                         </td>
                         <td>
-                            Spend funds from {$ps[p].name}
+                            Spend funds from {%$ps[p].name%}
                         </td>
                     </tr>
-                    {/if}
-                {/section}
+                    {%/if%}
+                {%/section%}
            </table>
           </td>
         </tr>
@@ -59,6 +59,6 @@
          </td>
         </tr>
     </table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

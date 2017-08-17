@@ -1,12 +1,12 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{if $activated == 0}
+{%if $activated == 0%}
 	<b>Account not activated</b><br><br>
 	Account has been already activated or you have provide invalid activation code.
 	Please check link you received.
-{else}
+{%else%}
 	<b>Account activated</b><br><br>
-{/if}
+{%/if%}
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

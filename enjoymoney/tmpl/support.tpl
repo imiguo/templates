@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h2>enjoymoney.biz Support</h2>
 If you are already a Registered Investor of enjoymoney.biz please login into your account and click again on "Support". For security purpose, we will not reply to any qyestion concerning an investment, if you are not logged in.
@@ -6,12 +6,12 @@ If you are not an Investor yet, please send your question by the form below.<br>
 
 <font color="red">Monitor admins:</font> Please do NOT send spam emails. We do NOT respond to the emails we are not interested in the offers. <br><br>
 
-{if $say eq 'send'}
+{%if $say eq 'send'%}
 Message has been successfully sent. We will back to you in next 24 hours. Thank you.<br><br>
-{else}
+{%else%}
 <script language=javascript>
-{if $userinfo.logged == 1}
-{literal}
+{%if $userinfo.logged == 1%}
+{%literal%}
 function checkform() {
   if (document.mainform.message.value == '') {
     alert("Please type your message!");
@@ -20,9 +20,9 @@ function checkform() {
   }
   return true;
 }
-{/literal}
-{else}
-{literal}
+{%/literal%}
+{%else%}
+{%literal%}
 function checkform() {
   if (document.mainform.name.value == '') {
     alert("Please type your full name!");
@@ -41,8 +41,8 @@ function checkform() {
   }
   return true;
 }
-{/literal}
-{/if}
+{%/literal%}
+{%/if%}
 </script>
 
 <h4>Support Form</h4>
@@ -55,21 +55,21 @@ function checkform() {
 <tbody>
 <tr>
 <td width="270" valign="middle" height="34" class="reg">Name<font color="#FF0000">*</font>:</td>
-{if $userinfo.logged}
-<td width="114"><b>{$userinfo.name}</b></td>
-<input type=hidden name=name value={$userinfo.name}>
-{else}
+{%if $userinfo.logged%}
+<td width="114"><b>{%$userinfo.name%}</b></td>
+<input type=hidden name=name value={%$userinfo.name%}>
+{%else%}
  <td width="310" valign="middle" class="dots"><input type="text" style="width:175;height:20;" class="input2" name="name"></td>
- {/if}
+ {%/if%}
 </tr>
 <tr>
 <td valign="middle" height="34" class="reg">Email<font color="#FF0000">*</font>:</td>
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 <td><b>ccc@qq.com</b></td>
-<input type=hidden name="email" value={$userinfo.email}>
-{else}
+<input type=hidden name="email" value={%$userinfo.email%}>
+{%else%}
  <td class="dots"><input type="text" style="width:175;height:20;" class="input2" name="email"></td>
- {/if}
+ {%/if%}
 </tr>
 
 <tr>
@@ -87,10 +87,10 @@ function checkform() {
  <td valign="middle" align="left" colspan="2"><input type="submit" class="sbmt" value="Submit"></td>
 </tr>
 </tbody></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 
 
-{/if}
+{%/if%}
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

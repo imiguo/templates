@@ -1,6 +1,6 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{literal}
+{%literal%}
 <script language=javascript>
 function checkform() {
   if (document.mainform.username.value=='') {
@@ -16,15 +16,15 @@ function checkform() {
   return true;
 }
 </script>
-{/literal}
+{%/literal%}
 
-{if $frm.say eq 'invalid_login'}
+{%if $frm.say eq 'invalid_login'%}
 <h3>Login error:</h3><br><br>
 
 Your login or password or turing image code is wrong. Please check this information.
-{/if}
+{%/if%}
 
-{*================================================================*}
+{%*================================================================*%}
 <h3>Login:</h3>
 <br>
 <form method=post name=mainform onsubmit="return checkform()">
@@ -32,24 +32,24 @@ Your login or password or turing image code is wrong. Please check this informat
 <table cellspacing=0 cellpadding=2 border=0>
 <tr>
  <td>Username:</td>
- <td><input type=text name=username value='{$frm.username|escape:"html"}' class=inpts size=30></td>
+ <td><input type=text name=username value='{%$frm.username|escape:"html"%}' class=inpts size=30></td>
 </tr>
 <tr>
  <td>Password:</td>
  <td><input type=password name=password value='' class=inpts size=30></td>
 </tr>
-{if $userinfo.validation_enabled == 1}
+{%if $userinfo.validation_enabled == 1%}
 <tr>
- <td class=menutxt><img src="?a=show_validation_image&{$userinfo.session_name}={$userinfo.session_id}&rand={$userinfo.rand}"></td>
+ <td class=menutxt><img src="?a=show_validation_image&{%$userinfo.session_name%}={%$userinfo.session_id%}&rand={%$userinfo.rand%}"></td>
  <td><input type=text name=validation_number class=inpts size=30></td>
 </tr>
-{/if}
+{%/if%}
 <tr>
  <td>&nbsp;</td>
  <td><input type=submit value="Login" class=sbmt></td>
 </tr></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 <br><br>
 <a href=?a=forgot_password >forgot your login information</a>.
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

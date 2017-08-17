@@ -1,15 +1,15 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h2>Register Account</h2>
 Fill the form available below to open an account with Midollar. Please make sure you provide us with your real information. If you have questions about this process please contact support.  Program participation is available to any individual, who is over 18 years of age.<br>
 <br><br>
 
-{if $deny_registration}
+{%if $deny_registration%}
  We are closed for new registrations now.
-{elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref}
+{%elseif $settings.use_referal_program && $settings.force_upline && !$referer && !$settings.get_rand_ref%}
  You  do not have a upline. Our system require a upline for each user.
-{else}
- {literal}
+{%else%}
+ {%literal%}
 
  <script language=javascript>
  function checkform() {
@@ -18,9 +18,9 @@ Fill the form available below to open an account with Midollar. Please make sure
     document.regform.fullname.focus();
     return false;
   }
- {/literal}
- {if $settings.use_user_location}
- {literal}
+ {%/literal%}
+ {%if $settings.use_user_location%}
+ {%literal%}
   if (document.regform.address.value == '') {
     alert("Please enter your address!");
     document.regform.address.focus();
@@ -46,9 +46,9 @@ Fill the form available below to open an account with Midollar. Please make sure
     document.regform.country.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.username.value == '') {
     alert("Please enter your username!");
     document.regform.username.focus();
@@ -64,9 +64,9 @@ Fill the form available below to open an account with Midollar. Please make sure
     document.regform.password2.focus();
     return false;
   }
- {/literal}
- {if $settings.use_transaction_code}
- {literal}
+ {%/literal%}
+ {%if $settings.use_transaction_code%}
+ {%literal%}
   if (document.regform.transaction_code.value == '') {
     alert("Please enter your transaction code!");
     document.regform.transaction_code.focus();
@@ -77,9 +77,9 @@ Fill the form available below to open an account with Midollar. Please make sure
     document.regform.transaction_code2.focus();
     return false;
   }
- {/literal}
- {/if}
- {literal}
+ {%/literal%}
+ {%/if%}
+ {%literal%}
   if (document.regform.email.value == '') {
     alert("Please enter your e-mail address!");
     document.regform.email.focus();
@@ -111,82 +111,82 @@ Fill the form available below to open an account with Midollar. Please make sure
   return IsNumber;
  }
  </script>
- {/literal}
+ {%/literal%}
 
- {if $errors}
+ {%if $errors%}
   <ul style="color:red">
-  {section name=e loop=$errors}
-   {if $errors[e] eq 'full_name'}
+  {%section name=e loop=$errors%}
+   {%if $errors[e] eq 'full_name'%}
     <li>Please enter your full name!
-   {/if}
-   {if $errors[e] eq 'address'}
+   {%/if%}
+   {%if $errors[e] eq 'address'%}
     <li>Please enter your address!
-   {/if}
-   {if $errors[e] eq 'city'}
+   {%/if%}
+   {%if $errors[e] eq 'city'%}
     <li>Please enter your city!
-   {/if}
-   {if $errors[e] eq 'state'}
+   {%/if%}
+   {%if $errors[e] eq 'state'%}
     <li>Please enter your state!
-   {/if}
-   {if $errors[e] eq 'zip'}
+   {%/if%}
+   {%if $errors[e] eq 'zip'%}
     <li>Please enter your zip!
-   {/if}
-   {if $errors[e] eq 'country'}
+   {%/if%}
+   {%if $errors[e] eq 'country'%}
     <li>Please choose your country!
-   {/if}
-   {if $errors[e] eq 'username'}
+   {%/if%}
+   {%if $errors[e] eq 'username'%}
     <li>Please enter your username!
-   {/if}
-   {if $errors[e] eq 'username_exists'}
+   {%/if%}
+   {%if $errors[e] eq 'username_exists'%}
     <li>Sorry, such user already exists! Please try another username.
-   {/if}
-   {if $errors[e] eq 'email_exists'}
+   {%/if%}
+   {%if $errors[e] eq 'email_exists'%}
     <li>Sorry, such email already exists! Please try another email.
-   {/if}
-   {if $errors[e] eq 'password'}
+   {%/if%}
+   {%if $errors[e] eq 'password'%}
     <li>Please enter a password!
-   {/if}
-   {if $errors[e] eq 'password_confirm'}
+   {%/if%}
+   {%if $errors[e] eq 'password_confirm'%}
     <li>Please check your password!
-   {/if}
-   {if $errors[e] eq 'password_too_small'}
-    <li>The password you provided is too small, please enter at least {$settings.min_user_password_length} characters!
-   {/if}
-   {if $errors[e] eq 'transaction_code'}
+   {%/if%}
+   {%if $errors[e] eq 'password_too_small'%}
+    <li>The password you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code'%}
     <li>Please enter the Transaction Code!
-   {/if}
-   {if $errors[e] eq 'transaction_code_confirm'}
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_confirm'%}
     <li>Please check your Transaction Code!
-   {/if}
-   {if $errors[e] eq 'transaction_code_too_small'}
-    <li>The Transaction Code you provided is too small, please enter at least {$settings.min_user_password_length} characters!
-   {/if}
-   {if $errors[e] eq 'transaction_code_vs_password'}
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_too_small'%}
+    <li>The Transaction Code you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+   {%/if%}
+   {%if $errors[e] eq 'transaction_code_vs_password'%}
     <li>The Transaction Code should differ from the Password!
-   {/if}
-   {if $errors[e] eq 'egold'}
+   {%/if%}
+   {%if $errors[e] eq 'egold'%}
     <li>Please enter your e-gold account number!
-   {/if}
-   {if $errors[e] eq 'email'}
+   {%/if%}
+   {%if $errors[e] eq 'email'%}
     <li>Please enter your e-mail!
-   {/if}
-   {if $errors[e] eq 'agree'}
+   {%/if%}
+   {%if $errors[e] eq 'agree'%}
     <li>You have to agree with the Terms and Conditions!
-   {/if}
-   {if $errors[e] eq 'turing_image'}
+   {%/if%}
+   {%if $errors[e] eq 'turing_image'%}
     <li>Enter the verification code as it is shown in the corresponding box.
-   {/if}
-   {if $errors[e] eq 'no_upline'}
-    <li>The system requires an upline to register. {if $settings.get_rand_ref}You have to be agreed to random one or found a referral link in the net.{/if}
-   {/if}
-   {if $errors[e] eq 'ip_exists_in_database'}
+   {%/if%}
+   {%if $errors[e] eq 'no_upline'%}
+    <li>The system requires an upline to register. {%if $settings.get_rand_ref%}You have to be agreed to random one or found a referral link in the net.{%/if%}
+   {%/if%}
+   {%if $errors[e] eq 'ip_exists_in_database'%}
     <li>Your IP already exists in our database. Sorry, but registration impossible.
-   {/if}
+   {%/if%}
 
    <br>
-  {/section}
+  {%/section%}
   </ul>
- {/if}
+ {%/if%}
 
 
 <form name="regform" onsubmit="return checkform()" method="post">
@@ -207,7 +207,7 @@ Fill the form available below to open an account with Midollar. Please make sure
   <tbody><tr>
 
  <td width="200" valign="middle" height="30" align="right">Full Name<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="45" class="inpts" value="{$frm.fullname|escape:"quotes"}" name="fullname"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="45" class="inpts" value="{%$frm.fullname|escape:"quotes"%}" name="fullname"></td>
   </tr>
 </tbody></table>
 
@@ -216,18 +216,18 @@ Fill the form available below to open an account with Midollar. Please make sure
   <tbody><tr>
 
  <td valign="middle" height="30" align="right">E-mail Address<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{$frm.email|escape:"quotes"}" name="email"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{%$frm.email|escape:"quotes"%}" name="email"></td>
 
  <td valign="middle" height="30" align="right">Retype E-mail<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{$frm.email1|escape:"quotes"}" name="email1"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{%$frm.email1|escape:"quotes"%}" name="email1"></td>
   </tr>
   <tr>
 
  <td valign="middle" height="30" align="right">Secret question:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{$frm.sq|escape:"quotes"}" name="sq"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{%$frm.sq|escape:"quotes"%}" name="sq"></td>
 
  <td valign="middle" height="30" align="right">Secret answer:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{$frm.sa|escape:"quotes"}" name="sa"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="20" class="inpts" value="{%$frm.sa|escape:"quotes"%}" name="sa"></td>
   </tr>
 </tbody></table>
 
@@ -246,17 +246,17 @@ Fill the form available below to open an account with Midollar. Please make sure
 <table width="100%" border="0">
   <tbody><tr>
     <td> </td><td width="200" valign="middle" height="30" align="right">Username<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="text" style="height:20px;" size="45" class="inpts" value="{$frm.username|escape:"quotes"}" name="username"></td>
+ <td valign="middle"><input type="text" style="height:20px;" size="45" class="inpts" value="{%$frm.username|escape:"quotes"%}" name="username"></td>
   </tr>
 </tbody></table>
 <table width="100%" border="0">
   <tbody><tr>
 
  <td valign="middle" height="30" align="right">Password<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="password" style="height:20px;" size="20" class="inpts" value="{$frm.password|escape:"quotes"}" name="password"></td>
+ <td valign="middle"><input type="password" style="height:20px;" size="20" class="inpts" value="{%$frm.password|escape:"quotes"%}" name="password"></td>
 
  <td valign="middle" height="30" align="right">Retype Password<font color="#FF0000">*</font>:&nbsp;&nbsp;</td>
- <td valign="middle"><input type="password" style="height:20px;" size="20" class="inpts" value="{$frm.password2|escape:"quotes"}" name="password2"></td>
+ <td valign="middle"><input type="password" style="height:20px;" size="20" class="inpts" value="{%$frm.password2|escape:"quotes"%}" name="password2"></td>
   </tr>
 
 
@@ -275,12 +275,12 @@ Fill the form available below to open an account with Midollar. Please make sure
 
 <table width="100%" border="0">
 <tbody>
-{if $settings.def_payee_account_perfectmoney}
+{%if $settings.def_payee_account_perfectmoney%}
 <tr>
 <td>Your Perfect Money Account:</td>
-<td><input type=text class=inpts size=30 name=perfectmoney value="{$frm.perfectmoney|escape:"quotes"}"></td>
+<td><input type=text class=inpts size=30 name=perfectmoney value="{%$frm.perfectmoney|escape:"quotes"%}"></td>
 </tr>
-{/if}
+{%/if%}
 </tbody>
 </table>
 <font color="#FF0000">*</font>
@@ -297,7 +297,7 @@ Fill the form available below to open an account with Midollar. Please make sure
 
     <tbody><tr><td></td></tr><tr>
  <td width="200">Your Upline:</td>
-  <td>{$referer.name} ({$referer.username})</td>
+  <td>{%$referer.name%} ({%$referer.username%})</td>
 </tr>
 
 
@@ -308,7 +308,7 @@ Fill the form available below to open an account with Midollar. Please make sure
 <table width="100%" border="0">
 
 <tbody><tr>
- <td colspan="2"><input type=checkbox name=agree value=1 {if $frm.agree}checked{/if} > I agree with <a href="?a=rules">Terms and conditions</a></td>
+ <td colspan="2"><input type=checkbox name=agree value=1 {%if $frm.agree%}checked{%/if%} > I agree with <a href="?a=rules">Terms and conditions</a></td>
 </tr>
 <tr>
  <td align="right" class="menutxt"></td>
@@ -320,6 +320,6 @@ Fill the form available below to open an account with Midollar. Please make sure
 </tr></tbody></table>
 
 
-        </div><input type="hidden" name="_token" value="{$csrf_token}"></form>
-{/if}
-{include file="footer.tpl"}
+        </div><input type="hidden" name="_token" value="{%$csrf_token%}"></form>
+{%/if%}
+{%include file="footer.tpl"%}

@@ -1,5 +1,5 @@
-{include file="logo.tpl"}
-<table width="972" border="0" align="center" cellpadding="0" cellspacing="0" background="images/index_04.gif?tag={$tag}">
+{%include file="logo.tpl"%}
+<table width="972" border="0" align="center" cellpadding="0" cellspacing="0" background="images/index_04.gif?tag={%$tag%}">
   <!--DWLayoutTable-->
   <tr>
     <td width="231" height="372" align="right" valign="top" class="lbg">
@@ -7,7 +7,7 @@
   <table width="200" border="0" cellpadding="0" cellspacing="0">
     <!--DWLayoutTable-->
   <tr>
-    <td height="45" valign="top"><img src="images/box2_01.gif?tag={$tag}" width="200" height="45"></td>
+    <td height="45" valign="top"><img src="images/box2_01.gif?tag={%$tag%}" width="200" height="45"></td>
     </tr>
     <tr>
     <td height="200" valign="top" class="boxc2" width="200">
@@ -26,7 +26,7 @@ to share with you. Below you can check out all our investment plans.</font></spa
 <div style="padding-right:10px;padding-top:15px;">
   <center>
     <h2>we accept</h2>
-    <img width="200" height="65" border="0" src="images/payments.png?tag={$tag}">
+    <img width="200" height="65" border="0" src="images/payments.png?tag={%$tag%}">
   </center>
 </div>
   </td>

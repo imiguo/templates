@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 <h2>Registration Completed!</h2><br>
@@ -8,4 +8,4 @@ You are now an official member of this program. You can login to your account to
 
 <b>Important:</b> Do not provide your login and password to anyone!
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

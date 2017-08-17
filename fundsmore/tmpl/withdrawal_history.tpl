@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -20,21 +20,21 @@
 
 From: <select name=month_from class=inpts>
 
-{section name=month_from loop=$month}
+{%section name=month_from loop=$month%}
 
-<option value={$smarty.section.month_from.index+1} {if $smarty.section.month_from.index+1 == $frm.month_from}selected{/if}>{$month[month_from]}
+<option value={%$smarty.section.month_from.index+1%} {%if $smarty.section.month_from.index+1 == $frm.month_from%}selected{%/if%}>{%$month[month_from]%}
 
-{/section}
+{%/section%}
 
 </select> &nbsp;
 
 <select name=day_from class=inpts>
 
-{section name=day_from loop=$day}
+{%section name=day_from loop=$day%}
 
-<option value={$smarty.section.day_from.index+1} {if $smarty.section.day_from.index+1 == $frm.day_from}selected{/if}>{$day[day_from]}
+<option value={%$smarty.section.day_from.index+1%} {%if $smarty.section.day_from.index+1 == $frm.day_from%}selected{%/if%}>{%$day[day_from]%}
 
-{/section}
+{%/section%}
 
 </select> &nbsp;
 
@@ -42,11 +42,11 @@ From: <select name=month_from class=inpts>
 
 <select name=year_from class=inpts>
 
-{section name=year_from loop=$year}
+{%section name=year_from loop=$year%}
 
-<option value={$year[year_from]} {if $year[year_from] == $frm.year_from}selected{/if}>{$year[year_from]}
+<option value={%$year[year_from]%} {%if $year[year_from] == $frm.year_from%}selected{%/if%}>{%$year[year_from]%}
 
-{/section}
+{%/section%}
 
 </select><br><img src=images/q.gif width=1 height=4><br>
 
@@ -54,21 +54,21 @@ From: <select name=month_from class=inpts>
 
 To: <select name=month_to class=inpts>
 
-{section name=month_to loop=$month}
+{%section name=month_to loop=$month%}
 
-<option value={$smarty.section.month_to.index+1} {if $smarty.section.month_to.index+1 == $frm.month_to}selected{/if}>{$month[month_to]}
+<option value={%$smarty.section.month_to.index+1%} {%if $smarty.section.month_to.index+1 == $frm.month_to%}selected{%/if%}>{%$month[month_to]%}
 
-{/section}
+{%/section%}
 
 </select> &nbsp;
 
 <select name=day_to class=inpts>
 
-{section name=day_to loop=$day}
+{%section name=day_to loop=$day%}
 
-<option value={$smarty.section.day_to.index+1} {if $smarty.section.day_to.index+1 == $frm.day_to}selected{/if}>{$day[day_to]}
+<option value={%$smarty.section.day_to.index+1%} {%if $smarty.section.day_to.index+1 == $frm.day_to%}selected{%/if%}>{%$day[day_to]%}
 
-{/section}
+{%/section%}
 
 </select> &nbsp;
 
@@ -76,11 +76,11 @@ To: <select name=month_to class=inpts>
 
 <select name=year_to class=inpts>
 
-{section name=year_to loop=$year}
+{%section name=year_to loop=$year%}
 
-<option value={$year[year_to]} {if $year[year_to] == $frm.year_to}selected{/if}>{$year[year_to]}
+<option value={%$year[year_to]%} {%if $year[year_to] == $frm.year_to%}selected{%/if%}>{%$year[year_to]%}
 
-{/section}
+{%/section%}
 
 </select>
 
@@ -96,13 +96,13 @@ To: <select name=month_to class=inpts>
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 <br><br>
 
 
 
-{if $settings.use_history_balance_mode}
+{%if $settings.use_history_balance_mode%}
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 
@@ -122,63 +122,63 @@ To: <select name=month_to class=inpts>
 
 </tr>
 
-{if $qtrans > 0}
+{%if $qtrans > 0%}
 
-{section name=trans loop=$trans}
+{%section name=trans loop=$trans%}
 
 <tr>
 
- <td align=center nowrap>{$trans[trans].d}</td>
+ <td align=center nowrap>{%$trans[trans].d%}</td>
 
- <td><b>{$trans[trans].transtype}</b><br><small class=gray>{$trans[trans].description}</small></td>
+ <td><b>{%$trans[trans].transtype%}</b><br><small class=gray>{%$trans[trans].description%}</small></td>
 
  <td align=right><b>
 
-  {if $trans[trans].debitcredit == 0}
+  {%if $trans[trans].debitcredit == 0%}
 
-  {$currency_sign}{$trans[trans].actual_amount}
+  {%$currency_sign%}{%$trans[trans].actual_amount%}
 
   </b>
 
-  {else}
+  {%else%}
 
   &nbsp;
 
-  {/if}
+  {%/if%}
 
  </td>
 
  <td align=right><b>
 
-  {if $trans[trans].debitcredit == 1}
+  {%if $trans[trans].debitcredit == 1%}
 
-  {$currency_sign}{$trans[trans].actual_amount}
+  {%$currency_sign%}{%$trans[trans].actual_amount%}
 
   </b> 
 
-  {if $trans[trans].transtype eq 'Withdrawal request'} <a href=?a=cancelwithdraw&id={$trans[trans].id} onclick="return confirm('Are you sure you want to delete this request?')"></a>{/if}
+  {%if $trans[trans].transtype eq 'Withdrawal request'%} <a href=?a=cancelwithdraw&id={%$trans[trans].id%} onclick="return confirm('Are you sure you want to delete this request?')"></a>{%/if%}
 
-  {else}
+  {%else%}
 
   &nbsp;
 
-  {/if}
+  {%/if%}
 
  </td>
 
  <td align=right><b>
 
-  {$currency_sign}{$trans[trans].balance}
+  {%$currency_sign%}{%$trans[trans].balance%}
 
  </td>
 
- <td><img src="images/{$trans[trans].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17></td>
+ <td><img src="images/{%$trans[trans].ec%}.gif?tag={%$tag%}" align=absmiddle hspace=1 height=17></td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{else}
+{%else%}
 
 <tr>
 
@@ -186,43 +186,43 @@ To: <select name=month_to class=inpts>
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr><td colspan=3>&nbsp;</td>
 
 
 
-{if $qtrans > 0}
+{%if $qtrans > 0%}
 
 <tr>
 
  <td colspan=2>For this period:</td>
 
- <td align=right nowrap><b>{$currency_sign}{$periodcredit}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$periodcredit%}</b></td>
 
- <td align=right nowrap><b>{$currency_sign}{$perioddebit}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$perioddebit%}</b></td>
 
- <td align=right nowrap><b>{$currency_sign}{$periodbalance}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$periodbalance%}</b></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr>
 
  <td colspan=2>Total:</td>
 
- <td align=right nowrap><b>{$currency_sign}{$allcredit}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$allcredit%}</b></td>
 
- <td align=right nowrap><b>{$currency_sign}{$alldebit}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$alldebit%}</b></td>
 
- <td align=right nowrap><b>{$currency_sign}{$allbalance}</b></td>
+ <td align=right nowrap><b>{%$currency_sign%}{%$allbalance%}</b></td>
 
 </tr>
 
 </table>
 
-{else}
+{%else%}
 
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
 
@@ -236,29 +236,29 @@ To: <select name=month_to class=inpts>
 
 </tr>
 
-{if $qtrans > 0}
+{%if $qtrans > 0%}
 
-{section name=trans loop=$trans}
+{%section name=trans loop=$trans%}
 
 <tr>
 
- <td><b>{$trans[trans].transtype}</b></td>
+ <td><b>{%$trans[trans].transtype%}</b></td>
 
- <td width=200 align=right><b>{$currency_sign} {$trans[trans].actual_amount}</b> <img src="images/{$trans[trans].ec}.gif?tag={$tag}" align=absmiddle hspace=1 height=17> {if $trans[trans].transtype eq 'Withdrawal request'} <a href=?a=cancelwithdraw&id={$trans[trans].id} onclick="return confirm('Are you sure you want to delete this request?')"></a>{/if}</td>
+ <td width=200 align=right><b>{%$currency_sign%} {%$trans[trans].actual_amount%}</b> <img src="images/{%$trans[trans].ec%}.gif?tag={%$tag%}" align=absmiddle hspace=1 height=17> {%if $trans[trans].transtype eq 'Withdrawal request'%} <a href=?a=cancelwithdraw&id={%$trans[trans].id%} onclick="return confirm('Are you sure you want to delete this request?')"></a>{%/if%}</td>
 
- <td width=170 align=center valign=bottom><b><small>{$trans[trans].d}</small></b></td>
+ <td width=170 align=center valign=bottom><b><small>{%$trans[trans].d%}</small></b></td>
 
 </tr>
 
 <tr>
 
- <td colspan=3 style="color: gray"><small>{$trans[trans].description}</small></td>
+ <td colspan=3 style="color: gray"><small>{%$trans[trans].description%}</small></td>
 
 </tr>
 
-{/section}
+{%/section%}
 
-{else}
+{%else%}
 
 <tr>
 
@@ -266,35 +266,35 @@ To: <select name=month_to class=inpts>
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr><td colspan=3>&nbsp;</td>
 
-{if $qtrans > 0}
+{%if $qtrans > 0%}
 
 <tr>
 
  <td colspan=2>For this period:</td>
 
- <td align=right><b>{$currency_sign} {$periodsum}</b></td>
+ <td align=right><b>{%$currency_sign%} {%$periodsum%}</b></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr>
 
  <td colspan=2>Total:</td>
 
- <td align=right><b>{$currency_sign} {$allsum}</b></td>
+ <td align=right><b>{%$currency_sign%} {%$allsum%}</b></td>
 
 </tr>
 
 </table>
 
-{/if}
+{%/if%}
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

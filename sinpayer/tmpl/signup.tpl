@@ -1,58 +1,58 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">
-            <h3>Registration at {$app_site}</h3>
+            <h3>Registration at {%$app_site%}</h3>
             <br>
             <script language=javascript>
-            function check_reg_form() {
+            function check_reg_form() {%
                 if (document.regform.fullname.value == '') {
                     alert("Please enter your full name!");
                     document.regform.fullname.focus();
                     return false;
-                }
+                %}
 
 
-                if (document.regform.username.value == '') {
+                if (document.regform.username.value == '') {%
                     alert("Please enter your username!");
                     document.regform.username.focus();
                     return false;
-                }
-                if (!document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)) {
+                %}
+                if (!document.regform.username.value.match(/^[A-Za-z0-9_\-]+$/)) {%
                     alert("For username you should use English letters and digits only!");
                     document.regform.username.focus();
                     return false;
-                }
-                if (document.regform.password.value == '') {
+                %}
+                if (document.regform.password.value == '') {%
                     alert("Please enter your password!");
                     document.regform.password.focus();
                     return false;
-                }
-                if (document.regform.password.value != document.regform.password2.value) {
+                %}
+                if (document.regform.password.value != document.regform.password2.value) {%
                     alert("Please check your password!");
                     document.regform.password2.focus();
                     return false;
-                }
+                %}
 
 
-                if (document.regform.email.value == '') {
+                if (document.regform.email.value == '') {%
                     alert("Please enter your e-mail address!");
                     document.regform.email.focus();
                     return false;
-                }
-                if (document.regform.email.value != document.regform.email1.value) {
+                %}
+                if (document.regform.email.value != document.regform.email1.value) {%
                     alert("Please retupe your e-mail!");
                     document.regform.email.focus();
                     return false;
-                }
-                if (document.regform.agree.checked == false) {
+                %}
+                if (document.regform.agree.checked == false) {%
                     alert("You have to agree with the Terms and Conditions!");
                     return false;
-                }
+                %}
                 return true;
             }
 
-            function IsNumeric(sText) {
+            function IsNumeric(sText) {%
                 var ValidChars = "0123456789";
                 var IsNumber = true;
                 var Char;
@@ -61,7 +61,7 @@
                     Char = sText.charAt(i);
                     if (ValidChars.indexOf(Char) == -1) {
                         IsNumber = false;
-                    }
+                    %}
                 }
                 return IsNumber;
             }
@@ -73,78 +73,78 @@
                     <tr>
                         <td>Your Full Name:</td>
                         <td>
-                            <input type=text name=fullname value="{$frm.fullname|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=fullname value="{%$frm.fullname|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Your Username:</td>
                         <td>
-                            <input type=text name=username value="{$frm.username|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=username value="{%$frm.username|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Define Password:</td>
                         <td>
-                            <input type=password name=password value="{$frm.password|escape:"quotes"}" class=inpts size=30>
+                            <input type=password name=password value="{%$frm.password|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Retype Password:</td>
                         <td>
-                            <input type=password name=password2 value="{$frm.password2|escape:"quotes"}" class=inpts size=30>
+                            <input type=password name=password2 value="{%$frm.password2|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
-                    {if $settings.def_payee_account_perfectmoney}
+                    {%if $settings.def_payee_account_perfectmoney%}
                     <tr>
                         <td>Your PerfectMoney Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=perfectmoney value="{$frm.perfectmoney|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=perfectmoney value="{%$frm.perfectmoney|escape:"quotes"%}">
                         </td>
                     </tr>
-                    {/if}
-                    {if $settings.def_payee_account_payeer}
+                    {%/if%}
+                    {%if $settings.def_payee_account_payeer%}
                     <tr>
                         <td>Your Payeer Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=payeer value="{$frm.payeer|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=payeer value="{%$frm.payeer|escape:"quotes"%}">
                         </td>
                     </tr>
-                    {/if}
-                    {if $settings.def_payee_account_bitcoin}
+                    {%/if%}
+                    {%if $settings.def_payee_account_bitcoin%}
                     <tr>
                         <td>Your Bitcoin Account:</td>
                         <td>
-                            <input type=text class=inpts size=30 name=bitcoin value="{$frm.bitcoin|escape:"quotes"}">
+                            <input type=text class=inpts size=30 name=bitcoin value="{%$frm.bitcoin|escape:"quotes"%}">
                         </td>
                     </tr>
-                    {/if}
+                    {%/if%}
                     <tr>
                         <td>Your E-mail Address:</td>
                         <td>
-                            <input type=text name=email value="{$frm.email|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=email value="{%$frm.email|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Retype Your E-mail:</td>
                         <td>
-                            <input type=text name=email1 value="{$frm.email1|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=email1 value="{%$frm.email1|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Secret question:</td>
                         <td>
-                            <input type=text name=sq value="{$frm.sq|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=sq value="{%$frm.sq|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Secret answer:</td>
                         <td>
-                            <input type=text name=sa value="{$frm.sa|escape:"quotes"}" class=inpts size=30>
+                            <input type=text name=sa value="{%$frm.sa|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
                     <tr>
                         <td>Your Upline:</td>
-                        <td>{$referer.name} ({$referer.username})</td>
+                        <td>{%$referer.name%} ({%$referer.username%})</td>
                     </tr>
                     <tr>
                         <td colspan=2>
@@ -157,9 +157,9 @@
                         </td>
                     </tr>
                 </table>
-            <input type="hidden" name="_token" value="{$csrf_token}"></form>
+            <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
         </div>
     </div>
 </div>
 </div>
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

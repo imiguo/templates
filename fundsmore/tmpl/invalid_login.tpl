@@ -1,8 +1,8 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
-{literal}
+{%literal%}
 
 <script language=javascript>
 
@@ -34,7 +34,7 @@ function checkform() {
 
 </script>
 
-{/literal}
+{%/literal%}
 
 
 
@@ -42,15 +42,15 @@ function checkform() {
 
 
 
-{if $frm.say eq 'bad_validation'}
+{%if $frm.say eq 'bad_validation'%}
 
 Please enter string from turing image correctly. It is require to prevent hacking of your account.
 
-{else}
+{%else%}
 
 Your login or password is wrong. Please check this information.
 
-{/if}
+{%/if%}
 
 <br><br>
 
@@ -68,7 +68,7 @@ Your login or password is wrong. Please check this information.
 
  <td>Username:</td>
 
- <td><input type=text name=username value='{$frm.username|escape:"html"}' class=inpts size=30></td>
+ <td><input type=text name=username value='{%$frm.username|escape:"html"%}' class=inpts size=30></td>
 
 </tr><tr>
 
@@ -78,17 +78,17 @@ Your login or password is wrong. Please check this information.
 
 </tr>
 
-{if $userinfo.validation_enabled == 1}
+{%if $userinfo.validation_enabled == 1%}
 
 <tr>
 
- <td class=menutxt><img src="?a=show_validation_image&{$userinfo.session_name}={$userinfo.session_id}&rand={$userinfo.rand}"></td>
+ <td class=menutxt><img src="?a=show_validation_image&{%$userinfo.session_name%}={%$userinfo.session_id%}&rand={%$userinfo.rand%}"></td>
 
  <td><input type=text name=validation_number class=inpts size=30></td>
 
 </tr>
 
-{/if}
+{%/if%}
 
 <tr>
 
@@ -98,7 +98,7 @@ Your login or password is wrong. Please check this information.
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 <br><br>
 
@@ -106,5 +106,5 @@ or <a href=?a=forgot_password >remember your login information</a>.
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

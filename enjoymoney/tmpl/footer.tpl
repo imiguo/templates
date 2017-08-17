@@ -2,12 +2,12 @@
 </td>
 
 <td width="231" valign="top" class="rbg">
-{if $userinfo.logged != 1}
+{%if $userinfo.logged != 1%}
 <div style="padding-left:10px;">
 	<table width="200" border="0" cellpadding="0" cellspacing="0">
 	  <!--DWLayoutTable-->
   <tr>
-    <td width="200" height="40" valign="top"><img src="images/box_01.png?tag={$tag}" width="200" height="40"></td>
+    <td width="200" height="40" valign="top"><img src="images/box_01.png?tag={%$tag%}" width="200" height="40"></td>
   </tr>
   <tr>
     <td valign="top" class="boxc" align="center">
@@ -28,19 +28,19 @@
 			</tr>
 
 			<tr>
-			<td height="32" colspan="2" align="center" valign="bottom"><input type=image src="images/login.gif?tag={$tag}" value="Login"></td>
+			<td height="32" colspan="2" align="center" valign="bottom"><input type=image src="images/login.gif?tag={%$tag%}" value="Login"></td>
 		  </tr>
 
 		  <tr>
 			<td height="20" colspan="2" align="center" valign="bottom" class="logform"><a href="?a=forgot_password">Forgot your password?</a></td>
 		  </tr>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 			</table>
 	</div>
 	</td>
   </tr>
   <tr>
-    <td height="11" valign="top"><img src="images/box_04.gif?tag={$tag}" width="200" height="11"></td>
+    <td height="11" valign="top"><img src="images/box_04.gif?tag={%$tag%}" width="200" height="11"></td>
   </tr>
 </table>
 	</div>
@@ -49,7 +49,7 @@
 <table width="200" border="0" cellpadding="0" cellspacing="0">
 	  <!--DWLayoutTable-->
   <tr>
-    <td width="200" height="35" valign="top"><img src="images/box1_01.gif?tag={$tag}" width="200" height="35"></td>
+    <td width="200" height="35" valign="top"><img src="images/box1_01.gif?tag={%$tag%}" width="200" height="35"></td>
   </tr>
 
   <tr>
@@ -90,7 +90,7 @@
 </table>
 <p>&nbsp;</p>
 </div>
-{else}
+{%else%}
 
 
 
@@ -98,7 +98,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="200">
     <!--DWLayoutTable-->
   <tbody><tr>
-    <td height="40" valign="top" width="200"><img src="images/menu_01.gif?tag={$tag}" height="40" width="200"></td>
+    <td height="40" valign="top" width="200"><img src="images/menu_01.gif?tag={%$tag%}" height="40" width="200"></td>
   </tr>
   <tr>
     <td class="boxc" align="center" valign="top">
@@ -146,11 +146,11 @@
   </td>
   </tr>
   <tr>
-    <td height="11" valign="top"><img src="images/box_04.gif?tag={$tag}" height="11" width="200"></td>
+    <td height="11" valign="top"><img src="images/box_04.gif?tag={%$tag%}" height="11" width="200"></td>
   </tr>
 </tbody></table>
 </div>
-{/if}
+{%/if%}
 </td>
   </tr>
 </table>
@@ -162,12 +162,12 @@
     <tr>
      <td width="962" height="60" valign="middle" class="foot">
        <a href="?a=home">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-       {if $userinfo.logged!=1}
+       {%if $userinfo.logged!=1%}
        <a href="?a=signup">Register Account</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-       {else}
+       {%else%}
        <a href="?a=deposit">Deposit</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="?a=logout">Log Out</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-       {/if}
+       {%/if%}
        <a href="?a=cust&amp;page=aboutus">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="?a=cust&amp;page=howtoinvest">how To Invest</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
        <a href="?a=faq">F.A.Q</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;

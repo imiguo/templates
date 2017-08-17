@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -14,11 +14,11 @@
 
 
 
-{if $say == 'invalid_code'}
+{%if $say == 'invalid_code'%}
 
 <b style="color: red">Invalid Confirmation Code</b><br><br>
 
-{/if}
+{%/if%}
 
 
 
@@ -44,11 +44,11 @@ The system sent you an e-mail with the confirmation code used to confirm your id
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 
 
 

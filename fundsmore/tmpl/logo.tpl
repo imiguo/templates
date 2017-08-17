@@ -8,13 +8,13 @@
 
  <link rel="icon" href="images/fav.ico" type="image/x-icon" />
 
- <script src="js/core.js?tag={$tag}" type="text/javascript"></script>
+ <script src="js/core.js?tag={%$tag%}" type="text/javascript"></script>
 
- <script src="js/caption.js?tag={$tag}" type="text/javascript"></script>
+ <script src="js/caption.js?tag={%$tag%}" type="text/javascript"></script>
 
- <script src="js/mootools-more.js?tag={$tag}" type="text/javascript"></script>
+ <script src="js/mootools-more.js?tag={%$tag%}" type="text/javascript"></script>
 
-{literal}
+{%literal%}
 
 <script type="text/javascript">
 
@@ -42,49 +42,49 @@ var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
 
 </script>
 
-{/literal}
+{%/literal%}
 
 
 
- <link rel="stylesheet" href="css/main.css?tag={$tag}" type="text/css" media="screen,projection" />
+ <link rel="stylesheet" href="css/main.css?tag={%$tag%}" type="text/css" media="screen,projection" />
 
- <link rel="stylesheet" href="css/position.css?tag={$tag}" type="text/css" media="screen,projection" />
+ <link rel="stylesheet" href="css/position.css?tag={%$tag%}" type="text/css" media="screen,projection" />
 
- <link rel="stylesheet" href="css/layout.css?tag={$tag}" type="text/css" media="screen,projection" />
+ <link rel="stylesheet" href="css/layout.css?tag={%$tag%}" type="text/css" media="screen,projection" />
 
- <link rel="stylesheet" href="css/personal.css?tag={$tag}" type="text/css" media="screen,projection" />
+ <link rel="stylesheet" href="css/personal.css?tag={%$tag%}" type="text/css" media="screen,projection" />
 
- <link rel="stylesheet" href="css/general.css?tag={$tag}" type="text/css" media="screen,projection" />
-
-
-
- <script type="text/javascript" src="js/hide.js?tag={$tag}"></script>
-
- <script type="text/javascript" src="js/jquery-1.4.2.min.js?tag={$tag}"></script>
-
- <script type="text/javascript" src="js/tiny.js?tag={$tag}"></script>
-
- <script type="text/javascript" src="js/cufon-yui.js?tag={$tag}"></script>
+ <link rel="stylesheet" href="css/general.css?tag={%$tag%}" type="text/css" media="screen,projection" />
 
 
 
- <script type="text/javascript" src="js/cufon-replace.js?tag={$tag}"></script>
+ <script type="text/javascript" src="js/hide.js?tag={%$tag%}"></script>
 
- <script type="text/javascript" src="js/HeliosCond_400.font.js?tag={$tag}"></script>
+ <script type="text/javascript" src="js/jquery-1.4.2.min.js?tag={%$tag%}"></script>
 
- <script type="text/javascript" src="js/Heliosthin.font.js?tag={$tag}"></script>
+ <script type="text/javascript" src="js/tiny.js?tag={%$tag%}"></script>
 
- <script type="text/javascript" src="js/tabs.js?tag={$tag}"></script>
-
-
-
- <script src="js/tab.js?tag={$tag}" type="text/javascript"></script>
-
- <link href="js/SpryTabbedPanels.css?tag={$tag}" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="js/cufon-yui.js?tag={%$tag%}"></script>
 
 
 
-{literal}
+ <script type="text/javascript" src="js/cufon-replace.js?tag={%$tag%}"></script>
+
+ <script type="text/javascript" src="js/HeliosCond_400.font.js?tag={%$tag%}"></script>
+
+ <script type="text/javascript" src="js/Heliosthin.font.js?tag={%$tag%}"></script>
+
+ <script type="text/javascript" src="js/tabs.js?tag={%$tag%}"></script>
+
+
+
+ <script src="js/tab.js?tag={%$tag%}" type="text/javascript"></script>
+
+ <link href="js/SpryTabbedPanels.css?tag={%$tag%}" rel="stylesheet" type="text/css" />
+
+
+
+{%literal%}
 
 <script type="text/javascript">
 
@@ -178,7 +178,7 @@ margin: 0
 
 <![endif]-->
 
-{/literal}
+{%/literal%}
 
 </head>
 
@@ -188,7 +188,7 @@ margin: 0
 
 <div id="access" style="display: none;">
 
-  <div class="close2"><a href="#" onClick="showLogin(); return false;"><img src="images/close.png?tag={$tag}" alt="" /></a></div>
+  <div class="close2"><a href="#" onClick="showLogin(); return false;"><img src="images/close.png?tag={%$tag%}" alt="" /></a></div>
 
 
 
@@ -222,7 +222,7 @@ margin: 0
 
 	 <div style=" padding-left: 160px;"><a href="?a=forgot_password">Password Recovery</a></div>
 
-  <input type="hidden" name="_token" value="{$csrf_token}"></form>
+  <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 </div>
 
@@ -230,7 +230,7 @@ margin: 0
 
 
 
-{literal}
+{%literal%}
 
 <script type="text/javascript">
 
@@ -288,7 +288,7 @@ document.getElementById('overlay').style.display = 'none';
 
 </script>
 
- {/literal}
+ {%/literal%}
 
 
 
@@ -304,7 +304,7 @@ document.getElementById('overlay').style.display = 'none';
 
           <h1 id="logo">
 
-           <a href=?a=home><img src="images/logo.png?tag={$tag}"  alt="" /></a>
+           <a href=?a=home><img src="images/logo.png?tag={%$tag%}"  alt="" /></a>
 
            <span class="header1"></span>
 
@@ -312,19 +312,19 @@ document.getElementById('overlay').style.display = 'none';
 
          </div><!-- end logoheader -->
 
-{if $userinfo.logged != 1}
+{%if $userinfo.logged != 1%}
 
          <div class="social">
 
           <ul class="menu">
 
-                      <li id="item-510" ><a href="#" onClick="showLogin(); return false;" ><img src="images/log.png?tag={$tag}" /></a></li>
+                      <li id="item-510" ><a href="#" onClick="showLogin(); return false;" ><img src="images/log.png?tag={%$tag%}" /></a></li>
 
                      </ul>
 
          </div>
 
-{/if}
+{%/if%}
 
           <div class="header_3">
 
@@ -332,15 +332,15 @@ document.getElementById('overlay').style.display = 'none';
 
             <a href="?a=home" class="a1"><span class="notext">Home</span></a>
 
-			     {if $userinfo.logged != 1}
+			     {%if $userinfo.logged != 1%}
 
             <a href="?a=signup" class="a2"><span class="notext">Register</span></a>
 
-					{else}
+					{%else%}
 
 						<a class="a10" href="?a=logout"><span class="notext">Logout</span></a>
 
-					{/if}
+					{%/if%}
 
             <a href="?a=cust&amp;page=about"  class="a3"><span class="notext">About us</span></a>
 
@@ -379,35 +379,35 @@ document.getElementById('overlay').style.display = 'none';
 
                 <ul id="carousel1">
 
-                 <li><a href=?a=signup><img src="images/carousel_icon1.png?tag={$tag}" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon1.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan1</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon2.png?tag={$tag}" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon2.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signu pclass="carousel_link">Plan2</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon3.png?tag={$tag}" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon3.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan3</a></li>
 
-                 <li><a href=?a=signup><img src="images/carousel_icon4.png?tag={$tag}" alt="" /></a>
+                 <li><a href=?a=signup><img src="images/carousel_icon4.png?tag={%$tag%}" alt="" /></a>
 
                  <a href=?a=signup class="carousel_link">Plan4</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon5.png?tag={$tag}" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon5.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan5</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon6.png?tag={$tag}" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon6.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan6</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon7.png?tag={$tag}" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon7.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan7</a></li>
 
-                 <li ><a href=?a=signup><img src="images/carousel_icon8.png?tag={$tag}" alt="" /></a>
+                 <li ><a href=?a=signup><img src="images/carousel_icon8.png?tag={%$tag%}" alt="" /></a>
 
 		 <a href=?a=signup class="carousel_link">Plan8</a></li>
 

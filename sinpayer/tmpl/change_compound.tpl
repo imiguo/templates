@@ -1,17 +1,17 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 <h3>Change Compounding Percent</h3><br><br>
 
-{if $fatal}
- {if $fatal eq 'deposit_not_found'}Wrong deposit ID has been provided{/if}
- {if $fatal eq 'compound_forbidden'}There is no compounding for this plan{/if}
+{%if $fatal%}
+ {%if $fatal eq 'deposit_not_found'%}Wrong deposit ID has been provided{%/if%}
+ {%if $fatal eq 'compound_forbidden'%}There is no compounding for this plan{%/if%}
 
- {if $fatal eq 'update_completed'}Your compounding percent has been successfully changed.{/if}
+ {%if $fatal eq 'update_completed'%}Your compounding percent has been successfully changed.{%/if%}
 
-{else}
+{%else%}
 
 <script>
-{literal}
+{%literal%}
 function openCalculator(id)
 {
   w = 225; h = 400;
@@ -36,45 +36,45 @@ function c_c()
     document.change_compound.percent.value = 100;
   }
 }
-{/literal}
+{%/literal%}
 </script>
 
 <form method=post name=change_compound>
 <input type=hidden name=a value=change_compound>
 <input type=hidden name=action value=change>
-<input type=hidden name=deposit value={$deposit.id}>
+<input type=hidden name=deposit value={%$deposit.id%}>
 
 <table cellspacing=0 cellpadding=2 border=0>
 <tr>
-      <td colspan=2>Change the compounding percent for <b>{$currency_sign}{$deposit.deposit}</b>
-        deposit in the <b>{$type.name|escape:html}</b></td>
+      <td colspan=2>Change the compounding percent for <b>{%$currency_sign%}{%$deposit.deposit%}</b>
+        deposit in the <b>{%$type.name|escape:html%}</b></td>
 </tr>
 <tr><td nowrap width=1%>Compounding percent: </td>
-  {if $compound_percents}
+  {%if $compound_percents%}
 <td><select name='percent' class=inpts>
-{section name=p loop=$compound_percents}<option value="{$compound_percents[p].percent}" {if $deposit.compound == $compound_percents[p].percent}selected{/if}>{$compound_percents[p].percent}%</option>{/section}
+{%section name=p loop=$compound_percents%}<option value="{%$compound_percents[p].percent%}" {%if $deposit.compound == $compound_percents[p].percent%}selected{%/if%}>{%$compound_percents[p].percent%}%</option>{%/section%}
 </select></td>
-  {else}
-<td width=99%><input type=text name='percent' value="{$deposit.compound}" class=inpts size=5 onchange="c_c()" onkeyup="c_c()" onfocusout="c_c()" onactivate="c_c()" ondeactivate="c_c()"></td></tr>
+  {%else%}
+<td width=99%><input type=text name='percent' value="{%$deposit.compound%}" class=inpts size=5 onchange="c_c()" onkeyup="c_c()" onfocusout="c_c()" onactivate="c_c()" ondeactivate="c_c()"></td></tr>
 <tr>
-      <td nowrap colspan=2>(You can set any compounding percent between <b>{$compound_min_percents}%</b>
-        and <b>{$compound_max_percents}%</b>)</td>
-  {/if}
+      <td nowrap colspan=2>(You can set any compounding percent between <b>{%$compound_min_percents%}%</b>
+        and <b>{%$compound_max_percents%}%</b>)</td>
+  {%/if%}
 </tr>
-{if $settings.enable_calculator}
+{%if $settings.enable_calculator%}
 <tr>
- <td colspan=2><a href="javascript:openCalculator({$type.id})">Calculate your profit &gt;&gt;</a></td>
+ <td colspan=2><a href="javascript:openCalculator({%$type.id%})">Calculate your profit &gt;&gt;</a></td>
 </tr>
-{/if}
+{%/if%}
 <tr>
  <td>&nbsp;</td>
  <td><input type=submit value="Change" class=sbmt></td>
 </tr></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 <script>
 withdraw();
 </script>
-{/if}
+{%/if%}
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

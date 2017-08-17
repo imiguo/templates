@@ -1,8 +1,8 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <h2>Account Login </h2>
 Please enter your username and password to login to your account. If you have an account with us and have forgotten your password, please clcik on the "Forgot your password?" and complete the password reminder form, then your password will be e-mailed to you immediately.<br><br><br>
 
-{literal}
+{%literal%}
 <script language=javascript>
 function checkform() {
   if (document.mainform.username.value=='') {
@@ -18,14 +18,14 @@ function checkform() {
   return true;
 }
 </script>
-{/literal}
+{%/literal%}
 
-{if $frm.say eq 'invalid_login'}
+{%if $frm.say eq 'invalid_login'%}
 <h3>Login error:</h3>
 
 Your login or password or turing image code is wrong. Please check this information.
 <br><br>
-{/if}
+{%/if%}
 <br>
 
 <form onsubmit="return checkform()" name="mainform" method="post">
@@ -38,7 +38,7 @@ Your login or password or turing image code is wrong. Please check this informat
   <tbody>
   <tr>
     <td width="170" valign="middle" height="34" class="reg"><font color="#FF0000">*</font> Account Number:</td>
-    <td width="200" valign="middle" class="dots"><input style="width:175;height:20;" class="input2" value="{$frm.username|escape:"html"}" name="username"></td>
+    <td width="200" valign="middle" class="dots"><input style="width:175;height:20;" class="input2" value="{%$frm.username|escape:"html"%}" name="username"></td>
   <td width="210" valign="middle" class="dots">Your valid account number.</td>
   </tr>
   
@@ -53,5 +53,5 @@ Your login or password or turing image code is wrong. Please check this informat
   <td valign="middle" class="tab" colspan="2"><input type="submit" class="sbmt" value="Login">    &nbsp;&nbsp;&nbsp;<a href="?a=forgot_password">Forgot your password?</a></td>
   </tr>
 </tbody></table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form><br><br><br><br>
-{include file="footer.tpl"}
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form><br><br><br><br>
+{%include file="footer.tpl"%}

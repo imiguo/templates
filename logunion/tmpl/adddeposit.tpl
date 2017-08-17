@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <br>
 <form  method="post" name="deposit"  onsubmit="return checkform()">
 
@@ -57,5 +57,5 @@
     </tr>
   </table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
-{include file="footer.tpl"}
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
+{%include file="footer.tpl"%}

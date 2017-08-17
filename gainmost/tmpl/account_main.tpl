@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 	
 			
@@ -20,19 +20,19 @@ User Info</font></p>
 <table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
  <td width="400" class="field">User:</td>
- <td class="field"><strong>{$userinfo.username}</strong></td>
+ <td class="field"><strong>{%$userinfo.username%}</strong></td>
 </tr>
 
 <tr>
  <td class="field">Registration Date:</td>
- <td class="field"><strong>{$userinfo.create_account_date}</strong></td>
+ <td class="field"><strong>{%$userinfo.create_account_date%}</strong></td>
 </tr>
 	<tr>
 <td>&nbsp;</td>
 	</tr>
 <tr>
  <td class="field">Last Access:</td>
- <td class="field"><strong>{$last_access}&nbsp;</strong>&nbsp;</td>
+ <td class="field"><strong>{%$last_access%}&nbsp;</strong>&nbsp;</td>
 </tr>
 </tbody></table>
 
@@ -59,27 +59,27 @@ User Info</font></p>
 					<table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
  <td width="400" valign="top" class="field">Account Balance:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.total}</b><br>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.total%}</b><br>
 </td></tr>
 
 <tr>
  <td class="field">Earned Total:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.earning}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.earning%}</b></td>
 </tr>
 
 <tr>
  <td class="field">Pending Withdrawal:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.withdraw_pending}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.withdraw_pending%}</b></td>
 </tr>
 
 <tr>
  <td class="field">Withdrew Total:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.withdrawal}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.withdrawal%}</b></td>
 </tr>
 
 <tr>
  <td class="field">Active Deposit:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.active_deposit}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.active_deposit%}</b></td>
 </tr>
 
 </tbody></table>
@@ -94,22 +94,22 @@ User Info</font></p>
 					<table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
  <td width="400" class="field">Last Deposit:</td>
- <td class="field">{$currency_sign}<b>{$last_deposit}</b> &nbsp; <small>{$last_deposit_date}</small></td>
+ <td class="field">{%$currency_sign%}<b>{%$last_deposit%}</b> &nbsp; <small>{%$last_deposit_date%}</small></td>
 </tr>
 
 <tr>
  <td class="field">Total Deposit:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.deposit}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.deposit%}</b></td>
 </tr>
 
 <tr>
  <td class="field">Last Withdrawal:</td>
- <td class="field">{$currency_sign}<b>{$last_withdrawal}</b> &nbsp; <small>{$last_withdrawal_date}</small></td>
+ <td class="field">{%$currency_sign%}<b>{%$last_withdrawal%}</b> &nbsp; <small>{%$last_withdrawal_date%}</small></td>
 </tr>
 
 <tr>
     <td class="field">Withdrew Total:</td>
- <td class="field">{$currency_sign}<b>{$ab_formated.withdrawal}</b></td>
+ <td class="field">{%$currency_sign%}<b>{%$ab_formated.withdrawal%}</b></td>
 </tr>
 </tbody></table>
 				</div>
@@ -118,4 +118,4 @@ User Info</font></p>
 
 
 <!--  \ TEXT BOX / -->
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

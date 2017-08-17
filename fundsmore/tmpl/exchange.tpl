@@ -1,48 +1,48 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
-{literal}
+{%literal%}
 
 <script>
 
 var balances = new Array();
 
-{/literal}
+{%/literal%}
 
                                                                                                  
 
-var currencies = new Array({section name=ec loop=$ec}'{$ec[ec].ec}'{if !$smarty.section.ec.last},{/if}{/section});
+var currencies = new Array({%section name=ec loop=$ec%}'{%$ec[ec].ec%}'{%if !$smarty.section.ec.last%},{%/if%}{%/section%});
 
-var curs = new Array({section name=ec loop=$exchange}'{$exchange[ec].from}'{if !$smarty.section.ec.last},{/if}{/section});
+var curs = new Array({%section name=ec loop=$exchange%}'{%$exchange[ec].from%}'{%if !$smarty.section.ec.last%},{%/if%}{%/section%});
 
 
 
-{section name=ec loop=$ec}
+{%section name=ec loop=$ec%}
 
-balances[{$ec[ec].ec}] = new Number('{$ec[ec].balance}');
+balances[{%$ec[ec].ec%}] = new Number('{%$ec[ec].balance%}');
 
-{/section}
+{%/section%}
 
 
 
 var exchange = new Array();
 
-{section name=from loop=$exchange}
+{%section name=from loop=$exchange%}
 
-exchange[{$exchange[from].from}] = new Array();
+exchange[{%$exchange[from].from%}] = new Array();
 
-{section name=to loop=$exchange[from].tos}
+{%section name=to loop=$exchange[from].tos%}
 
-exchange[{$exchange[from].from}][{$exchange[from].tos[to].to}] = new Number('{$exchange[from].tos[to].percent}');
+exchange[{%$exchange[from].from%}][{%$exchange[from].tos[to].to%}] = new Number('{%$exchange[from].tos[to].percent%}');
 
-{/section}
+{%/section%}
 
-{/section}
+{%/section%}
 
 
 
-{literal}
+{%literal%}
 
 function in_out(id, bForce)
 
@@ -342,7 +342,7 @@ function chng_bg(id, color)
 
 </script>
 
-{/literal}
+{%/literal%}
 
 
 
@@ -350,7 +350,7 @@ function chng_bg(id, color)
 
 
 
-{if $ec}
+{%if $ec%}
 
 <form method=post name="exchange_form">
 
@@ -360,21 +360,21 @@ function chng_bg(id, color)
 
 <table cellspacing=0 cellpadding=2 border=0>
 
-{section name=ec loop=$ec}
+{%section name=ec loop=$ec%}
 
 <tr>
 
- <td><input type="radio" name="from" value="{$ec[ec].ec}" {if $smarty.section.ec.index == 0}checked{/if} onclick="chng_selection('{$ec[ec].ec}')"></td>
+ <td><input type="radio" name="from" value="{%$ec[ec].ec%}" {%if $smarty.section.ec.index == 0%}checked{%/if%} onclick="chng_selection('{%$ec[ec].ec%}')"></td>
 
- <td><img src="images/{$ec[ec].ec}.gif?tag={$tag}" align=absmiddle height=17> {$ec[ec].ec_name} :</td>
+ <td><img src="images/{%$ec[ec].ec%}.gif?tag={%$tag%}" align=absmiddle height=17> {%$ec[ec].ec_name%} :</td>
 
- <td><input type=text name="amount_{$ec[ec].ec}" value="{$ec[ec].balance}" class=inpts size=7
+ <td><input type=text name="amount_{%$ec[ec].ec%}" value="{%$ec[ec].balance%}" class=inpts size=7
 
-      onchange="in_out('{$ec[ec].ec}')" onkeyup="in_out('{$ec[ec].ec}')"
+      onchange="in_out('{%$ec[ec].ec%}')" onkeyup="in_out('{%$ec[ec].ec%}')"
 
-      onfocusout="in_out('{$ec[ec].ec}', true)" onactivate="in_out('{$ec[ec].ec}', true)"
+      onfocusout="in_out('{%$ec[ec].ec%}', true)" onactivate="in_out('{%$ec[ec].ec%}', true)"
 
-      ondeactivate="in_out('{$ec[ec].ec}', true)">
+      ondeactivate="in_out('{%$ec[ec].ec%}', true)">
 
  </td>
 
@@ -382,49 +382,49 @@ function chng_bg(id, color)
 
  <td>
 
-  <select name="to_{$ec[ec].ec}" class=inpts onchange="in_out('{$ec[ec].ec}')">
+  <select name="to_{%$ec[ec].ec%}" class=inpts onchange="in_out('{%$ec[ec].ec%}')">
 
    <option value=''>--SELECT--</option>
 
-{section name=ecs loop=$ec[ec].tos}
+{%section name=ecs loop=$ec[ec].tos%}
 
-{if $ec[ec].ec != $ec[ec].tos[ecs].to}
+{%if $ec[ec].ec != $ec[ec].tos[ecs].to%}
 
-<option value={$ec[ec].tos[ecs].to}>{$ec[ec].tos[ecs].ec_name}</option>
+<option value={%$ec[ec].tos[ecs].to%}>{%$ec[ec].tos[ecs].ec_name%}</option>
 
-{/if}
+{%/if%}
 
-{/section}
+{%/section%}
 
   </select>
 
  </td>
 
- <td><input type=text name="estimate_{$ec[ec].ec}" value="0" class=inpts size=7
+ <td><input type=text name="estimate_{%$ec[ec].ec%}" value="0" class=inpts size=7
 
-      onchange="out_in('{$ec[ec].ec}+100')" onkeyup="out_in('{$ec[ec].ec}')+100"
+      onchange="out_in('{%$ec[ec].ec%}+100')" onkeyup="out_in('{%$ec[ec].ec%}')+100"
 
-      onfocusout="out_in('{$ec[ec].ec}', true)+100" onactivate="out_in('{$ec[ec].ec}', true)+100"
+      onfocusout="out_in('{%$ec[ec].ec%}', true)+100" onactivate="out_in('{%$ec[ec].ec%}', true)+100"
 
-      ondeactivate="out_in('{$ec[ec].ec}', true)+100">
+      ondeactivate="out_in('{%$ec[ec].ec%}', true)+100">
 
  </td>
 
- <td><input type=submit name="exchange_{$ec[ec].ec}" value="Exchange" class=sbmt></td>
+ <td><input type=submit name="exchange_{%$ec[ec].ec%}" value="Exchange" class=sbmt></td>
 
 </tr>
 
-{/section}
+{%/section%}
 
 </table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{else}
+{%else%}
 
 Currently you have no funds to exchange.<br><br>
 
-{/if}
+{%/if%}
 
 
 
@@ -444,49 +444,49 @@ Currently you have no funds to exchange.<br><br>
 
  <td align=center class=calendartablebg>From / To</td>
 
-{section name=from loop=$exchange}
+{%section name=from loop=$exchange%}
 
- <td align=center class=calendartablebg><img src="images/{$exchange[from].from}.gif?tag={$tag}" height=17></td>
+ <td align=center class=calendartablebg><img src="images/{%$exchange[from].from%}.gif?tag={%$tag%}" height=17></td>
 
-{/section}
+{%/section%}
 
 </tr>
 
-{section name=from loop=$exchange}
+{%section name=from loop=$exchange%}
 
 <tr>
 
- <td align=center class=calendartablebg id="e{$exchange[from].from}_t"><img src="images/{$exchange[from].from}.gif?tag={$tag}" height=17></td>
+ <td align=center class=calendartablebg id="e{%$exchange[from].from%}_t"><img src="images/{%$exchange[from].from%}.gif?tag={%$tag%}" height=17></td>
 
- {section name=to loop=$exchange[from].tos}
+ {%section name=to loop=$exchange[from].tos%}
 
-  <td align=center class=calendartablebg id="e{$exchange[from].from}_{$exchange[from].tos[to].to}">
+  <td align=center class=calendartablebg id="e{%$exchange[from].from%}_{%$exchange[from].tos[to].to%}">
 
-   {if $exchange[from].from == $exchange[from].tos[to].to}
-
-     -
-
-   {else}
-
-    {if $exchange[from].tos[to].percent == 100}
+   {%if $exchange[from].from == $exchange[from].tos[to].to%}
 
      -
 
-    {else}
+   {%else%}
 
-     {$exchange[from].tos[to].percent}%
+    {%if $exchange[from].tos[to].percent == 100%}
 
-    {/if}
+     -
 
-   {/if}
+    {%else%}
+
+     {%$exchange[from].tos[to].percent%}%
+
+    {%/if%}
+
+   {%/if%}
 
   </td>
 
- {/section}
+ {%/section%}
 
 </tr>
 
-{/section}
+{%/section%}
 
 </table>
 
@@ -494,9 +494,9 @@ Currently you have no funds to exchange.<br><br>
 
 
 
-{if $ec}
+{%if $ec%}
 
-{literal}
+{%literal%}
 
 <script>
 
@@ -504,11 +504,11 @@ chng_selection();
 
 </script>
 
-{/literal}
+{%/literal%}
 
-{/if}
+{%/if%}
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

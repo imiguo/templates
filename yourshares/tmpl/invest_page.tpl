@@ -1,11 +1,11 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
-{$settings.site_name} INVESTMENT PROGRAMS:<br><br>
-
-
-{include file="index.plans.tpl"}
+{%$settings.site_name%} INVESTMENT PROGRAMS:<br><br>
 
 
+{%include file="index.plans.tpl"%}
 
 
-{include file="footer.tpl"}
+
+
+{%include file="footer.tpl"%}

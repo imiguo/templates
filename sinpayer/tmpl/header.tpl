@@ -1,23 +1,23 @@
-{include file="logo.tpl"}
+{%include file="logo.tpl"%}
 
-{if $userinfo.logged == 1}
+{%if $userinfo.logged == 1%}
 <style>
-.hdcont h3:first-of-type {
+.hdcont h3:first-of-type {%
     margin-top:-147px !Important;
     color:#fff;
     font-weight:400;
     font-size:35px;
-}
+%}
 </style>
 
-<link href="./hustydesigns/dashboard.css?tag={$tag}" rel="stylesheet" type="text/css" />
+<link href="./hustydesigns/dashboard.css?tag={%$tag%}" rel="stylesheet" type="text/css" />
 
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">
             <div id="ws-accmenu">
                 <div id="ws-avatar">
-                    <img src="./hustydesigns/images/account-icon01.png?tag={$tag}" />
+                    <img src="./hustydesigns/images/account-icon01.png?tag={%$tag%}" />
                 </div>
                 <div id="ws-menus">
                     <ul>
@@ -37,4 +37,4 @@
                 </div>
             </div>
             <div id="ws-myaccount">
-{/if}
+{%/if%}

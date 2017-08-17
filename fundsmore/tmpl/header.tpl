@@ -1,4 +1,4 @@
-{include file="logo.tpl"}
+{%include file="logo.tpl"%}
 <div id="content" >
 <div class="padding_content">
 <div class="wrapper_overflow">

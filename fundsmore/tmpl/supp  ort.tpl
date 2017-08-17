@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -8,19 +8,19 @@
 
 
 
-{if $say eq 'send'}
+{%if $say eq 'send'%}
 
 Message has been successfully sent. We will back to you in next 24 hours. Thank you.<br><br>
 
-{else}
+{%else%}
 
 
 
 <script language=javascript>
 
-{if $userinfo.logged == 1}
+{%if $userinfo.logged == 1%}
 
-{literal}
+{%literal%}
 
 function checkform() { 
 
@@ -38,11 +38,11 @@ function checkform() {
 
 }
 
-{/literal}
+{%/literal%}
 
-{else}
+{%else%}
 
-{literal}
+{%literal%}
 
 function checkform() {
 
@@ -80,9 +80,9 @@ function checkform() {
 
 }
 
-{/literal}
+{%/literal%}
 
-{/if}
+{%/if%}
 
 </script>
 
@@ -102,15 +102,15 @@ function checkform() {
 
  <td>Your Name:</td>
 
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 
- <td><b>{$userinfo.name}</b></td>
+ <td><b>{%$userinfo.name%}</b></td>
 
-{else}
+{%else%}
 
  <td><input type="text" name="name" size=30 class=inpts></td>
 
-{/if}
+{%/if%}
 
 </tr>
 
@@ -118,15 +118,15 @@ function checkform() {
 
  <td>Your Email:</td>
 
-{if $userinfo.logged}
+{%if $userinfo.logged%}
 
- <td><b>{$userinfo.email}</b></td>
+ <td><b>{%$userinfo.email%}</b></td>
 
-{else}
+{%else%}
 
  <td><input type="text" name="email" size=30 class=inpts></td>
 
-{/if}
+{%/if%}
 
 </tr>
 
@@ -144,15 +144,15 @@ function checkform() {
 
 </tr></table>
 
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 
 
-{/if}
+{%/if%}
 
 
 
 
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

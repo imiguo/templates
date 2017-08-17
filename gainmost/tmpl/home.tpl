@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 
 
 
@@ -28,9 +28,9 @@
 
 
 
-{if $User_IP=="72.232.85.138"}
+{%if $User_IP=="72.232.85.138"%}
 
-{else}
+{%else%}
 
 
 
@@ -38,13 +38,13 @@
 
 <br>  
 
-<a href="?a=signup"><img src="images/plan1.gif?tag={$tag}" width="210" height="140" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="?a=signup"><img src="images/plan2.gif?tag={$tag}" width="210" height="140" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="?a=signup"><img src="images/plan3.gif?tag={$tag}" width="210" height="140" border="0"></a><br>
+<a href="?a=signup"><img src="images/plan1.gif?tag={%$tag%}" width="210" height="140" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="?a=signup"><img src="images/plan2.gif?tag={%$tag%}" width="210" height="140" border="0"></a>&nbsp;&nbsp;&nbsp;<a href="?a=signup"><img src="images/plan3.gif?tag={%$tag%}" width="210" height="140" border="0"></a><br>
 
 
 
 
 
-{/if}
+{%/if%}
 
 
 
@@ -60,7 +60,7 @@
 
             <h2>The right place to start your safe income!</h2>
 
-<img border="0" class="imaging2" alt="" src="images/img.jpg?tag={$tag}">
+<img border="0" class="imaging2" alt="" src="images/img.jpg?tag={%$tag%}">
 
 <p>Our dedication to maintaining a research dynamic, entrepreneurial, nimble and solid investment team, the core of which has experience in trading, tactical asset allocation, risk management and has made a substantial commitment to proprietary systems. </p>
 
@@ -74,7 +74,7 @@
 
 achieving high levels</h2>
 
-<img border="0" class="imaging2" alt="" src="images/img1.jpg?tag={$tag}">
+<img border="0" class="imaging2" alt="" src="images/img1.jpg?tag={%$tag%}">
 
 <p>Our staff consists of highly skilled professionals interested in their work and prosperity of the company. During many years our employees have got not only a great experience but also have developed unique strategies, technologies and know-hows that allow FirstFidelityInvest to be favorably different from the competitors.   </p>
 
@@ -94,5 +94,5 @@ achieving high levels</h2>
 
 <!--  \ TEXT BOX / -->
 
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}
 

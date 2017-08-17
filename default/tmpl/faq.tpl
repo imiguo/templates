@@ -1,30 +1,30 @@
-{include file="header.tpl"}
+{%include file="header.tpl"%}
 <h3>FAQ.</h3><br>
-<p align=justify> <b>How can I invest with {$site_name} ?</b><br>
-  To make a investment you must first become a member of {$site_name} hyip. Once 
+<p align=justify> <b>How can I invest with {%$site_name%} ?</b><br>
+  To make a investment you must first become a member of {%$site_name%} hyip. Once 
   you are signed up, you can make your first deposit. All deposits must be made 
   through the Members Area. You can login using the member username and password 
   you receive when signup. <br>
   <br>
-  <b>I wish to invest with {$site_name} but I don't have an e-gold account. What 
+  <b>I wish to invest with {%$site_name%} but I don't have an e-gold account. What 
   should I do?</b><br>
   You can open a free e-gold account here: <a href="http://www.e-gold.com/">www.e-gold.com</a> 
   <br>
   <br>
-  <b>How do I open my {$site_name} HYIP Account?</b><br>
+  <b>How do I open my {%$site_name%} HYIP Account?</b><br>
   It's quite easy and convenient. Follow this <a href=?a=signup>link</a>, fill 
   in the registration form and then press "Register". <br>
   <br>
   <b>Which e-currencies do you accept?</b><br>
   We accept
    e-gold,
-   {if $settings.def_payee_account_evocash}Evocash, {/if}
-   {if $settings.def_payee_account_stormpay}StormPay, {/if}
-   {if $settings.def_payee_account_ebullion}e-Bullion, {/if}
-   {if $settings.def_payee_account_paypal}PayPal, {/if}
-   {if $settings.def_payee_account_goldmoney}GoldMoney, {/if}
-   {if $settings.def_payee_account_intgold}INTGold, {/if}
-   {if $settings.def_payee_account_eeecurrency}eeeCurrency, {/if}
+   {%if $settings.def_payee_account_evocash%}Evocash, {%/if%}
+   {%if $settings.def_payee_account_stormpay%}StormPay, {%/if%}
+   {%if $settings.def_payee_account_ebullion%}e-Bullion, {%/if%}
+   {%if $settings.def_payee_account_paypal%}PayPal, {%/if%}
+   {%if $settings.def_payee_account_goldmoney%}GoldMoney, {%/if%}
+   {%if $settings.def_payee_account_intgold%}INTGold, {%/if%}
+   {%if $settings.def_payee_account_eeecurrency%}eeeCurrency, {%/if%}
    e-currencies. <br>
   <br>
   <b>How can I withdraw funds?</b><br>
@@ -35,7 +35,7 @@
   Your account will be updated as fast, as you deposit. <br>
   <br>
   <b>How can I change my e-mail address or password?</b><br>
-  Log into your {$site_name} account and click on the "Account Information". You 
+  Log into your {%$site_name%} account and click on the "Account Information". You 
   can change your e-mail address and password there. <br>
   <br>
   <b>What if I can't log into my account because I forgot my password?</b><br>
@@ -43,20 +43,20 @@
   or e-mail and you'll receive your account information. <br>
   <br>
   <b>Does a daily profit paid directly to my e-gold account?</b><br>
-  No, profits are gathered on your {$site_name} account and you can withdraw them 
+  No, profits are gathered on your {%$site_name%} account and you can withdraw them 
   anytime. <br>
   <br>
   <b>How do you calculate the interest on my account?</b><br>
-  Depending on each plan. Interest on your {$site_name} HYIP account is acquired 
+  Depending on each plan. Interest on your {%$site_name%} HYIP account is acquired 
   Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available 
   balance at the end of each day. <br>
   <br>
   <b>Can I do a direct deposit from my account balance?</b><br>
-  Yes! To make a deposit from your {$site_name} HYIP account balance. Simply login 
+  Yes! To make a deposit from your {%$site_name%} HYIP account balance. Simply login 
   into your members account and click on Make Deposit ans select the Deposit from 
   Account Balance Radio button. <br>
   <br>
-  <b>Can I make an additional deposit to {$site_name} HYIP account once it has 
+  <b>Can I make an additional deposit to {%$site_name%} HYIP account once it has 
   been opened?</b><br>
   Yes, you can but all transactions are handled separately. <br>
   <br>
@@ -89,13 +89,13 @@
   Sorry, but our systems are only setup to receive payments via e-gold. <br>
   <br>
   <b>How can I make a spend?</b><br>
-  To make a spend you must first become a member of {$site_name} HYIP. Once you 
+  To make a spend you must first become a member of {%$site_name%} HYIP. Once you 
   are signed up, you can make your first spend. All spends must be made through 
   the Member Area. You can login using the member username and password you received 
   when signup. <br>
   <br>
   <b>Who manages the funds?</b><br>
-  These funds are managed by a team of {$site_name} HYIP investment experts. <br>
+  These funds are managed by a team of {%$site_name%} HYIP investment experts. <br>
   <br>
 </p>
-{include file="footer.tpl"}
+{%include file="footer.tpl"%}

@@ -1,5 +1,5 @@
-{if $userinfo.logged != 1}
-{literal}
+{%if $userinfo.logged != 1%}
+{%literal%}
 <script language=javascript>
 function checklogin() {   
   if (document.loginform.username.value=='') {
@@ -15,7 +15,7 @@ function checklogin() {
   return true;
 }
 </script>
-{/literal}
+{%/literal%}
 <form method=post name=loginform onsubmit="return checklogin()">
 <input type=hidden name=a value='do_login'>
 <table cellspacing=0 cellpadding=2 border=0 width="100%">
@@ -33,12 +33,12 @@ function checklogin() {
  <td class=menutxt>Password:</td>
  <td><input type=password name=password class=inpts size=15></td>
 </tr>
-{if $userinfo.validation_enabled == 1}
+{%if $userinfo.validation_enabled == 1%}
 <tr>
- <td class=menutxt><img src="?a=show_validation_image&{$userinfo.session_name}={$userinfo.session_id}&rand={$userinfo.rand}"></td>
+ <td class=menutxt><img src="?a=show_validation_image&{%$userinfo.session_name%}={%$userinfo.session_id%}&rand={%$userinfo.rand%}"></td>
  <td><input type=text name=validation_number class=inpts size=15></td>
 </tr>
-{/if}
+{%/if%}
 <tr>
  <td class=menutxt>&nbsp;</td>
  <td><input type=submit value="Login" class=sbmt size=15></td>
@@ -46,9 +46,9 @@ function checklogin() {
 <tr>
  <td colspan=2 align=right><a href=?a=forgot_password class=menutxt>Password recovery</a>
 </table>
-<input type="hidden" name="_token" value="{$csrf_token}"></form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{else}
+{%else%}
 
 <table cellspacing=0 cellpadding=2 border=0 width="100%">
 <tr>
@@ -63,34 +63,34 @@ function checklogin() {
 </tr><tr>
  <td class=menutxt><br><a href=?a=deposit class=menutxt>Make Deposit</a></td>
 </tr><tr>
-{if $settings.use_add_funds}
+{%if $settings.use_add_funds%}
  <td class=menutxt><a href=?a=add_funds class=menutxt>Make Deposit to Account</a></td>
 </tr><tr>
-{/if}
+{%/if%}
  <td class=menutxt><a href=?a=deposit_list class=menutxt>Your Deposits</a></td>
 </tr><tr>
  <td class=menutxt><a href=?a=deposit_history class=menutxt>Deposits History</a></td>
 </tr><tr>
  <td class=menutxt><br><a href=?a=earnings class=menutxt>Earnings History</a></td>
-</tr>{if $settings.use_referal_program == 1}<tr>
+</tr>{%if $settings.use_referal_program == 1%}<tr>
  <td class=menutxt><a href=?a=earnings&type=commissions class=menutxt>Referrals History</a></td>
-</tr>{/if}
+</tr>{%/if%}
 <tr>
  <td class=menutxt><br><a href=?a=withdraw class=menutxt>Withdraw</a></td>
 </tr><tr>
  <td class=menutxt><a href=?a=withdraw_history class=menutxt>Withdrawals History</a></td>
 </tr><tr>
  <td class=menutxt><br><a href=?a=exchange class=menutxt>Currency Exchange</a></td>
-{if $settings.internal_transfer_enabled}
+{%if $settings.internal_transfer_enabled%}
 </tr><tr>
  <td class=menutxt><br><a href=?a=internal_transfer class=menutxt>Internal Transfer</a></td>
-{/if}
+{%/if%}
 </tr><tr>
-</tr>{if $settings.use_referal_program == 1}<tr>
+</tr>{%if $settings.use_referal_program == 1%}<tr>
  <td class=menutxt><br><a href=?a=referals class=menutxt>Your Referrals</a></td>
 </tr><tr>
  <td class=menutxt><a href=?a=referallinks class=menutxt>Referral Links</a></td>
-</tr>{/if}<tr>
+</tr>{%/if%}<tr>
  <td class=menutxt><br><a href=?a=edit_account class=menutxt>Edit Account</a></td>
 </tr><tr>
  <td class=menutxt><br><a href=?a=logout class=menutxt>Logout</a></td>
@@ -98,4 +98,4 @@ function checklogin() {
 </table>
 
 
-{/if}
+{%/if%}
