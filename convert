@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__  . '/vendor/autoload.php';
+use DQNEO\SmartyDelimiterConverter\Converter;
+
+// if ($argc < 2) {
+//     echo "Usage: " . basename(__FILE__) . " <directory>\n";
+//     exit;
+// }
+$themes = [
+    'default',
+    'enjoymoney',
+    'fundsmore',
+    'gainmost',
+    'logunion',
+    'midollar',
+    'sinpayer',
+    'yourshares',
+];
+foreach ($themes as $theme) {
+    $dir = __DIR__."/{$theme}/tmpl";
+    $iterator = new RecursiveDirectoryIterator($dir);
+    $iterator = new RecursiveIteratorIterator($iterator);
+
+    $from = ['{','}'];
+    $to = ['{%','%}'];
+    $converter = new Converter($from, $to);
+
+    foreach ($iterator as $fileinfo) {
+        if ($fileinfo->isFile()) {
+            $filename = $fileinfo->getPathname();
+            $converted = $converter->convert($filename);
+            file_put_contents($filename, $converted);
+        }
+    }
+}

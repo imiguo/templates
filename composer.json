@@ -1,0 +1,5 @@
+{
+    "require": {
+        "dqneo/smarty-delimiter-converter": "^0.0.3"
+    }
+}
