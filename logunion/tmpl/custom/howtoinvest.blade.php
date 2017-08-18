@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 	<h2>How to Invest</h2>
 	Program participation is available to any individual, who is over 18 years of age and has a reliable Internet access. To start, one has to create the LogUnion.com personal investment account. We assure you that you will get exceptional service and customer support.<br><br>
@@ -44,4 +44,4 @@ Review and confirm the submitted information. Your withdrawal request will be ad
 Please note that your amount will be sent to your e-currency account. So if you have changed your E-Currency account, please contact our staff before requesting a withdrawal.
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

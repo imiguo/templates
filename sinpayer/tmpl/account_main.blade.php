@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>Dashboard</h3>
 <br>
 <div id="ws-promote">
@@ -86,4 +86,4 @@
 </div>
 </div>
 </div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

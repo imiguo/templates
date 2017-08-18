@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $ok == 1%}
 
@@ -123,4 +123,4 @@ Click <a href="?a=deposit">here</a> and try again.
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

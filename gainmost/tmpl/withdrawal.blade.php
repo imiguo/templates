@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 {%literal%}
@@ -202,4 +202,4 @@ We have no fee for this operation.
 {%/if%}
 
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

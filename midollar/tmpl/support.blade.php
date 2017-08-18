@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Midollar.com Support</h2>
 If you are already a Registered Investor of Midollar.com please login into your account and click again on "Support". For security purpose, we will not reply to any qyestion concerning an investment, if you are not logged in.
@@ -90,4 +90,4 @@ function checkform() {
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

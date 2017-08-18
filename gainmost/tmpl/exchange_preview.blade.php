@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $exchanged%}
 
@@ -31,4 +31,4 @@ can be exchanged to at least {%$currency_sign%}0.01.{%/if%} {%else%}
   {%/if%}
 
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
              <script src="js/jquery00.js?tag={%$tag%}" type="text/javascript"></script>
 <script src="js/jquery-u.js?tag={%$tag%}"></script>
 <script src="js/java0000.js?tag={%$tag%}"></script>
@@ -1002,4 +1002,4 @@ This page is not final and more regional manages are to be added in the nearest 
   </td>
  </tr>
 </tbody></table>                           
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

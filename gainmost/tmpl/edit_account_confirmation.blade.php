@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Confirm Your Identity:</h2><br><br>
 <form action="index.php" method=post name=editform>
@@ -23,5 +23,5 @@ The system sent you an e-mail with the confirmation code used to confirm your id
 </tr></table>
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

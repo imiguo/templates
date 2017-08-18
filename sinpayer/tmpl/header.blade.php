@@ -1,4 +1,4 @@
-{%include file="logo.tpl"%}
+{%include file="logo.blade.php"%}
 
 {%if $userinfo.logged == 1%}
 <style>

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Password page</h3><br>
 
@@ -21,4 +21,4 @@
 {%/if%}
 </table>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

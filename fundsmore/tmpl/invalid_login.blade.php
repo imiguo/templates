@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -106,5 +106,5 @@ or <a href=?a=forgot_password >remember your login information</a>.
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

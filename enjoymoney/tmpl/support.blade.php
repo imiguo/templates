@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>enjoymoney.biz Support</h2>
 If you are already a Registered Investor of enjoymoney.biz please login into your account and click again on "Support". For security purpose, we will not reply to any qyestion concerning an investment, if you are not logged in.
@@ -93,4 +93,4 @@ function checkform() {
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

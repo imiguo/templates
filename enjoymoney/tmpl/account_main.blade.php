@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 {%*------------>交易码*%}
 {%if $settings.use_transaction_code ==1 && $userinfo.transaction_code == ''%}
 <b>Note: currently you have not specified
@@ -169,4 +169,4 @@ code' in your account information if you do not want to use this feature.
 {%/if%}
 <br>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

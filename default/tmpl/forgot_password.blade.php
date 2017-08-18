@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%literal%}
 <script language=javascript>
@@ -35,4 +35,4 @@ No accounts found
 Login and password send to you. Please check your e-mail account
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

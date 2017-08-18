@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -296,5 +296,5 @@ To: <select name=month_to class=inpts>
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

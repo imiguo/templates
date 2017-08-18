@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -486,7 +486,7 @@ Your account data has been updated successfully.<br><br>
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 
 
 

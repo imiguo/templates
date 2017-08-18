@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Deposit to Account</h3>
 
@@ -62,4 +62,4 @@
     </table>
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Your Referrals:</h3><br>
 {%if $upline.email != ""%}
@@ -135,4 +135,4 @@ From: </td>
 {%/if%}
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

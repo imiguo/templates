@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h2>Account Login </h2>
 Please enter your username and password to login to your account. If you have an account with us and have forgotten your password, please clcik on the "Forgot your password?" and complete the password reminder form, then your password will be e-mailed to you immediately.<br><br><br>
 
@@ -54,4 +54,4 @@ Your login or password or turing image code is wrong. Please check this informat
   </tr>
 </tbody></table>
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form><br><br><br><br>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

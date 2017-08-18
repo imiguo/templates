@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%literal%}
 <script language=javascript>
@@ -52,4 +52,4 @@ Your login or password or turing image code is wrong. Please check this informat
 <br><br>
 <a href=?a=forgot_password >forgot your login information</a>.
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

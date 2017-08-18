@@ -24,7 +24,7 @@
 
 {%if $settings.show_news_box%}
 
-{%include file="news_box.tpl"%}
+{%include file="news_box.blade.php"%}
 
 {%/if%}
 

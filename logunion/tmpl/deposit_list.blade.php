@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Total Deposits: {%$currency_sign%}{%$total%}</h2>
 
@@ -396,5 +396,5 @@
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

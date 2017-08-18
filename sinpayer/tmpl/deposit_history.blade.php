@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>Deposit history</h3>
 <form method=post>
 <input type=hidden name=a value=deposit_history>
@@ -146,4 +146,4 @@ To: <select name=month_to class=inpts>
 </table>
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

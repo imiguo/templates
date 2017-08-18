@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%literal%}
 <script language=javascript>
@@ -82,4 +82,4 @@ function go(p)
 </center>
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

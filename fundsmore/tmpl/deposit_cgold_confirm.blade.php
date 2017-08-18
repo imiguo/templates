@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -98,4 +98,4 @@ Amount ({%$currency_sign%}): <b>{%$amount_format%}</b><br>
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

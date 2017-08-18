@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Your Deposit status</h3><br>
 <br>
@@ -9,4 +9,4 @@
   not received your deposit. Please try again. 
 {%/if%} 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

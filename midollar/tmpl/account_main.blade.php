@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Welcome to Members Area!</h2>
 You can deposit funds to your account as many times as you wish and use any payment system available. Our attitude towards spam is zero-tolerance. Any members caught spamming will permanently lose memberships.<br><br><br><br>
@@ -107,4 +107,4 @@ here</a> to specify a new transaction code .</b> <br>
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -886,7 +886,7 @@ for (i = 0; i<document.spendform.type.length; i++) {
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 
 
 

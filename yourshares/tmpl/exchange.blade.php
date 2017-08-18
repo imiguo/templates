@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%literal%}
 <script>
@@ -254,4 +254,4 @@ chng_selection();
 {%/literal%}
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

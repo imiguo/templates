@@ -1,16 +1,16 @@
 				   <!-- Image Table: Start -->
 {%if $frm.a ne 'login'%}
-{%include file="login_box.tpl"%}
+{%include file="login_box.blade.php"%}
 {%/if%}
 				   
 {%if $settings.show_stats_box%}
 <br>
-{%include file="stats_box.tpl"%}
+{%include file="stats_box.blade.php"%}
 {%/if%}
                                    
 {%if $settings.show_info_box%}
 <br>
-{%include file="info_box.tpl"%}
+{%include file="info_box.blade.php"%}
 {%/if%}
 					<!-- Stats Table: End -->
 {%if $settings.show_kitco_dollar_per_ounce_box == 1%}

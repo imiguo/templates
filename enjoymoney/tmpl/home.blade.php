@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h2>Welcome to <font color="#4D9001">Enjoy Money!</font></h2>
 <span class="floatimgleft"><img src="images/pic1.jpg?tag={%$tag%}"></span>
 <strong>Enjoy Money</strong> is a private offshore company focused on trade in stocks of high-technology companies. Our strategy is to trade stocks of high-tech companies that are believed to be undervalued by the market. We believe that new technologies can improve our standard of living and make life even better. This is our philosophy and the energy that drives us forward, strengthens us, and challenges us to be better tomorrow than we are today.<br><br>
@@ -23,4 +23,4 @@ Let your money go to work for you today with Enjoy Money.<br>
 <div align="center"><img src="images/plan1.gif?tag={%$tag%}" height="75" width="480"></div>
 <div style="padding-top:10px;" align="center"><img src="images/plan2.gif?tag={%$tag%}" height="75" width="480"></div>
 <div style="padding-top:10px;" align="center"><img src="images/plan3.gif?tag={%$tag%}" height="75" width="480"></div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

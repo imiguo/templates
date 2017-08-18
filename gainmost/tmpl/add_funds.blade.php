@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $frm.say eq 'deposit_success'%}
 <h2>The deposit has been successfully saved.</h2>
@@ -50,4 +50,4 @@
 </tr></table>
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

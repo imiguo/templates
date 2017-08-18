@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -94,5 +94,5 @@ achieving high levels</h2>
 
 <!--  \ TEXT BOX / -->
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

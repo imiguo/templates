@@ -1,5 +1,5 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

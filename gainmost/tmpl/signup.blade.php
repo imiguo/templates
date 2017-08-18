@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Register Account</h2>
 <strong>Fill the form available below to open an account with Gain Most. Please make sure you provide us with your real information. If you have questions about this process please contact support.  Program participation is available to any individual, who is over 18 years of age.</strong><br>
@@ -327,4 +327,4 @@
 
         </div><input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

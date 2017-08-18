@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -510,5 +510,5 @@ chng_selection();
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

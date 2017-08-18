@@ -1,8 +1,8 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
-	
-			
-			
+    
+            
+            
 <h2>Account Overview</h2>
 <strong>The Account Overview page provides a snapshot of all your financial activity. You can view your account balance easy including the total balance of all your investments and interest earned .The balance of your account is updated in real time, up to the time of enquiry.</strong><br><br>
 You can also use the navigation menu buttons to access different areas of your account, make new deposits, get referral link or change settings.<br><br><br>
@@ -12,9 +12,9 @@ You can also use the navigation menu buttons to access different areas of your a
 <p align="center"><font size="4" face="MV Boli" color="#FE8A03">
 User Info</font></p>
 
-				<!--  / TEXT BOX \ -->
-				<div class="textBox">
-					
+                <!--  / TEXT BOX \ -->
+                <div class="textBox">
+                    
 
 
 <table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
@@ -27,9 +27,9 @@ User Info</font></p>
  <td class="field">Registration Date:</td>
  <td class="field"><strong>{%$userinfo.create_account_date%}</strong></td>
 </tr>
-	<tr>
+    <tr>
 <td>&nbsp;</td>
-	</tr>
+    </tr>
 <tr>
  <td class="field">Last Access:</td>
  <td class="field"><strong>{%$last_access%}&nbsp;</strong>&nbsp;</td>
@@ -48,15 +48,15 @@ User Info</font></p>
 
 
 
-				</div>
-				<!--  \ TEXT BOX / -->
+                </div>
+                <!--  \ TEXT BOX / -->
 
 
 <p align="center"><font size="4" face="MV Boli" color="#FE8A03">Earnings</font></p>
 
-				<!--  / TEXT BOX \ -->
-				<div class="textBox">
-					<table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
+                <!--  / TEXT BOX \ -->
+                <div class="textBox">
+                    <table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
  <td width="400" valign="top" class="field">Account Balance:</td>
  <td class="field">{%$currency_sign%}<b>{%$ab_formated.total%}</b><br>
@@ -83,15 +83,15 @@ User Info</font></p>
 </tr>
 
 </tbody></table>
-				</div>
-				<!--  \ TEXT BOX / -->
+                </div>
+                <!--  \ TEXT BOX / -->
 
 
 <p align="center"><font size="4" face="MV Boli" color="#FE8A03">Account History</font></p>
 
-				<!--  / TEXT BOX \ -->
-				<div class="textBox">
-					<table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
+                <!--  / TEXT BOX \ -->
+                <div class="textBox">
+                    <table width="550" cellspacing="1" cellpadding="0" border="0" align="center">
 <tbody><tr>
  <td width="400" class="field">Last Deposit:</td>
  <td class="field">{%$currency_sign%}<b>{%$last_deposit%}</b> &nbsp; <small>{%$last_deposit_date%}</small></td>
@@ -112,10 +112,10 @@ User Info</font></p>
  <td class="field">{%$currency_sign%}<b>{%$ab_formated.withdrawal%}</b></td>
 </tr>
 </tbody></table>
-				</div>
-				<!--  \ TEXT BOX / -->
+                </div>
+                <!--  \ TEXT BOX / -->
 
 
 
 <!--  \ TEXT BOX / -->
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

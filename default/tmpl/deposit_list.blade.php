@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Your deposits:</h3><br>
 
@@ -78,4 +78,4 @@
 <br>
 {%/section%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

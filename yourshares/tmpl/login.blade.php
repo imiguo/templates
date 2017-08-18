@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h2>Account Login </h2>
 Please enter your username and password to login to your account. If you have an account with us and have forgotten your password, please clcik on the "Forgot your password?" and complete the password reminder form, then your password will be e-mailed to you immediately.<br><br><br>
 
@@ -93,4 +93,4 @@ There are several steps you can take to improve your security while logged in to
 <li>Always log off of your YourShares.biz account and close your web browser when you have finished your online session.</li> 
 </ul>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>FAQ</h3>
 <div class="hd_faqtitle">How can I invest with {%$app_site%} ?</div>
 <div class="hd_faqbody"> To make a investment you must first become a member of {%$app_site%}. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup. </div>
@@ -57,4 +57,4 @@
 <div class="hd_faqbody">No, we believe that you MUST be paid in full, the only fees that your transaction will incur are the mandatory fees of each payment processor which is not under our control.</div>
 <div class="hd_faqtitle">Do I need to have own deposit in order to receive a commission from referrals?</div>
 <div class="hd_faqbody">No, your own deposit is not required.</div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

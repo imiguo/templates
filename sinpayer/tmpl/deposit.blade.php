@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>MAKE A DEPOSIT</h3>
 {%*------------>打开计算器*%}
 {%literal%}
@@ -225,4 +225,4 @@ for (i = 0; i<document.spendform.type.length; i++) {
 }
 </script>
 {%/literal%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

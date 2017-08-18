@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>Our banners</h3><br><br><center>
       
 	  
@@ -59,4 +59,4 @@ To see our 160*60 banner click <a onclick="window.open(this.href); return false"
     
 </center>  
 	                                             
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

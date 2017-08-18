@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
    <div class="blog_info_page">
         
@@ -30,4 +30,4 @@ We invite you to become really RICH with <strong><a href="?a=signup">FundsMore</
   <br>
 
   
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

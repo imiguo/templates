@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 <h3>Support Form:</h3><br>
@@ -76,4 +76,4 @@ function checkform() {
 {%/if%}
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Withdraw Principal:</h2><br><br>
 {%if $fatal%} {%if $fatal eq 'deposit_not_found'%}Wrong deposit ID has been provided{%/if%} 
@@ -105,4 +105,4 @@ withdraw();
 {%/if%}
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

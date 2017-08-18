@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Your account:</h3><br>
 {%if $settings.use_transaction_code ==1 && $userinfo.transaction_code == ''%} <b>Note: currently you have not specified 
@@ -77,4 +77,4 @@ here</a> to specify a new transaction code .</b> <br>
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

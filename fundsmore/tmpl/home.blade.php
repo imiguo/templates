@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
         <div class="blog_info_page">
@@ -30,4 +30,4 @@ Welcome to <strong>FundsMore.biz</strong>, your guide in the world of investment
 
                      
 	                                             
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

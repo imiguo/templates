@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h2>Register Account</h2>
 You may ONLY open one account by email address. With one account, you may open as many investments as you wish, in USD using the e-currency you want (Liberty Reserve, Perfect Money, Solid Trust Pay or Ego Pay).<br>
@@ -311,4 +311,4 @@ All the data giving by a member to enjoymoney.biz will be only privately used an
 
 {%*-------------------------------------------------------------------------*%}
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

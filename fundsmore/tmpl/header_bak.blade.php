@@ -1,4 +1,4 @@
-{%include file="logo.tpl"%}
+{%include file="logo.blade.php"%}
 
 
 
@@ -24,7 +24,7 @@
 
               <td width=300 align=center><img src="images/q.gif?tag={%$tag%}" width=180 height=1>
 
-{%include file="left.tpl"%}
+{%include file="left.blade.php"%}
 
               </td>
 

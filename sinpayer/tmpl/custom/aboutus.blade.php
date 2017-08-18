@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>ABOUT {%$app_full_name%}</h3>
 <style>
 .hd_fullbg {
@@ -72,4 +72,4 @@ Our professional traders do three things that amateurs often forget. They plan a
         </p>
     </div>
 </div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

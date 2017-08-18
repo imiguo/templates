@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $false_data != 1%}
     <h3>Please confirm your deposit:</h3>
@@ -11,5 +11,5 @@
     <br>
     <img id="coin_payment_image" src="{%$settings.def_payee_qrcode_bitcoin%}">
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

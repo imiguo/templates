@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <br>
 <form  method="post" name="deposit"  onsubmit="return checkform()">
 
@@ -46,4 +46,4 @@
   </table>
 
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

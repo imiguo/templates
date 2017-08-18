@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Investors Last 10</h3><br>
 
@@ -28,4 +28,4 @@
 {%/if%}
 </table>
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

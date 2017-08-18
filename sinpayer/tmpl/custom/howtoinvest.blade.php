@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>How to Invest</h3>
 <br>
 <table cellspacing=1 cellpadding=2 border=0 width=100%>
@@ -35,4 +35,4 @@
         </td>
     </tr>
 </table>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

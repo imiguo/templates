@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Ask for withdrawal:</h3><br>
 
@@ -181,4 +181,4 @@ For other e-currencies please provide your payee account details in the comments
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

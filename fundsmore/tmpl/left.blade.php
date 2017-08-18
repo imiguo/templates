@@ -2,7 +2,7 @@
 
 {%if $frm.a ne 'login'%}
 
-{%include file="login_box.tpl"%}
+{%include file="login_box.blade.php"%}
 
 {%/if%}
 
@@ -12,7 +12,7 @@
 
 <br>
 
-{%include file="stats_box.tpl"%}
+{%include file="stats_box.blade.php"%}
 
 {%/if%}
 
@@ -22,7 +22,7 @@
 
 <br>
 
-{%include file="info_box.tpl"%}
+{%include file="info_box.blade.php"%}
 
 {%/if%}
 

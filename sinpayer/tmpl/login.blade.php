@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <script language=javascript>
 function checkform() {
     if (document.mainform.username.value == '') {
@@ -51,4 +51,4 @@ Your login or password or turing image code is wrong. Please check this informat
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 <br>
 <br> or <a href="?a=forgot_password">remember your login information</a>.
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

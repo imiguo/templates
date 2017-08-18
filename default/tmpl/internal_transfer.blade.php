@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Internal Transfer:</h3><br><br>
 
@@ -108,4 +108,4 @@
 {%/if%}
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $ok == 1%}
 <h3>Please confirm your deposit:</h3>
@@ -102,4 +102,4 @@ and try again.
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

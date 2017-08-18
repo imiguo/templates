@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Referrers Top 20</h3>
 
@@ -25,4 +25,4 @@
 {%/if%}
 </table>
 <br><br>Last reset on {%$start_date%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

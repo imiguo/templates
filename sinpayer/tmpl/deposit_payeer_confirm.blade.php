@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $false_data != 1%}
     <h3>Please confirm your deposit</h3>
@@ -48,5 +48,5 @@
         <input type=button class=sbmt value="Cancel" onclick="document.location='?a=account'">
     <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

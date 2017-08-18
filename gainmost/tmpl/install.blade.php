@@ -1,4 +1,4 @@
-{%include file="header_install.tpl"%}
+{%include file="header_install.blade.php"%}
 
 
 {%if $wrong_license == 1%}
@@ -75,4 +75,4 @@ Login to admin area, go to settings screen and specify your sitename, e-gold acc
 </td></tr></table>
 {%/if%}
 
-{%include file="footer_install.tpl"%}
+{%include file="footer_install.blade.php"%}

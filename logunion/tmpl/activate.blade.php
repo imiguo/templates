@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%if $activated == 0%}
 	<b>Account not activated</b><br><br>
@@ -9,4 +9,4 @@
 {%/if%}
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

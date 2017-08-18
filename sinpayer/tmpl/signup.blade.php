@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <div id="w-account">
     <div class="z-content">
         <div id="ws-account">
@@ -162,4 +162,4 @@
     </div>
 </div>
 </div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

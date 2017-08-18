@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>FAQ.</h3>
 <br>
 <p align=justify> <b>How can I invest with {%$site_name%} ?</b>
@@ -131,4 +131,4 @@
   These funds are managed by a team of {%$site_name%} HYIP investment experts.
   <br>
   <br></p>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

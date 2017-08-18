@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -108,5 +108,5 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

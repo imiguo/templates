@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
   <h2>Welcome to YourShares.biz!</h2>
@@ -40,4 +40,4 @@ Identifying these exceptional companies and buying them inexpensively relative t
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

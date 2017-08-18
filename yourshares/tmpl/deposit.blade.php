@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 {%*------------>打开计算器*%}
 {%literal%}
 <script language="javascript"><!--
@@ -240,4 +240,4 @@ for (i = 0; i<document.spendform.type.length; i++) {
 </script>
 {%/literal%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

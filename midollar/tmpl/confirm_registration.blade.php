@@ -1,4 +1,4 @@
-{%include file="header.tpl"%} 
+{%include file="header.blade.php"%} 
 {%if $success == 0%} 
 	<b>Account has not been confirmed:</b><br> Please check the link you received. It seems it is broken. 
 {%else%} 
@@ -9,4 +9,4 @@ Your account has been successfully confirmed.
 {%/if%}
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

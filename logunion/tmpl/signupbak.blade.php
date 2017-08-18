@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>Registration at {%$settings.site_name%}:</h3>
 <br>
 
@@ -351,4 +351,4 @@
     </table>
   <input type="hidden" name="_token" value="{%$csrf_token%}"></form>
                                               {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

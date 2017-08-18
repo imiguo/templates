@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>TEST page</h3><br>
 
@@ -24,4 +24,4 @@
 </tr></table>
 <input type="hidden" name="_token" value="{%$csrf_token%}"></form>{%/section%}
 
-{%include file="footer.tpl"%} 
+{%include file="footer.blade.php"%} 

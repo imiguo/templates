@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -80,5 +80,5 @@ Login and password send to you. Please check your e-mail account
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

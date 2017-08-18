@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
   <h2>About Log Union</h2>
 
@@ -21,4 +21,4 @@ One of the primary concerns of on-line traders is the safety of trading large am
 FOREX has no physical location. It is an enormous network of currency dealers who are interconnected by means of telecommunication services, concentrated in all major world financial centers and working 24 hours a day as a single apparatus. The main participants in the currency market are commercial banks, currency exchanges, central banks, export trading companies, investment funds, broker companies and individuals. Global daily forex turnover is estimated to be over $2 trillion. This enormous turnover is more than the combination of all the worlds' stock markets on any given day.
   
 <!--  \ TEXT BOX / -->
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

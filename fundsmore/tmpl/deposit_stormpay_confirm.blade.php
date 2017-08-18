@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 
 
@@ -112,5 +112,5 @@ You will have to invest ${%$amount*100/93.1+69/93.1|string_format:"%.2f"%} if yo
 
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
 

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
         <div class="article">
           <h2><span>About us | Midollar investment company</h2>
           <p class="infopost">Midollar is now online and available to investors all over the world</p>
@@ -22,4 +22,4 @@
           </div>
           <div class="clr"></div>
         </div>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

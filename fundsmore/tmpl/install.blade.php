@@ -1,4 +1,4 @@
-{%include file="header_install.tpl"%}
+{%include file="header_install.blade.php"%}
 
 
 
@@ -152,5 +152,5 @@ Login to admin area, go to settings screen and specify your sitename, e-gold acc
 
 
 
-{%include file="footer_install.tpl"%}
+{%include file="footer_install.blade.php"%}
 

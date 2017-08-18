@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.<br>
 
@@ -8,7 +8,7 @@ Profits from these investments are used to enhance our program and increase its 
 <br><br>
 
 
-{%include file="index.plans.tpl"%}
+{%include file="index.plans.blade.php"%}
 
 <?
 include 'html/index.plans.inc.php';
@@ -50,4 +50,4 @@ Level {%$ref_levels[rl].level%}: <b>{%$ref_levels[rl].percent%}%</b><br>
 
 
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 {%literal%}
 <script language="javascript"><!--
@@ -145,4 +145,4 @@
     </script>
 {%/literal%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

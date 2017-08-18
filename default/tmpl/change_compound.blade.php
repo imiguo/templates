@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 
 <h3>Change Compounding Percent:</h3><br><br>
 
@@ -77,4 +77,4 @@ withdraw();
 </script>
 {%/if%}
 
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}

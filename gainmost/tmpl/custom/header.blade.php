@@ -1,4 +1,4 @@
-{%include file="logo.tpl"%}
+{%include file="logo.blade.php"%}
       <!--  / BANNER CONTAINER \ -->
         
         <div id="container">

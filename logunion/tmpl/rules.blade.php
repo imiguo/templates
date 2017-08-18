@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 <h3>Rules & Agreements.</h3>
 <br>
 
@@ -53,4 +53,4 @@
   <br>
   If you do not agree with the above disclaimer, please do not go any further.
 </p>
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
