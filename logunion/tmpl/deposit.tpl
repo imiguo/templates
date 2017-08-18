@@ -22,7 +22,7 @@ function openCalculator(id)
 
 
 
-{/literal%}
+{%/literal%}
 
   {%if $qplans > 1%}
 

@@ -10,7 +10,7 @@ function openCalculator(id)
   l = (screen.width-w-30)/2;
   window.open('?a=calendar&type=' + id, 'calculator' + id, "top="+t+",left="+l+",width="+w+",height="+h+",resizable=1,scrollbars=0");
 
-{/literal%}
+{%/literal%}
   {%if $qplans > 1%}
 {%literal%}
   for (i = 0; i < document.spendform.h_id.length; i++)
@@ -169,7 +169,7 @@ Please select one of the plans below and make your deposit!<br><br><br>
 
         <select name=h_id >
             {%* ---------------------------------------------------------------------------------- *%}
-            {%if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" or $userinfo.username=="yhf"%} 
+            {%if $userinfo.username==goldpoll or $userinfo.username==lll or $userinfo.username=="iehyip.com" or $userinfo.username=="yhf"%}
                 {%section name=plans loop=$plans start=3%}
                     <option  value='{%$plans[plans].id%}'>{%$plans[plans].name%}</option>
                 {%/section%}
@@ -204,17 +204,17 @@ Please select one of the plans below and make your deposit!<br><br><br>
               {%section name=p loop=$ps%}
                    {%if $ps[p].status%}
                       <tr>
-                          <td><input name="type" type="radio"  value="process_{%$ps[p].id%}" 
+                          <td><input name="type" type="radio"  value="process_{%$ps[p].id%}"
                             {%if $ps[p].name == "LibertyReserve"%}checked{%/if%}></td>
                           <td>{%$ps[p].name%}</td>
-                      </tr>         
-                  {%/if%}               
+                      </tr>
+                  {%/if%}
                   {%if $ps[p].balance > 0 and $ps[p].status == 1%}
                       <tr>
                           <td><input name="type" type="radio"  value="account_{%$ps[p].id%}"></td>
                           <td>the Account Balance {%$ps[p].name%}</td>
                       </tr>
-                  {%/if%}    
+                  {%/if%}
               {%/section%}
             </tbody>
           </table>

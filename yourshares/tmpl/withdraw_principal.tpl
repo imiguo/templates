@@ -41,7 +41,7 @@ this deposit.<br>
 {%literal%}
 function withdraw()
 {%
-  var max_amount = new Number('{/literal%}{%$deposit.deposit%}{%literal%}');
+  var max_amount = new Number('{%/literal%}{%$deposit.deposit%}{%literal%}');
   var percent = new Number('{%/literal%}{%$type.withdraw_principal_percent%}{%literal%}');
   var out_val = new Number(document.withdraw_form.amount.value.replace(",","."));
   if (isNaN(out_val))

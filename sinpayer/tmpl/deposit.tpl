@@ -9,7 +9,7 @@ function openCalculator(id)
   t = (screen.height-h-30)/2;
   l = (screen.width-w-30)/2;
   window.open('?a=calendar&type=' + id, 'calculator' + id, "top="+t+",left="+l+",width="+w+",height="+h+",resizable=1,scrollbars=0");
-{/literal%}
+{%/literal%}
   {%if $qplans > 1%}
 {%literal%}
   for (i = 0; i < document.spendform.h_id.length; i++)

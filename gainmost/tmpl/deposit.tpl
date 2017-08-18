@@ -46,7 +46,7 @@ function openCalculator(id)
 
 
 
-{/literal%}
+{%/literal%}
 
 
 
