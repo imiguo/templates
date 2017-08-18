@@ -7,31 +7,31 @@ Message has been successfully sent. We will back to you in next 24 hours. Thank 
 {%else%}
 <script language=javascript>
 {%if $userinfo.logged == 1%}
-function checkform() {%
+function checkform() {
   if (document.mainform.message.value == '') {
     alert("Please type your message!");
     document.mainform.message.focus();
     return false;
-  %}
+  }
   return true;
 }
 {%else%}
-function checkform() {%
+function checkform() {
     if (document.mainform.name.value == '') {
         alert("Please type your full name!");
         document.mainform.name.focus();
         return false;
-    %}
-    if (document.mainform.email.value == '') {%
+    }
+    if (document.mainform.email.value == '') {
         alert("Please enter your e-mail address!");
         document.mainform.email.focus();
         return false;
-    %}
-    if (document.mainform.message.value == '') {%
+    }
+    if (document.mainform.message.value == '') {
         alert("Please type your message!");
         document.mainform.message.focus();
         return false;
-    %}
+    }
     return true;
 }
 {%/if%}

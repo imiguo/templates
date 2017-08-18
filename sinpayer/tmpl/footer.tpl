@@ -23,32 +23,32 @@
 <script src="jquery.min.js?tag={%$tag%}"></script>
 <script src="hustydesigns/hd_animate.js?tag={%$tag%}"></script>
 <script>
-wow = new WOW({%
+wow = new WOW({
     animateClass: 'animated',
     offset: 100,
     callback: function(box) {
-    %}
+    }
 });
 wow.init();
 </script>
 <script>
-$(document).ready(function() {%
+$(document).ready(function() {
     $(".hdopen").click(function() {
         $(".addmenu").slideDown();
-    %});
-    $(".hdclose").click(function() {%
+    });
+    $(".hdclose").click(function() {
         $(".addmenu").slideUp();
-    %});
+    });
 });
 </script>
 <script>
-$(document).ready(function() {%
+$(document).ready(function() {
     $(".hdopensmall").click(function() {
         $(".addmenusmall").slideDown();
-    %});
-    $(".hdclosesmall").click(function() {%
+    });
+    $(".hdclosesmall").click(function() {
         $(".addmenusmall").slideUp();
-    %});
+    });
 });
 </script>
 </body>

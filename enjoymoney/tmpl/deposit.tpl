@@ -3,7 +3,7 @@
 {%literal%}
 <script language="javascript"><!--
 function openCalculator(id)
-{%
+{
 
   w = 225; h = 400;
   t = (screen.height-h-30)/2;

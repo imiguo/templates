@@ -2,12 +2,12 @@
 
 {%if $userinfo.logged == 1%}
 <style>
-.hdcont h3:first-of-type {%
+.hdcont h3:first-of-type {
     margin-top:-147px !Important;
     color:#fff;
     font-weight:400;
     font-size:35px;
-%}
+}
 </style>
 
 <link href="./hustydesigns/dashboard.css?tag={%$tag%}" rel="stylesheet" type="text/css" />

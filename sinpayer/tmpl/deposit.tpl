@@ -4,7 +4,7 @@
 {%literal%}
 <script language="javascript"><!--
 function openCalculator(id)
-{%
+{
   w = 225; h = 400;
   t = (screen.height-h-30)/2;
   l = (screen.width-w-30)/2;

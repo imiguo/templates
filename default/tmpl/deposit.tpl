@@ -2,7 +2,7 @@
 
 {%literal%}
 <script language="javascript"><!--
-    function openCalculator(id) {%
+    function openCalculator(id) {
 
         w = 225;
         h = 400;

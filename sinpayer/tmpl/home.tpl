@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css?tag={%$tag%}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-    #style-1::-webkit-scrollbar-track {%
+    #style-1::-webkit-scrollbar-track {
         -webkit-box-shadow: none;
         background-color: transparent;
-    %}
+    }
 
-    #style-1::-webkit-scrollbar {%
+    #style-1::-webkit-scrollbar {
         width: 5px;
         background-color: transparent;
-    %}
+    }
 
-    #style-1::-webkit-scrollbar-thumb {%
+    #style-1::-webkit-scrollbar-thumb {
         background-color: #555555;
         border: 0px solid #256DC0;
-    %}
+    }
 
-    .amk_loginform .amk_input input::-webkit-input-placeholder {%
+    .amk_loginform .amk_input input::-webkit-input-placeholder {
         color: pink!important;
-    %}
+    }
     </style>
 </head>
 
@@ -58,17 +58,17 @@
                     {%if $userinfo.logged != 1%}
                     <h2>Member Login</h2>
                     <script language=javascript>
-                    function checkform() {%
+                    function checkform() {
                         if (document.mainform.username.value == '') {
                             alert("Please type your username!");
                             document.mainform.username.focus();
                             return false;
-                        %}
-                        if (document.mainform.password.value == '') {%
+                        }
+                        if (document.mainform.password.value == '') {
                             alert("Please type your password!");
                             document.mainform.password.focus();
                             return false;
-                        %}
+                        }
                         return true;
                     }
                     </script>
@@ -97,12 +97,12 @@
         </div>
         {%if $userinfo.logged == 1%}
         <style>
-        .hdcont h3:first-of-type {%
+        .hdcont h3:first-of-type {
             margin-top:-147px !Important;
             color:#fff;
             font-weight:400;
             font-size:35px;
-        %}
+        }
         </style>
 
         <link href="./hustydesigns/dashboard.css?tag={%$tag%}" rel="stylesheet" type="text/css" />
@@ -341,11 +341,11 @@
     <script src="hustydesigns/hd_animate.js?tag={%$tag%}"></script>
     <script src="jquery.min.js?tag={%$tag%}"></script>
     <script>
-    wow = new WOW({%
+    wow = new WOW({
         animateClass: 'animated',
         offset: 100,
         callback: function(box) {
-        %}
+        }
     });
     wow.init();
     </script>

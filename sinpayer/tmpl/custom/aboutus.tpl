@@ -1,40 +1,40 @@
 {%include file="header.tpl"%}
 <h3>ABOUT {%$app_full_name%}</h3>
 <style>
-.hd_fullbg {%
+.hd_fullbg {
     margin-top: 40px;
     background: url(./hustydesigns/graphics/aboutimg2.jpg);
     padding: 25px !Important;
     background-size: cover;
     border: 1px solid #ccc;
-%}
+}
 
-.compdetails {%
+.compdetails {
     margin: 20px 0;
     color: #fff;
     text-align: center;
     padding: 50px 0 !Important;
     border-radius: 3px;
     background: url(./hustydesigns/graphics/aboutimg3.jpg);
-%}
+}
 
-.compdetails span {%
+.compdetails span {
     display: block;
     font-size: 35px;
     font-weight: 800;
     color: #444;
-%}
+}
 
-.hd_fullbg span {%
+.hd_fullbg span {
     border: 1px solid #ccc;
     display: block;
     font-size: 13px;
     padding: 10px 20px;
     margin: 20px 0;
     border-radius: 3px;
-%}
+}
 
-.hd_fullbg h4 {%
+.hd_fullbg h4 {
     background: rgba(255, 255, 255, 0.8);
     display: block;
     padding: 15px 20px;
@@ -44,7 +44,7 @@
     margin: 20px 0;
     border-radius: 3px;
     border: 1px solid #ccc;
-%}
+}
 </style>
 <div class="row">
     <div class="col s12  compdetails">

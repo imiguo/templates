@@ -8,7 +8,7 @@
 
 function openCalculator(id)
 
-{%
+{
 
 
 
