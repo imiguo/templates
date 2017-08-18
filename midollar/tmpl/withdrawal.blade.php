@@ -1,4 +1,4 @@
-{%include file="header.tpl"%}
+{%include file="header.blade.php"%}
 {%literal%}
 
 
@@ -195,4 +195,4 @@ You have no funds to withdraw.
 {%/if%}
 
 {%/if%}
-{%include file="footer.tpl"%}
+{%include file="footer.blade.php"%}
