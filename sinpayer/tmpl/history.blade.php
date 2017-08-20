@@ -1,4 +1,6 @@
 @if (config('hm.show_history'))
+@php($deposits = app('App\Services\DataService')->deposits(10))
+@php($payouts = app('App\Services\DataService')->payouts(10))
 <style type="text/css">
     #history {
         background: #222222 url("hustydesigns/graphics/revshare.png") no-repeat center bottom / 100%;
@@ -8,7 +10,7 @@
     .hlastbox {
         display: inline-block;
         margin: 10px;
-        width: 45%;
+        width: @if (count($deposits) != count($payouts)) 100% @else 45% @endif;
         min-height: 50px;
         max-height: 480px;
         padding: 10px;
@@ -58,7 +60,7 @@
             <br>
             <table width="100%" border="0">
                 <tbody>
-                @foreach (app('App\Services\DataService')->deposits(10) as $deposit)
+                @foreach ($deposits as $deposit)
                     <tr>
                         <td class="lastborder">
                             <div class="{{$deposit['payment']}}-img"></div>
@@ -76,7 +78,7 @@
             <br>
             <table width="100%" border="0">
                 <tbody>
-                @foreach (app('App\Services\DataService')->payouts(10) as $payout)
+                @foreach ($payouts as $payout)
                     <tr>
                         <td class="lastborder">
                             <div class="{{$payout['payment']}}-img"></div>
