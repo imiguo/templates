@@ -6,7 +6,7 @@
 
 <title>FundsMore.biz Enjoy Luxury LifeStyle.</title>
 
- <link rel="icon" href="images/fav.ico" type="image/x-icon" />
+ <link rel="icon" href="images/fav.ico?tag={%$tag%}" type="image/x-icon" />
 
  <script src="js/core.js?tag={%$tag%}" type="text/javascript"></script>
 
