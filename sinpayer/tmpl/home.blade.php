@@ -233,18 +233,6 @@
     <div id="amk_main">
         <div class="amk_wrap wow fadeInUp" data-wow-delay="0s">
             <div class="amk_box amk_left">
-                <h3>About <span>Us!</span></h3>
-                <p>Welcome to {%$app_full_name%}.
-                    <br> {%$app_full_name%} is the newest venture in the field of forex and crypto mining industry. {%$app_full_name%} is trusted dependable investment company that offers Great opportunities with zero risks. You found what you're looking for with {%$app_site%} , which offers High End asset management program based on Forex and global hardware mining pools!! With {%$app_full_name%}, anyone can participate from anywhere in the world. Since 2015, {%$app_full_name%} has been listed as the Registered Company at the British Royal Register - Company House UK with company number #09865621. </p>
-                <br />
-                <p>Our trading experts are hybrid of professionals from various fields with highly extensive experience as such we can offer our members various investment portfolio. We provide a variety of services developed by experienced traders in investing assets at strong interest rates. {%$app_full_name%} support system is always available for any concern our client might have. Join {%$app_site%} today and Let your money work for you! </p>
-                <br />
-            </div>
-            <div class="amk_box amk_right">
-                <iframe width="480" height="350" src="https://www.youtube.com/embed/f7iXTyHGYX4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="amk_clear"></div><span class="amk_hline_big"></span>
-            <div class="amk_box amk_left">
                 <h3>What <span>we do ?</span></h3>
                 <p>We are active in the foreign exchange trading and bitcoin mining market and endeavour to remain at the forefront of the bitcoin industry and such we can provide all our clients with strong investment choices. Our regular use of progressive infrastructure and automated payment processing has allowed us to look for ways to offer our customers more value. It's time to begin drawing your assets! </p>
             </div>
@@ -267,6 +255,7 @@
                 <h3>Professional Team</h3></div>
         </div>
     </div>
+    {%blade('history')%}
     <div id="amk_referrals">
         <div class="amk_wrap wow fadeIn" data-wow-delay="0s">
             <h2>Introducing <span>The</span></h2>
