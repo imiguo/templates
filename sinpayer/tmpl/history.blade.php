@@ -79,7 +79,7 @@
                 @foreach (app('App\Services\DataService')->payouts(10) as $payout)
                     <tr>
                         <td class="lastborder">
-                            <div class="{{$deposit['payment']}}-img"></div>
+                            <div class="{{$payout['payment']}}-img"></div>
                         </td>
                         <td class="lastborder">{{$payout['username']}}</td>
                         <td class="lastborder">${{$payout['amount']}}</td>
