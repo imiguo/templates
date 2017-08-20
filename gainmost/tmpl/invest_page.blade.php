@@ -3,7 +3,7 @@
 {%$settings.site_name%} INVESTMENT PROGRAMS:<br><br>
 
 
-{%include file="index.plans.blade.php"%}
+{%include file="index_plans.blade.php"%}
 
 
 

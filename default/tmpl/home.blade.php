@@ -8,7 +8,7 @@ Profits from these investments are used to enhance our program and increase its 
 <br><br>
 
 
-{%include file="index.plans.blade.php"%}
+{%include file="index_plans.blade.php"%}
 
 <?
 include 'html/index.plans.inc.php';

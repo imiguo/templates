@@ -8,7 +8,7 @@
 
 
 
-{%include file="index.plans.blade.php"%}
+{%include file="index_plans.blade.php"%}
 
 
 
