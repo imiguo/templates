@@ -2,7 +2,7 @@
 
 {%literal%}
 <script language=javascript>
-function checkform() {
+function check_forgotform() {
   if (document.forgotform.email.value == '') {
     alert("Please type your username or email!");
     document.forgotform.email.focus();
@@ -17,7 +17,7 @@ function checkform() {
 {%if $found_records == 2%}
 Your accound found. Please check your e-mail address and follow confirm URL to reset your password.
 {%else%}
-<form method=post name=forgotform onsubmit="return checkform();">
+<form method=post name=forgotform onsubmit="return check_forgotform();">
 <input type=hidden name=a value="forgot_password">
 <input type=hidden name=action value="forgot_password">
 <table cellspacing=0 cellpadding=2 border=0>
