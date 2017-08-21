@@ -22,9 +22,9 @@
 
   <input type="hidden" name="require_IPN" value="1">
 
-  <input type="hidden" name="return_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes"> 
+  <input type="hidden" name="return_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes"> 
 
-  <input type="hidden" name="cancel_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=no"> 
+  <input type="hidden" name="cancel_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=no"> 
 
   <input type=hidden name=user1 value="{%$userinfo.id%}">
 

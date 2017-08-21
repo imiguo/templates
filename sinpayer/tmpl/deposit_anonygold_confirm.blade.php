@@ -39,9 +39,9 @@ Amount ($US): <b>{%$amount_format%}</b><br>
  <INPUT type=hidden name="SUGGESTED_MEMO" value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}">
  <input type=hidden name="item_id" value="Deposit">
 
- <input type=hidden name="return_url" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+ <input type=hidden name="return_url" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
  <input type=hidden name="notify_url" value="{%$settings.site_url%}/anonygold_processing.php">
- <input type=hidden name="cancel_url" value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+ <input type=hidden name="cancel_url" value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 <br><input type=submit value="Process" class=sbmt> &nbsp;
 <input type=button class=sbmt value="Cancel" onclick="document.location='?a=deposit'">

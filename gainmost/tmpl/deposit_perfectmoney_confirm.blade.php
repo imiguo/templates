@@ -37,9 +37,9 @@ Amount ($US): <b>{%$amount_format%}</b><br>
   <input type="hidden" name="PAYMENT_UNITS" value=USD>
   <input type="hidden" name="SUGGESTED_MEMO" value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}">
   <input type="hidden" name="STATUS_URL" value="{%$settings.site_url%}/index.php}">
-  <input type="hidden" name="PAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+  <input type="hidden" name="PAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
   <input type="hidden" name="PAYMENT_URL_METHOD" value="POST">
-  <input type="hidden" name="NOPAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+  <input type="hidden" name="NOPAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=no">
   <input type="hidden" name="NOPAYMENT_URL_METHOD" value="POST">
  <input type="hidden" name="BAGGAGE_FIELDS"   value="PLAN_ID">
     <input type="hidden" name="PLAN_ID" value="{%$h_id%}">

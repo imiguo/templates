@@ -11,7 +11,7 @@
   <input type="hidden" name="item_name" value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}"> 
   <input type="hidden" name="amount" value="{%$amount%}"> 
   <input type="hidden" name="return" value="{%$settings.site_url%}/paypal_processing.php"> 
-  <input type="hidden" name="cancel_return" value="{%$settings.site_url%}/index.php?a=return_egold&process=no"> 
+  <input type="hidden" name="cancel_return" value="{%$settings.site_url%}/callback?a=return_egold&process=no"> 
   <input type=hidden name=custom value="checkpayment|{%$userinfo.id%}|{%$h_id%}">
   <input type=hidden name=quantity value=1>
   <input type=hidden name=no_note value=1>

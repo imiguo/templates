@@ -43,9 +43,9 @@ Amount ({%$currency_sign%}): <b>{%$amount_format%}</b><br>
 <INPUT type=hidden name=PAYMENT_UNITS value="{%$settings.egold_paymentunits%}"> 
 <INPUT type=hidden name=PAYMENT_METAL_ID value="1">
 <INPUT type=hidden name=STATUS_URL value="{%$settings.site_url%}/egold_processing.php">
-<INPUT type=hidden name=PAYMENT_URL value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type=hidden name=PAYMENT_URL value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 <INPUT type=hidden name=PAYMENT_URL_METHOD value=POST>
-<INPUT type=hidden name=NOPAYMENT_URL  value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=NOPAYMENT_URL  value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 <INPUT type=hidden name=NOPAYMENT_URL_METHOD value=POST>
 <INPUT type=hidden name=BAGGAGE_FIELDS value="id {%if $use_compound%}compound{%/if%}">
 {%if 1==2%}<INPUT type=hidden name=BAGGAGE_FIELDS value="userid hyipid a {%if $use_compound%}compound{%/if%}">{%/if%}

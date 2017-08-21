@@ -64,9 +64,9 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
   <input type="hidden" name="PAYMENT_AMOUNT " value="{%$amount%}">
 
-  <input type="hidden" name="PAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+  <input type="hidden" name="PAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
-  <input type="hidden" name="NOPAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+  <input type="hidden" name="NOPAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
   <input type="hidden" name="STATUS_URL" value="{%$settings.site_url%}/pecunix_processing.php">
 

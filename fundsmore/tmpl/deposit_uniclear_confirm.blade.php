@@ -80,11 +80,11 @@ Amount ({%$currency_sign%}): <b>{%$amount_format%}</b><br>
 
 <INPUT type=hidden name=spi_status_method value="post">
 
-<INPUT type=hidden name=spi_success_url value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type=hidden name=spi_success_url value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
 <INPUT type=hidden name=spi_success_metho value=post>
 
-<INPUT type=hidden name=spi_cancel_url  value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=spi_cancel_url  value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 <INPUT type=hidden name=spi_cancel_method value=post>
 

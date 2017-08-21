@@ -37,8 +37,8 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 <INPUT type=hidden name=SELLERACCOUNTID value="{%$settings.def_payee_account_intgold%}" >
 <input type="hidden" name="POSTURLNUM" value="{%$settings.intgold_posturl%}">
 <!--INPUT type=hidden name=POSTURL value="{%$settings.site_url%}/intgold_processing.php"-->
-<INPUT type=hidden name=RETURNURL value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
-<INPUT type=hidden name=CANCEL_RETURN value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=RETURNURL value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
+<INPUT type=hidden name=CANCEL_RETURN value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 <input type="hidden" name="METHOD" value="POST">
 <input type="hidden" name="RETURNPAGE" value="CGI">
 <input type="hidden" name="ITEM_NUMBER" value="{%$userinfo.id%}">

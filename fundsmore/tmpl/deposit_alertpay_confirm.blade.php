@@ -80,9 +80,9 @@ Amount ({%$currency_sign%}): <b>{%$amount_format%}</b><br>
 
 <INPUT type=hidden name=ap_merchant value="{%$settings.def_payee_account_alertpay%}">
 
-<INPUT type=hidden name=ap_returnurl value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type=hidden name=ap_returnurl value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
-<INPUT type=hidden name=ap_cancelurl  value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=ap_cancelurl  value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 <INPUT type=hidden value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}" name=ap_itemname>
 

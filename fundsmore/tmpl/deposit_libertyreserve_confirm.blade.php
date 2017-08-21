@@ -74,7 +74,7 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
   <input type=hidden name=lr_success_url value="{%$settings.site_url%}/deposit_success.php">
 
-  <input type=hidden name=lr_fail_url value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+  <input type=hidden name=lr_fail_url value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
   <input type=hidden name=lr_status_url value="{%$settings.site_url%}/index.php">
 

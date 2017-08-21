@@ -76,11 +76,11 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
 <INPUT type=hidden name=merchant_check_url value="{%$settings.site_url%}/evocash_processing.php">
 
-<INPUT type=hidden name=pay_yes_url value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type=hidden name=pay_yes_url value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
 <INPUT type=hidden name=pay_yes_url_method value=POST>
 
-<INPUT type=hidden name=pay_no_url  value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=pay_no_url  value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 <INPUT type=hidden name=pay_no_url_method value=POST>
 

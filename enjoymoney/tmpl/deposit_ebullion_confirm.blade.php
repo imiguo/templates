@@ -39,9 +39,9 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 <input type="hidden" name="ATIP_SUGGESTED_MEMO" value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}">
 <input type="hidden" name="ATIP_FORCED_PAYER_ACCOUNT" value="{%$account%}">
 <input type="hidden" name="ATIP_PAYER_FEE_AMOUNT" value="0.00">
-<input type="hidden" name="ATIP_PAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<input type="hidden" name="ATIP_PAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 <input type="hidden" name="ATIP_PAYMENT_URL_METHOD" value="POST">
-<input type="hidden" name="ATIP_NOPAYMENT_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<input type="hidden" name="ATIP_NOPAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 <input type="hidden" name="ATIP_NOPAYMENT_URL_METHOD" value="POST">
 <input type="hidden" name="ATIP_PAYMENT_FIXED" value="0">
 <input type="hidden" name="ATIP_PAYMENT_AMOUNT" value="{%$amount%}">

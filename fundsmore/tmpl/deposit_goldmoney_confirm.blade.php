@@ -80,11 +80,11 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
 <INPUT type="hidden" name="OMI_RESULT_URL" value="{%$settings.site_url%}/goldmoney_processing.php">
 
-<INPUT type="hidden" name="OMI_SUCCESS_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type="hidden" name="OMI_SUCCESS_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
 <INPUT type="hidden" name="OMI_SUCCESS_URL_METHOD" value=POST>
 
-<INPUT type="hidden" name="OMI_FAIL_URL" value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type="hidden" name="OMI_FAIL_URL" value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 <INPUT type="hidden" name="OMI_FAIL_URL_METHOD" value=POST>
 

@@ -39,9 +39,9 @@ Amount ({%$currency_sign%}): <b>{%$amount_format%}</b><br>
 <INPUT type=hidden name=spi_currency value="USD">
 <INPUT type=hidden name=spi_status_ref value="{%$settings.site_url%}/uniclear_processing.php">
 <INPUT type=hidden name=spi_status_method value="post">
-<INPUT type=hidden name=spi_success_url value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+<INPUT type=hidden name=spi_success_url value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 <INPUT type=hidden name=spi_success_metho value=post>
-<INPUT type=hidden name=spi_cancel_url  value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+<INPUT type=hidden name=spi_cancel_url  value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 <INPUT type=hidden name=spi_cancel_method value=post>
 <INPUT type=hidden name=spi_baggage value="userid hyipid a compound">
 <INPUT type=hidden value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}" name=spi_description>

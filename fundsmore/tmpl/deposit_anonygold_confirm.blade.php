@@ -80,11 +80,11 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
 
 
- <input type=hidden name="return_url" value="{%$settings.site_url%}/index.php?a=return_egold&process=yes">
+ <input type=hidden name="return_url" value="{%$settings.site_url%}/callback?a=return_egold&process=yes">
 
  <input type=hidden name="notify_url" value="{%$settings.site_url%}/anonygold_processing.php">
 
- <input type=hidden name="cancel_url" value="{%$settings.site_url%}/index.php?a=return_egold&process=no">
+ <input type=hidden name="cancel_url" value="{%$settings.site_url%}/callback?a=return_egold&process=no">
 
 
 
