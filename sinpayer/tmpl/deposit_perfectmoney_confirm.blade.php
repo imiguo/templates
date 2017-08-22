@@ -6,7 +6,7 @@
     <br>
     <form action="https://perfectmoney.is/api/step1.asp" method="POST">
 
-        Your PerfectMoney account <b>{%$userinfo.perfectmoney_account%}</b><br>
+        Your PerfectMoney account: <b>{%$userinfo.perfectmoney_account%}</b><br>
         Amount ($US): <b>{%$amount_format%}</b><br>
         {%if $use_compound%}
             {%if $compound_min_percents == $compound_max_percents && !$compound_percents%}

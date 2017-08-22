@@ -5,7 +5,7 @@
     <br>
     <form action="//payeer.com/api/merchant/m.php" method="GET">
 
-        <!-- Your Payeer account <b>{%$userinfo.payeer_account%}</b><br> -->
+        Your Payeer account: <b>{%$userinfo.payeer_account%}</b><br>
         Amount ($US): <b>{%$amount_format%}</b><br>
 
         {%if $use_compound%}
