@@ -9,7 +9,7 @@
         Your Payeer account: <b>{%$userinfo.payeer_account%}</b><br>
         Amount ($US): <b>{%$amount_format%}</b><br>
 
-        <input type="hidden" name="m_shop" value="{%$settings.def_payee_account_payeer%}">
+        <input type="hidden" name="m_shop" value="{%psconfig('pe.shop_id')%}">
         <input type="hidden" name="m_orderid" value="{%$m_orderid%}">
         <input type="hidden" name="m_amount" value="{%$amount%}">
         <input type="hidden" name="m_curr" value="USD">

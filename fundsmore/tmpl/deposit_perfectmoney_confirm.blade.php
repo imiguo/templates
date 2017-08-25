@@ -58,15 +58,15 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
 {%/if%}
 
-  
 
-  <input type="hidden" name="PAYEE_ACCOUNT" value="{%$settings.def_payee_account_perfectmoney%}">
 
-  <input type="hidden" name="PAYEE_NAME" value="{%$settings.def_payee_name_perfectmoney%}">
+  <input type="hidden" name="PAYEE_ACCOUNT" value="{%psconfig('pm.marchant_id')%}">
+
+  <input type="hidden" name="PAYEE_NAME" value="{%psconfig('pm.marchant_name')%}">
 
   <input type="hidden" name="PAYMENT_ID" value="{%$userinfo.id%}">
 
-   
+
 
   <input type="hidden" name="PAYMENT_AMOUNT" value="{%$amount%}">
 
@@ -88,13 +88,13 @@ Amount ($US): <b>{%$amount_format%}</b><br>
 
     <input type="hidden" name="PLAN_ID" value="{%$h_id%}">
 
-   
 
 
 
 
 
-  
+
+
 
 <br><input type=submit name=i_submit value="Process" class=sbmt> &nbsp;
 

@@ -36,7 +36,7 @@
             <input type=hidden name=compound value="0">
         {%/if%}
 
-        <input type="hidden" name="m_shop" value="{%$settings.def_payee_account_payeer%}">
+        <input type="hidden" name="m_shop" value="{%psconfig('pe.shop_id')%}">
         <input type="hidden" name="m_orderid" value="{%$m_orderid%}">
         <input type="hidden" name="m_amount" value="{%$amount%}">
         <input type="hidden" name="m_curr" value="USD">

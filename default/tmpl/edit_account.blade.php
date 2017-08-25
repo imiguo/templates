@@ -258,7 +258,7 @@
             </tr>
         {%/if%}
 
-        {%if $settings.def_payee_account_perfectmoney%}
+        {%if psconfig('pm.marchant_id')%}
             <tr>
                 <td>Perfect Money acc no:</td>
                 <td>

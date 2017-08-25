@@ -275,7 +275,7 @@ Fill the form available below to open an account with Midollar. Please make sure
 
 <table width="100%" border="0">
 <tbody>
-{%if $settings.def_payee_account_perfectmoney%}
+{%if psconfig('pm.marchant_id')%}
 <tr>
 <td>Your Perfect Money Account:</td>
 <td><input type=text class=inpts size=30 name=perfectmoney value="{%$frm.perfectmoney|escape:"quotes"%}"></td>

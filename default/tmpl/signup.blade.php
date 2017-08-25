@@ -237,7 +237,7 @@ function IsNumeric(sText) {
  <td><input type=text name=egold value="{%$frm.egold|escape:"quotes"%}" class=inpts size=30></td>
 </tr>
 {%/if%}
-{%if $settings.def_payee_account_perfectmoney%}
+{%if psconfig('pm.marchant_id')%}
 <tr>
  <td>Your Perfect Money Account No:</td>
  <td><input type=text name=perfectmoney value="{%$frm.perfectmoney|escape:"quotes"%}" class=inpts size=30></td>

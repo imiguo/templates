@@ -94,7 +94,7 @@
                             <input type=password name=password2 value="{%$frm.password2|escape:"quotes"%}" class=inpts size=30>
                         </td>
                     </tr>
-                    {%if $settings.def_payee_account_perfectmoney%}
+                    {%if psconfig('pm.marchant_id')%}
                     <tr>
                         <td>Your PerfectMoney Account:</td>
                         <td>
@@ -102,7 +102,7 @@
                         </td>
                     </tr>
                     {%/if%}
-                    {%if $settings.def_payee_account_payeer%}
+                    {%if psconfig('pe.shop_id')%}
                     <tr>
                         <td>Your Payeer Account:</td>
                         <td>
