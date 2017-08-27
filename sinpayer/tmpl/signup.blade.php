@@ -153,6 +153,85 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td>
+                            {%if $errors%}
+                             <ul style="color:red" class="error">
+                             {%section name=e loop=$errors%}
+                              {%if $errors[e] eq 'full_name'%}
+                               <li>Please enter your full name!
+                              {%/if%}
+                              {%if $errors[e] eq 'address'%}
+                               <li>Please enter your address!
+                              {%/if%}
+                              {%if $errors[e] eq 'city'%}
+                               <li>Please enter your city!
+                              {%/if%}
+                              {%if $errors[e] eq 'state'%}
+                               <li>Please enter your state!
+                              {%/if%}
+                              {%if $errors[e] eq 'zip'%}
+                               <li>Please enter your zip!
+                              {%/if%}
+                              {%if $errors[e] eq 'country'%}
+                               <li>Please choose your country!
+                              {%/if%}
+                              {%if $errors[e] eq 'username'%}
+                               <li>Please enter your username!
+                              {%/if%}
+                              {%if $errors[e] eq 'username_exists'%}
+                               <li>Sorry, such user already exists! Please try another username.
+                              {%/if%}
+                              {%if $errors[e] eq 'email_exists'%}
+                               <li>Sorry, such email already exists! Please try another email.
+                              {%/if%}
+                              {%if $errors[e] eq 'password'%}
+                               <li>Please enter a password!
+                              {%/if%}
+                              {%if $errors[e] eq 'password_confirm'%}
+                               <li>Please check your password!
+                              {%/if%}
+                              {%if $errors[e] eq 'password_too_small'%}
+                               <li>The password you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+                              {%/if%}
+                              {%if $errors[e] eq 'transaction_code'%}
+                               <li>Please enter the Transaction Code!
+                              {%/if%}
+                              {%if $errors[e] eq 'transaction_code_confirm'%}
+                               <li>Please check your Transaction Code!
+                              {%/if%}
+                              {%if $errors[e] eq 'transaction_code_too_small'%}
+                               <li>The Transaction Code you provided is too small, please enter at least {%$settings.min_user_password_length%} characters!
+                              {%/if%}
+                              {%if $errors[e] eq 'transaction_code_vs_password'%}
+                               <li>The Transaction Code should differ from the Password!
+                              {%/if%}
+                              {%if $errors[e] eq 'egold'%}
+                               <li>Please enter your e-gold account number!
+                              {%/if%}
+                              {%if $errors[e] eq 'email'%}
+                               <li>Please enter your e-mail!
+                              {%/if%}
+                              {%if $errors[e] eq 'agree'%}
+                               <li>You have to agree with the Terms and Conditions!
+                              {%/if%}
+                              {%if $errors[e] eq 'turing_image'%}
+                               <li>Enter the verification code as it is shown in the corresponding box.
+                              {%/if%}
+                              {%if $errors[e] eq 'no_upline'%}
+                               <li>The system requires an upline to register. {%if $settings.get_rand_ref%}You have to be agreed to random one or found a referral link in the net.{%/if%}
+                              {%/if%}
+                              {%if $errors[e] eq 'ip_exists_in_database'%}
+                               <li>Your IP already exists in our database. Sorry, but registration impossible.
+                              {%/if%}
+
+                              <br>
+                             {%/section%}
+                             </ul>
+                            {%/if%}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
                             <input type=submit value="Register" class=sbmt>
                         </td>
                     </tr>
