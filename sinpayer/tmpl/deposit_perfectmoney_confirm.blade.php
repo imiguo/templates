@@ -11,7 +11,7 @@
 
         <input type="hidden" name="PAYEE_ACCOUNT" value="{%psconfig('pm.marchant_id')%}">
         <input type="hidden" name="PAYEE_NAME" value="{%psconfig('pm.marchant_name')%}">
-        <input type="hidden" name="PAYMENT_ID" value="{%$userinfo.id%}">
+        <input type="hidden" name="PAYMENT_ID" value="{%$payment_id%}">
 
         <input type="hidden" name="PAYMENT_AMOUNT" value="{%$amount%}">
         <input type="hidden" name="PAYMENT_UNITS" value=USD>
