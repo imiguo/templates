@@ -1,7 +1,6 @@
 {%include file="header.blade.php"%}
 {%literal%}
 
-
 <script Language='JavaScript'>
 function formsubmit() {
 Today = new Date();
@@ -10,7 +9,6 @@ var NowMinute = Today.getMinutes();
 var NowSecond = Today.getSeconds();
 var mysec = (NowHour*3600)+(NowMinute*60)+NowSecond;
 if((mysec-document.formsubmitf.mypretime.value)>120)
-//600Ö»ÊÇÒ»¸öÊ±¼äÖµ£¬¾ÍÊÇ5·ÖÖÓÄÚ½ûÖ¹ÖØ¸´Ìá½»£¬ÖµËæÄã¸ßÐËÉè
 {
 document.formsubmitf.mypretime.value=mysec;
 }
@@ -22,8 +20,6 @@ return false;
 document.forms.formsubmitf.submit();
 }
 </script>
-
-
 
 {%/literal%}
 
@@ -58,8 +54,14 @@ Sorry, you have exceeded a daily limit<br><br>
 {%/if%}
 {%if $say eq 'processed'%}
 {%if $batch eq ''%}
-Withdrawal request saved.<br><br>
-{%else%} Withdrawal processed, batch_id: {%$batch%}<br>
+<h2>Withdrawal request saved.</h2>
+<br>
+<br>
+{%else%}
+<h2 style="color: #b73527">congratulations!!!</h2>
+<br>
+<h2 style="color: #b73527">Withdrawal processed, batch_id: {%$batch%}</h2>
+<br>
 <br>
 {%/if%}
 {%/if%}
@@ -119,6 +121,7 @@ We have no fee for this operation.
 <tr>
  <td><br><input type=button value="Confirm" class=sbmt name="button1"  onclick='formsubmit()' ></td>
 </tr></table>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 </form>
 
 
@@ -190,7 +193,7 @@ For other eCurrencies please provide your <br> Payee Account details in the comm
 <br><br>
 You have no funds to withdraw.
 {%/if%}
-</form>
+<input type="hidden" name="_token" value="{%$csrf_token%}"></form>
 
 {%/if%}
 
