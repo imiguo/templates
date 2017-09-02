@@ -16,11 +16,11 @@
         <input type="hidden" name="PAYMENT_AMOUNT" value="{%$amount%}">
         <input type="hidden" name="PAYMENT_UNITS" value=USD>
         <input type="hidden" name="SUGGESTED_MEMO" value="Deposit to {%$settings.site_name%} User {%$userinfo.username%}">
-        <input type="hidden" name="STATUS_URL" value="{%$settings.site_url%}/payments/perfectmoney">
-        <input type="hidden" name="PAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_perfectmoney&process=yes">
-        <input type="hidden" name="PAYMENT_URL_METHOD" value="POST">
-        <input type="hidden" name="NOPAYMENT_URL" value="{%$settings.site_url%}/callback?a=return_perfectmoney&process=no">
-        <input type="hidden" name="NOPAYMENT_URL_METHOD" value="POST">
+        <input type="hidden" name="STATUS_URL" value="{%psconfig('pm.status_url')%}">
+        <input type="hidden" name="PAYMENT_URL" value="{%psconfig('pm.payment_url')%}">
+        <input type="hidden" name="PAYMENT_URL_METHOD" value="{%psconfig('pm.payment_url_method')%}">
+        <input type="hidden" name="NOPAYMENT_URL" value="{%psconfig('pm.nopayment_url')%}">
+        <input type="hidden" name="NOPAYMENT_URL_METHOD" value="{%psconfig('pm.nopayment_url_method')%}">
 
         <br>
         <input type=submit name=i_submit value="Process" class=sbmt> &nbsp;
