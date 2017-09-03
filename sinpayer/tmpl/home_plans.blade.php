@@ -9,6 +9,7 @@
                         <h5><b>{{$item['days']}}</b> Day</h5>
                     @else
                         <h4>{{ $item['period'] }}</h4>
+                        <h5>&nbsp;</h5>
                     @endif
 
                     <span class="amk_hline"></span>
